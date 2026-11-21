@@ -1,0 +1,108 @@
+<UserControl x:Class="LLMPulse.App.Views.HistoryView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:loc="clr-namespace:LLMPulse.App.Localization"
+             xmlns:sp="clr-namespace:ScottPlot.WPF;assembly=ScottPlot.WPF">
+    <UserControl.Resources>
+        <BooleanToVisibilityConverter x:Key="BoolToVis" />
+        <Style x:Key="Dim" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="15" />
+            <Setter Property="Foreground" Value="{DynamicResource TextFillColorSecondaryBrush}" />
+        </Style>
+        <Style x:Key="RowCard" TargetType="Border">
+            <Setter Property="Margin" Value="0,0,0,4" />
+            <Setter Property="Padding" Value="14,8" />
+            <Setter Property="CornerRadius" Value="8" />
+            <Setter Property="Cursor" Value="Hand" />
+            <Setter Property="Background" Value="{DynamicResource CardBackgroundFillColorDefaultBrush}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource CardStrokeColorDefaultBrush}" />
+            <Setter Property="BorderThickness" Value="1" />
+        </Style>
+    </UserControl.Resources>
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="24,8,24,24">
+            <TextBlock Text="{loc:Loc History_Title}" FontSize="28" FontWeight="SemiBold" />
+
+            <!-- 두 날짜 비교 -->
+            <TextBlock Text="{loc:Loc History_CompareTitle}" FontSize="20" FontWeight="SemiBold" Margin="0,16,0,8" />
+            <WrapPanel>
+                <TextBlock Text="{loc:Loc History_From}" VerticalAlignment="Center" Margin="0,0,8,0" />
+                <ComboBox ItemsSource="{Binding Dates}" SelectedItem="{Binding FromDate}" MinWidth="140"
+                          AutomationProperties.Name="{loc:Loc History_From}" />
+                <TextBlock Text="{loc:Loc History_To}" VerticalAlignment="Center" Margin="20,0,8,0" />
+                <ComboBox ItemsSource="{Binding Dates}" SelectedItem="{Binding ToDate}" MinWidth="140"
+                          AutomationProperties.Name="{loc:Loc History_To}" />
+                <TextBlock Text="{loc:Loc History_Category}" VerticalAlignment="Center" Margin="20,0,8,0" />
+                <ComboBox ItemsSource="{Binding Categories}" SelectedItem="{Binding SelectedCategory}"
+                          DisplayMemberPath="Title" MinWidth="220"
+                          AutomationProperties.Name="{loc:Loc History_Category}" />
+            </WrapPanel>
+            <TextBlock Text="{Binding CompareNote}" Style="{StaticResource Dim}" TextWrapping="Wrap" Margin="0,10,0,0" />
+
+            <Grid Margin="14,12,14,4" Visibility="{Binding HasHistory, Converter={StaticResource BoolToVis}}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="260" /><ColumnDefinition Width="130" /><ColumnDefinition Width="80" />
+                    <ColumnDefinition Width="80" /><ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" Text="{loc:Loc History_ColModel}" Style="{StaticResource Dim}" />
+                <TextBlock Grid.Column="1" Text="{loc:Loc History_ColRank}" Style="{StaticResource Dim}" />
+                <TextBlock Grid.Column="3" Text="{loc:Loc History_ColScore}" Style="{StaticResource Dim}" />
+                <TextBlock Grid.Column="4" Text="{loc:Loc History_ColPrice}" Style="{StaticResource Dim}" />
+            </Grid>
+            <ItemsControl ItemsSource="{Binding Rows}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border Style="{StaticResource RowCard}">
+                            <Border.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding OpenCommand}" />
+                            </Border.InputBindings>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="246" /><ColumnDefinition Width="130" /><ColumnDefinition Width="80" />
+                                    <ColumnDefinition Width="80" /><ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="0" Text="{Binding Name}" FontSize="17" FontWeight="SemiBold" TextTrimming="CharacterEllipsis" />
+                                <TextBlock Grid.Column="1" Text="{Binding RankText}" FontSize="17" />
+                                <TextBlock Grid.Column="2" Text="{Binding DeltaText}" FontSize="17" FontWeight="SemiBold" Foreground="{Binding DeltaBrush}" />
+                                <TextBlock Grid.Column="3" Text="{Binding ScoreText}" FontSize="17" />
+                                <TextBlock Grid.Column="4" Text="{Binding PriceText}" FontSize="17" Style="{StaticResource Dim}" />
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+
+            <!-- 출시 타임라인 -->
+            <TextBlock Text="{loc:Loc History_ReleaseTitle}" FontSize="20" FontWeight="SemiBold" Margin="0,28,0,4" />
+            <TextBlock Text="{loc:Loc History_ReleaseHelp}" Style="{StaticResource Dim}" TextWrapping="Wrap" />
+            <TextBlock Text="{Binding ReleaseNote}" Style="{StaticResource Dim}" Margin="0,6,0,0" />
+            <sp:WpfPlot x:Name="TimelinePlot" Height="320" Margin="0,8,0,12"
+                        AutomationProperties.Name="{loc:Loc History_ReleaseTitle}" />
+            <ItemsControl ItemsSource="{Binding Releases}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border Style="{StaticResource RowCard}">
+                            <Border.InputBindings>
+                                <MouseBinding MouseAction="LeftClick" Command="{Binding OpenCommand}" />
+                            </Border.InputBindings>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="120" /><ColumnDefinition Width="260" /><ColumnDefinition Width="180" />
+                                    <ColumnDefinition Width="80" /><ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="0" Text="{Binding Date}" FontSize="17" Style="{StaticResource Dim}" />
+                                <TextBlock Grid.Column="1" Text="{Binding Name}" FontSize="17" FontWeight="SemiBold" TextTrimming="CharacterEllipsis" />
+                                <TextBlock Grid.Column="2" Text="{Binding Vendor}" FontSize="17" Style="{StaticResource Dim}" TextTrimming="CharacterEllipsis" />
+                                <TextBlock Grid.Column="3" Text="{Binding ScoreText}" FontSize="17" />
+                                <TextBlock Grid.Column="4" Text="★" Foreground="#F2B01E" FontSize="17"
+                                           ToolTip="{loc:Loc History_Record}"
+                                           Visibility="{Binding IsRecord, Converter={StaticResource BoolToVis}}" />
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

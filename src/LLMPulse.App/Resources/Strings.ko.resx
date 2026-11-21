@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Nav_Dashboard" xml:space="preserve"><value>대시보드</value></data>
+  <data name="Nav_Leaderboard" xml:space="preserve"><value>리더보드</value></data>
+  <data name="Nav_Metrics" xml:space="preserve"><value>지표 정보</value></data>
+  <data name="Nav_Settings" xml:space="preserve"><value>설정</value></data>
+  <data name="Nav_About" xml:space="preserve"><value>정보</value></data>
+  <data name="Search_Placeholder" xml:space="preserve"><value>모델·제작사 검색</value></data>
+  <data name="Action_Refresh" xml:space="preserve"><value>새로고침</value></data>
+  <data name="Action_Language" xml:space="preserve"><value>언어</value></data>
+  <data name="Action_Theme" xml:space="preserve"><value>라이트/다크 테마 전환</value></data>
+  <data name="Action_MetricInfo" xml:space="preserve"><value>이 지표 설명 보기</value></data>
+  <data name="Action_Save" xml:space="preserve"><value>저장</value></data>
+  <data name="Fresh_NoData" xml:space="preserve"><value>데이터 없음</value></data>
+  <data name="Fresh_Updated" xml:space="preserve"><value>마지막 갱신 {0}</value></data>
+  <data name="Fresh_Stale" xml:space="preserve"><value>오래됨(48시간 이상) · {0}</value></data>
+  <data name="Status_Cooldown" xml:space="preserve"><value>최근에 갱신했습니다. 약 {0}분 후 다시 시도하세요.</value></data>
+  <data name="Status_Refreshing" xml:space="preserve"><value>갱신 중…</value></data>
+  <data name="Status_RefreshOk" xml:space="preserve"><value>완료. DB 에 모델 {0}개.</value></data>
+  <data name="Status_RefreshError" xml:space="preserve"><value>소스 &quot;{0}&quot; 실패: {1}</value></data>
+  <data name="Dashboard_Title" xml:space="preserve"><value>오늘의 추천</value></data>
+  <data name="Dashboard_Summary" xml:space="preserve"><value>오늘 신규 모델 {0}개, 이전 스냅샷 대비 1위 변경 {1}건.</value></data>
+  <data name="Dashboard_EmptyTitle" xml:space="preserve"><value>아직 데이터가 없습니다</value></data>
+  <data name="Dashboard_EmptyBody" xml:space="preserve"><value>설정에서 Artificial Analysis API 키를 입력한 뒤 새로고침을 누르세요. 매일 08:00 자동 갱신은 이후 단계에서 설정합니다.</value></data>
+  <data name="Dashboard_NoCategoryData" xml:space="preserve"><value>이 분야는 데이터가 부족합니다.</value></data>
+  <data name="Card_Best" xml:space="preserve"><value>최고 성능</value></data>
+  <data name="Card_Value" xml:space="preserve"><value>가성비</value></data>
+  <data name="Card_Score" xml:space="preserve"><value>점수</value></data>
+  <data name="Card_ViewRanking" xml:space="preserve"><value>상세 보기 →</value></data>
+  <data name="Rationale_Best" xml:space="preserve"><value>{0} 1위: 점수 {1}, 점수가 있는 {2}개 모델 중 최고.</value></data>
+  <data name="Rationale_BestRaw" xml:space="preserve"><value>{0} 1위: {1}, 데이터가 있는 {2}개 모델 중 최고.</value></data>
+  <data name="Rationale_Value" xml:space="preserve"><value>{0} 점수 {1} (1위 {3} 의 {2}), 블렌디드 {4}/1M — 허용치 {5} 이상 중 최저가.</value></data>
+  <data name="Badge_TopChanged" xml:space="preserve"><value>1위 변경 (이전: {0})</value></data>
+  <data name="Leaderboard_Title" xml:space="preserve"><value>리더보드</value></data>
+  <data name="Leaderboard_AllVendors" xml:space="preserve"><value>전체 제작사</value></data>
+  <data name="Leaderboard_Vendor" xml:space="preserve"><value>제작사</value></data>
+  <data name="Leaderboard_Count" xml:space="preserve"><value>{1}개 중 {0}개 모델</value></data>
+  <data name="Leaderboard_HeatHint" xml:space="preserve"><value>음영 = 분야 점수 (숫자 항상 병기)</value></data>
+  <data name="Col_Model" xml:space="preserve"><value>모델</value></data>
+  <data name="Col_Vendor" xml:space="preserve"><value>제작사</value></data>
+  <data name="Col_Price" xml:space="preserve"><value>블렌디드 $/1M ↓</value></data>
+  <data name="Col_Speed" xml:space="preserve"><value>tok/s ↑</value></data>
+  <data name="Col_Ttft" xml:space="preserve"><value>TTFT 초 ↓</value></data>
+  <data name="Col_Release" xml:space="preserve"><value>출시일</value></data>
+  <data name="Metrics_Title" xml:space="preserve"><value>지표 정보</value></data>
+  <data name="Metric_Method" xml:space="preserve"><value>측정 방법</value></data>
+  <data name="Metric_Scale" xml:space="preserve"><value>척도</value></data>
+  <data name="Metric_UsedIn" xml:space="preserve"><value>사용 분야</value></data>
+  <data name="Metric_Caveats" xml:space="preserve"><value>주의사항</value></data>
+  <data name="Metric_Source" xml:space="preserve"><value>출처:</value></data>
+  <data name="Metric_Updated" xml:space="preserve"><value>마지막 갱신:</value></data>
+  <data name="Metric_ScaleIndex" xml:space="preserve"><value>0–100 지수 ({0}), 변환 없이 그대로 사용</value></data>
+  <data name="Metric_ScalePercentile" xml:space="preserve"><value>{0}, 0–100 백분위 순위로 변환</value></data>
+  <data name="Metric_HigherBetter" xml:space="preserve"><value>↑ 높을수록 좋음</value></data>
+  <data name="Metric_LowerBetter" xml:space="preserve"><value>↓ 낮을수록 좋음</value></data>
+  <data name="Scoring_Title" xml:space="preserve"><value>점수 산정 방식</value></data>
+  <data name="Scoring_Percentile" xml:space="preserve"><value>원본 값은 항상 보존·표시합니다. 척도가 다른 지표는 해당 지표를 가진 모델 중 순위 백분위로 비교합니다 (낮을수록 좋은 지표는 뒤집음).</value></data>
+  <data name="Scoring_Index" xml:space="preserve"><value>종합 지능 지수처럼 이미 0–100 인 합성 지표는 백분위로 다시 변환하지 않고 그대로 씁니다.</value></data>
+  <data name="Scoring_Missing" xml:space="preserve"><value>분야 점수 = 분야 지표들의 가중 평균. 누락 지표는 가중치를 다시 정규화하며, 가용 지표가 50% 미만이면 추정하지 않고 &quot;—&quot; 로 표시합니다.</value></data>
+  <data name="Scoring_Best" xml:space="preserve"><value>최고 성능 = 분야 점수 1위.</value></data>
+  <data name="Scoring_Value" xml:space="preserve"><value>가성비 = 분야 점수가 1위 점수의 허용치(기본 90%) 이상인 모델 중 블렌디드 가격이 가장 낮은 모델. 점수/가격 비율은 싸고 약한 모델이 항상 이기므로 쓰지 않습니다.</value></data>
+  <data name="Scoring_Example" xml:space="preserve"><value>허용치 {0} 예시: 1위 점수가 70 이면 70 × {0} 이상인 모델이 후보이고, 그중 가장 싼 모델이 추천됩니다.</value></data>
+  <data name="Scoring_Limits" xml:space="preserve"><value>벤치마크는 데이터 오염이나 제작사 자체 보고일 수 있으며, 벤치 점수가 내 업무의 실제 성능과 같지는 않습니다.</value></data>
+  <data name="Settings_Title" xml:space="preserve"><value>설정</value></data>
+  <data name="Settings_Tolerance" xml:space="preserve"><value>가성비 허용치</value></data>
+  <data name="Settings_ToleranceHelp" xml:space="preserve"><value>1위 점수 대비 이 비율 이상인 모델을 &quot;가성비&quot; 후보로 봅니다.</value></data>
+  <data name="Settings_ToleranceValue" xml:space="preserve"><value>1위의 {0}</value></data>
+  <data name="Settings_ApiKey" xml:space="preserve"><value>Artificial Analysis API 키</value></data>
+  <data name="Settings_ApiKeyHelp" xml:space="preserve"><value>Windows 사용자별로 암호화(DPAPI)해 저장합니다. 설정 파일·로그에는 기록되지 않습니다.</value></data>
+  <data name="Settings_KeyEmpty" xml:space="preserve"><value>키를 먼저 입력하세요.</value></data>
+  <data name="Settings_KeySaved" xml:space="preserve"><value>키를 저장했습니다.</value></data>
+  <data name="Settings_KeyStored" xml:space="preserve"><value>저장된 키가 있습니다.</value></data>
+  <data name="Settings_KeyMissing" xml:space="preserve"><value>저장된 키가 없습니다.</value></data>
+  <data name="Settings_Refresh" xml:space="preserve"><value>데이터 갱신</value></data>
+  <data name="Settings_RefreshHelp" xml:space="preserve"><value>API 한도 보호를 위해 수동 새로고침은 10분에 1회로 제한됩니다.</value></data>
+  <data name="Settings_Sources" xml:space="preserve"><value>데이터 소스 상태</value></data>
+  <data name="Settings_LastSuccess" xml:space="preserve"><value>마지막 성공</value></data>
+  <data name="About_Title" xml:space="preserve"><value>정보</value></data>
+  <data name="About_Data" xml:space="preserve"><value>데이터 출처</value></data>
+  <data name="About_DataBy" xml:space="preserve"><value>데이터: </value></data>
+  <data name="About_Disclaimer" xml:space="preserve"><value>벤치마크의 한계</value></data>
+  <data name="About_DisclaimerBody" xml:space="preserve"><value>점수는 제3자 벤치마크에서 가져옵니다. 데이터 오염, 제작사 자체 보고 가능성이 있고 내 업무 성능과 다를 수 있으므로 참고용으로만 사용하세요.</value></data>
+  <data name="About_Privacy" xml:space="preserve"><value>개인정보</value></data>
+  <data name="About_PrivacyBody" xml:space="preserve"><value>모든 데이터는 이 PC(%LOCALAPPDATA%\LLMPulse)에만 저장됩니다. 네트워크 접근은 공개 벤치마크 데이터 가져오기(Artificial Analysis 는 내 API 키 사용), 이 앱 GitHub 저장소의 구독 플랜 목록 받기, GitHub Releases 업데이트 확인(설치판은 자동, 설정에서 끌 수 있음)뿐입니다. 사용 기록이나 개인 정보는 어디에도 보내지 않습니다.</value></data>
+  <data name="Footer_Data" xml:space="preserve"><value>데이터: </value></data>
+  <data name="Footer_Disclaimer" xml:space="preserve"><value>벤치마크는 참고용입니다.</value></data>
+  <data name="Card_Top" xml:space="preserve"><value>1위</value></data>
+  <data name="Action_Back" xml:space="preserve"><value>← 뒤로</value></data>
+  <data name="Action_OpenLeaderboard" xml:space="preserve"><value>리더보드에서 보기</value></data>
+  <data name="Chart_TopRanking" xml:space="preserve"><value>상위 순위</value></data>
+  <data name="Chart_PriceVsScore" xml:space="preserve"><value>가격 대비 점수</value></data>
+  <data name="Chart_ParetoHelp" xml:space="preserve"><value>선 위의 ◆ 는 파레토 프론티어(더 싸면서 점수가 더 높은 모델이 없음)입니다. ■ 최고 성능, ● 가성비. 가격 축은 로그 눈금입니다.</value></data>
+  <data name="Chart_ParetoLegend" xml:space="preserve"><value>파레토 프론티어</value></data>
+  <data name="Chart_UsedMetrics" xml:space="preserve"><value>이 분야에 사용한 지표</value></data>
+  <data name="Chart_Weight" xml:space="preserve"><value>가중치</value></data>
+  <data name="Chart_ScoreAxis" xml:space="preserve"><value>분야 점수 (0–100)</value></data>
+  <data name="Chart_PriceAxis" xml:space="preserve"><value>블렌디드 가격 $/1M 토큰 (로그)</value></data>
+  <data name="Compare_Title" xml:space="preserve"><value>모델 비교</value></data>
+  <data name="Compare_Empty" xml:space="preserve"><value>리더보드에서 모델을 1–4개 선택(Ctrl/Shift+클릭)한 뒤 비교를 누르세요. 행을 더블클릭하면 해당 모델을 엽니다.</value></data>
+  <data name="Compare_Radar" xml:space="preserve"><value>분야별 점수</value></data>
+  <data name="Compare_RadarHelp" xml:space="preserve"><value>데이터가 없는 분야는 0 으로 그려집니다.</value></data>
+  <data name="Compare_Trend" xml:space="preserve"><value>추이</value></data>
+  <data name="Compare_TrendMetric" xml:space="preserve"><value>추이 지표</value></data>
+  <data name="Compare_TrendFew" xml:space="preserve"><value>추이는 일별 스냅샷이 2개 이상 필요합니다. 매일 갱신이 쌓이면 채워집니다.</value></data>
+  <data name="Compare_Scores" xml:space="preserve"><value>분야 점수 (0–100)</value></data>
+  <data name="Compare_Raw" xml:space="preserve"><value>원본 값</value></data>
+  <data name="Leaderboard_CompareHint" xml:space="preserve"><value>비교할 모델을 선택하세요</value></data>
+  <data name="Leaderboard_Compare" xml:space="preserve"><value>선택한 {0}개 비교</value></data>
+  <data name="Leaderboard_CompareTooMany" xml:space="preserve"><value>최대 {0}개까지 선택하세요</value></data>
+  <data name="Nav_Matching" xml:space="preserve"><value>모델 매칭</value></data>
+  <data name="Matching_Title" xml:space="preserve"><value>모델 매칭</value></data>
+  <data name="Matching_Intro" xml:space="preserve"><value>보조 소스(OpenRouter, Aider, Arena)는 자체 이름으로 모델을 나열합니다. 이름은 후보가 정확히 하나일 때만 Artificial Analysis 모델과 자동 매칭되며, 나머지는 직접 연결할 수 있습니다. 연결된 데이터는 컨텍스트 길이와 코딩·사람 선호(Arena) 결과를 더하고 빠진 가격을 채웁니다.</value></data>
+  <data name="Matching_Empty" xml:space="preserve"><value>아직 보조 소스 데이터가 없습니다. 새로고침으로 OpenRouter, Aider, Arena 를 불러오세요.</value></data>
+  <data name="Matching_Summary" xml:space="preserve"><value>{0}개 매칭됨 · {1}개 매칭 필요</value></data>
+  <data name="Matching_Filter" xml:space="preserve"><value>필터</value></data>
+  <data name="Matching_Filter_Unmatched" xml:space="preserve"><value>매칭 필요</value></data>
+  <data name="Matching_Filter_Matched" xml:space="preserve"><value>매칭됨</value></data>
+  <data name="Matching_Filter_All" xml:space="preserve"><value>전체</value></data>
+  <data name="Matching_Search" xml:space="preserve"><value>소스 모델 검색</value></data>
+  <data name="Matching_Truncated" xml:space="preserve"><value>{1}개 중 처음 {0}개만 표시합니다. 검색으로 좁혀 보세요.</value></data>
+  <data name="Matching_Status_Needed" xml:space="preserve"><value>매칭 필요</value></data>
+  <data name="Matching_Context" xml:space="preserve"><value>컨텍스트 {0}K</value></data>
+  <data name="Matching_Price" xml:space="preserve"><value>입력 {0} · 출력 {1} (100만 토큰당)</value></data>
+  <data name="Matching_SelectItem" xml:space="preserve"><value>왼쪽에서 항목을 선택하면 모델과 연결할 수 있습니다.</value></data>
+  <data name="Matching_Suggestions" xml:space="preserve"><value>추천 (클릭하면 연결)</value></data>
+  <data name="Matching_NoSuggestions" xml:space="preserve"><value>비슷한 이름이 없습니다.</value></data>
+  <data name="Matching_PickModel" xml:space="preserve"><value>직접 모델 선택</value></data>
+  <data name="Matching_ModelSearch" xml:space="preserve"><value>모델 검색</value></data>
+  <data name="Matching_Link" xml:space="preserve"><value>선택한 모델과 연결</value></data>
+  <data name="Matching_Unlink" xml:space="preserve"><value>연결 해제</value></data>
+  <data name="Matching_Linked" xml:space="preserve"><value>{0} → {1} 연결함</value></data>
+  <data name="Matching_Unlinked" xml:space="preserve"><value>{0} 연결을 해제했습니다</value></data>
+  <data name="Settings_Schedule" xml:space="preserve"><value>자동 갱신</value></data>
+  <data name="Settings_ScheduleHelp" xml:space="preserve"><value>선택한 시각에 앱이 꺼져 있어도 백그라운드로 데이터를 갱신하는 Windows 작업 스케줄러 작업을 등록합니다. PC 가 꺼져 있었다면 켜질 때 실행됩니다. 앱이 열려 있으면 앱도 스스로 따라잡습니다.</value></data>
+  <data name="Settings_RefreshTime" xml:space="preserve"><value>갱신 시각 (HH:mm)</value></data>
+  <data name="Settings_Register" xml:space="preserve"><value>등록</value></data>
+  <data name="Settings_Unregister" xml:space="preserve"><value>해제</value></data>
+  <data name="Settings_TimeInvalid" xml:space="preserve"><value>08:00 같은 형식으로 입력하세요.</value></data>
+  <data name="Settings_ScheduleRegistered" xml:space="preserve"><value>등록됨: 매일 {0} 에 갱신합니다.</value></data>
+  <data name="Settings_ScheduleNotRegistered" xml:space="preserve"><value>등록되지 않았습니다. 앱이 열려 있을 때만 갱신됩니다.</value></data>
+  <data name="Settings_ScheduleFailed" xml:space="preserve"><value>스케줄을 변경하지 못했습니다: {0}</value></data>
+  <data name="Settings_TrayResident" xml:space="preserve"><value>창을 닫아도 트레이에서 계속 실행</value></data>
+  <data name="Settings_Notify" xml:space="preserve"><value>1위가 바뀌거나 신규 모델이 나오면 알림</value></data>
+  <data name="Tray_Open" xml:space="preserve"><value>LLM Pulse 열기</value></data>
+  <data name="Tray_Refresh" xml:space="preserve"><value>지금 새로고침</value></data>
+  <data name="Tray_Quit" xml:space="preserve"><value>종료</value></data>
+  <data name="Toast_Title" xml:space="preserve"><value>LLM Pulse</value></data>
+  <data name="Toast_Body" xml:space="preserve"><value>1위 변경 {0}개 분야 · 신규 모델 {1}개</value></data>
+  <data name="Card_MyPlan" xml:space="preserve"><value>내 구독 기준 최고</value></data>
+  <data name="Leaderboard_MyPlanOnly" xml:space="preserve"><value>내 구독만</value></data>
+  <data name="Settings_OpenDataFolder" xml:space="preserve"><value>데이터 폴더 열기</value></data>
+  <data name="Plan_Free" xml:space="preserve"><value>무료</value></data>
+  <data name="Plan_PerMonth" xml:space="preserve"><value>월 ${0}</value></data>
+  <data name="Plan_PerToken" xml:space="preserve"><value>토큰당 과금</value></data>
+  <data name="Plan_Detail" xml:space="preserve"><value>{0} · 매칭된 모델 {1}개 · 확인일 {2}</value></data>
+  <data name="Plan_LoadWarning" xml:space="preserve"><value>플랜 파일을 사용할 수 없어 내장 플랜을 표시합니다. {0}</value></data>
+  <data name="Plan_UserFile" xml:space="preserve"><value>사용자 정의 {0} 사용 중.</value></data>
+  <data name="Plan_UserFileHint" xml:space="preserve"><value>플랜을 편집하려면 데이터 폴더에 {0} (내장 목록과 같은 형식)을 두세요. 내장 플랜을 대체합니다.</value></data>
+  <data name="Matching_Aider" xml:space="preserve"><value>Aider 폴리글랏 {0}%</value></data>
+  <data name="Action_ExportCsv" xml:space="preserve"><value>CSV 내보내기</value></data>
+  <data name="Action_ExportPng" xml:space="preserve"><value>이 화면을 PNG 로 저장</value></data>
+  <data name="Nav_Plans" xml:space="preserve"><value>내 구독</value></data>
+  <data name="Plan_OnlyTip" xml:space="preserve"><value>내 구독에서 쓸 수 있는 모델만 보기</value></data>
+  <data name="Plans_Title" xml:space="preserve"><value>내 구독</value></data>
+  <data name="Plans_Help" xml:space="preserve"><value>사용 중인 구독을 체크하세요. 대시보드와 차트가 실제로 쓸 수 있는 모델만 기준으로 보여줍니다. 사용량 한도 메모를 남기고, 기본 규칙이 틀린 모델은 직접 고칠 수 있습니다.</value></data>
+  <data name="Plans_Profile" xml:space="preserve"><value>프로필</value></data>
+  <data name="Plans_ProfileName" xml:space="preserve"><value>프로필 이름</value></data>
+  <data name="Plans_ProfileSave" xml:space="preserve"><value>프로필로 저장</value></data>
+  <data name="Plans_ProfileDelete" xml:space="preserve"><value>삭제</value></data>
+  <data name="Plans_RunWizard" xml:space="preserve"><value>설정 마법사 다시 실행</value></data>
+  <data name="Plans_Limit" xml:space="preserve"><value>사용량 한도 메모</value></data>
+  <data name="Plans_LimitCap" xml:space="preserve"><value>한도</value></data>
+  <data name="Plans_LimitPeriod" xml:space="preserve"><value>기간</value></data>
+  <data name="Plans_LimitNote" xml:space="preserve"><value>메모 (예: 빠른 요청 500회)</value></data>
+  <data name="Plans_Period5h" xml:space="preserve"><value>5시간마다</value></data>
+  <data name="Plans_PeriodDay" xml:space="preserve"><value>하루마다</value></data>
+  <data name="Plans_PeriodWeek" xml:space="preserve"><value>주마다</value></data>
+  <data name="Plans_PeriodMonth" xml:space="preserve"><value>월마다</value></data>
+  <data name="Plans_UsageReset" xml:space="preserve"><value>초기화</value></data>
+  <data name="Plans_NoUsage" xml:space="preserve"><value>아직 센 사용량이 없습니다</value></data>
+  <data name="Plans_UsageCap" xml:space="preserve"><value>{1}회 중 {0}회 사용</value></data>
+  <data name="Plans_UsageNoCap" xml:space="preserve"><value>{0}회 사용</value></data>
+  <data name="Plans_Models" xml:space="preserve"><value>이 구독의 모델</value></data>
+  <data name="Plans_ModelsHelp" xml:space="preserve"><value>포함 = 사용 가능. 한도 있음 = 쓸 수는 있지만 사용량이 빡빡함(⚠ 표시). 사용 불가 = 이 구독에 없음. 여기서 바꾼 값이 기본 규칙보다 우선합니다.</value></data>
+  <data name="Plans_ModelFilter" xml:space="preserve"><value>모델 검색</value></data>
+  <data name="Plans_ModelSummary" xml:space="preserve"><value>포함 {0} · 한도 있음 {1} · 직접 수정 {2}</value></data>
+  <data name="Plans_Access" xml:space="preserve"><value>접근</value></data>
+  <data name="Plans_AccessNone" xml:space="preserve"><value>사용 불가</value></data>
+  <data name="Plans_AccessLimited" xml:space="preserve"><value>한도 있음</value></data>
+  <data name="Plans_AccessFull" xml:space="preserve"><value>포함</value></data>
+  <data name="Plans_AccessReset" xml:space="preserve"><value>기본값</value></data>
+  <data name="Wizard_Title" xml:space="preserve"><value>LLM Pulse 에 오신 것을 환영합니다</value></data>
+  <data name="Wizard_Step" xml:space="preserve"><value>{0} / {1} 단계</value></data>
+  <data name="Wizard_KeyTitle" xml:space="preserve"><value>1. 데이터 소스 키</value></data>
+  <data name="Wizard_KeyBody" xml:space="preserve"><value>실시간 데이터를 받으려면 Artificial Analysis API 키가 필요합니다. 키는 이 PC 에만 암호화되어 저장됩니다. 지금 건너뛰고 나중에 설정에서 넣어도 됩니다.</value></data>
+  <data name="Wizard_PlansTitle" xml:space="preserve"><value>2. 어떤 구독을 쓰나요?</value></data>
+  <data name="Wizard_PlansBody" xml:space="preserve"><value>Cursor, Claude, ChatGPT 가 미리 선택되어 있습니다. 필요하면 바꾸세요. 모델별 세부 설정은 나중에 '내 구독'에서 조정할 수 있습니다.</value></data>
+  <data name="Wizard_DoneTitle" xml:space="preserve"><value>3. 준비 완료</value></data>
+  <data name="Wizard_DoneBody" xml:space="preserve"><value>선택한 구독</value></data>
+  <data name="Wizard_DoneNote" xml:space="preserve"><value>키가 저장되어 있으면 완료와 함께 첫 데이터 갱신을 시작합니다.</value></data>
+  <data name="Wizard_OnlyMine" xml:space="preserve"><value>내가 쓸 수 있는 모델만 보기 (상단 바에서 언제든 전환)</value></data>
+  <data name="Wizard_NoPlans" xml:space="preserve"><value>선택한 구독 없음</value></data>
+  <data name="Wizard_Next" xml:space="preserve"><value>다음</value></data>
+  <data name="Wizard_Back" xml:space="preserve"><value>이전</value></data>
+  <data name="Wizard_Finish" xml:space="preserve"><value>완료</value></data>
+  <data name="Wizard_Skip" xml:space="preserve"><value>건너뛰기</value></data>
+  <data name="Pick_Title" xml:space="preserve"><value>오늘의 코딩 추천</value></data>
+  <data name="Pick_TitlePlan" xml:space="preserve"><value>오늘의 코딩 추천 · 내 구독 안에서</value></data>
+  <data name="Pick_Why" xml:space="preserve"><value>이유: {0}</value></data>
+  <data name="Pick_Alternatives" xml:space="preserve"><value>대안</value></data>
+  <data name="Pick_Tune" xml:space="preserve"><value>조합 조정 →</value></data>
+  <data name="Changes_Title" xml:space="preserve"><value>무엇이 바뀌었나</value></data>
+  <data name="Changes_Since" xml:space="preserve"><value>{0} 대비</value></data>
+  <data name="Changes_Empty" xml:space="preserve"><value>이전 갱신 대비 눈에 띄는 순위 변동이 없습니다.</value></data>
+  <data name="Change_New" xml:space="preserve"><value>새 모델: {0}</value></data>
+  <data name="Change_NewRanked" xml:space="preserve"><value>새 모델: {0} — {1} {2}위로 등장</value></data>
+  <data name="Change_Top" xml:space="preserve"><value>{1}: {0} 이(가) {2} 을(를) 제치고 1위</value></data>
+  <data name="Change_Entered" xml:space="preserve"><value>{1}: {0} 이(가) {2}위로 상위 10위 진입</value></data>
+  <data name="Change_Up" xml:space="preserve"><value>{1}: {0} {2}위 → {3}위 상승</value></data>
+  <data name="Change_Down" xml:space="preserve"><value>{1}: {0} {2}위 → {3}위 하락</value></data>
+  <data name="Weights_Help" xml:space="preserve"><value>슬라이더로 각 지표를 얼마나 반영할지 정하세요. 0 이면 이 조합에서 빠집니다. 퍼센트는 최종 점수에서 그 지표가 차지하는 비중입니다.</value></data>
+  <data name="Weights_Reset" xml:space="preserve"><value>기본값으로 되돌리기</value></data>
+  <data name="Weights_Custom" xml:space="preserve"><value>직접 조정한 가중치를 사용 중입니다. 이 조합에서는 1위 변경 알림이 꺼집니다.</value></data>
+  <data name="Plans_BreakEven" xml:space="preserve"><value>손익분기: 월 ${0} ≈ API 로 {2} 를 약 {1}M 토큰 쓸 수 있는 금액 (블렌디드 {3}/1M).</value></data>
+  <data name="Plans_EconTitle" xml:space="preserve"><value>구독 vs API 비용</value></data>
+  <data name="Plans_Econ" xml:space="preserve"><value>내 구독 합계는 월 ${0} 입니다. 같은 {1}M 토큰을 API 로 {2} 에 쓰면 월 약 ${3} 입니다.</value></data>
+  <data name="Plans_EconSubCheaper" xml:space="preserve"><value>구독이 월 약 ${0} 더 저렴합니다.</value></data>
+  <data name="Plans_EconApiCheaper" xml:space="preserve"><value>API 가 월 약 ${0} 더 저렴합니다.</value></data>
+  <data name="Plans_EconNote" xml:space="preserve"><value>대략적인 추정입니다. 내 구독에서 가장 좋은 모델의 블렌디드 가격(입력:출력 3:1)을 쓰며, 캐싱·할인·구독 사용량 한도는 반영하지 않습니다.</value></data>
+  <data name="Plans_EconUsage" xml:space="preserve"><value>내 월 사용량 (백만 토큰)</value></data>
+  <data name="Leaderboard_FavoritesOnly" xml:space="preserve"><value>즐겨찾기만</value></data>
+  <data name="Leaderboard_Columns" xml:space="preserve"><value>컬럼</value></data>
+  <data name="Leaderboard_FavToggle" xml:space="preserve"><value>즐겨찾기 추가/해제</value></data>
+  <data name="Card_Trend" xml:space="preserve"><value>7일 추이</value></data>
+  <data name="Card_DeltaTip" xml:space="preserve"><value>이전 스냅샷 대비 순위 변화</value></data>
+  <data name="Pinned_Title" xml:space="preserve"><value>내 즐겨찾기</value></data>
+  <data name="Chart_PlanLegend" xml:space="preserve"><value>초록 = 내 구독에 포함 · 흰 테두리 = 즐겨찾기</value></data>
+  <data name="Change_PriceDown" xml:space="preserve"><value>{0}: 가격 인하 {1} → {2} (−{3}%)</value></data>
+  <data name="Change_PriceUp" xml:space="preserve"><value>{0}: 가격 인상 {1} → {2} (+{3}%)</value></data>
+  <data name="Limit_Warn" xml:space="preserve"><value>{0}: {2}회 중 {1}회 사용 ({3}%) - 곧 소진돼요. 다른 모델이나 API를 고려해 보세요.</value></data>
+  <data name="Limit_Reached" xml:space="preserve"><value>{0}: 한도 소진 ({2}회 중 {1}회). 초기화될 때까지 다른 모델이나 API를 쓰세요.</value></data>
+  <data name="About_Shortcuts" xml:space="preserve"><value>단축키</value></data>
+  <data name="About_ShortcutsBody" xml:space="preserve"><value>Ctrl+K  검색
+F5  새로고침
+Ctrl+P  내 구독만 보기
+Ctrl+1…9  페이지 이동
+Ctrl +/-, 0  글자 크기
+Ctrl+Alt+U  사용량 +1 (전역)
+Ctrl+Alt+L  미니 위젯 (전역)</value></data>
+  <data name="Settings_StartWithWindows" xml:space="preserve"><value>Windows 시작 시 자동 실행 (트레이에서 조용히 돌며 알아서 갱신)</value></data>
+  <data name="Purpose_Label" xml:space="preserve"><value>무엇이 필요하세요?</value></data>
+  <data name="Purpose_Coding" xml:space="preserve"><value>코딩</value></data>
+  <data name="Purpose_Korean" xml:space="preserve"><value>한국어</value></data>
+  <data name="Purpose_Fast" xml:space="preserve"><value>빠른 응답</value></data>
+  <data name="Purpose_Balanced" xml:space="preserve"><value>종합</value></data>
+  <data name="Purpose_Cheap" xml:space="preserve"><value>싸면서 충분히 좋은 것</value></data>
+  <data name="Pick_TitleFor" xml:space="preserve"><value>오늘의 추천 · {0}</value></data>
+  <data name="Pick_TitleForPlan" xml:space="preserve"><value>오늘의 추천 · {0} · 내 구독 안에서</value></data>
+  <data name="Table_Title" xml:space="preserve"><value>분야별 한눈에 보기</value></data>
+  <data name="Table_Category" xml:space="preserve"><value>분야</value></data>
+  <data name="Model_Context" xml:space="preserve"><value>컨텍스트</value></data>
+  <data name="Model_Rank" xml:space="preserve"><value>{1}개 중 {0}위</value></data>
+  <data name="Model_Scores" xml:space="preserve"><value>분야별 점수와 순위</value></data>
+  <data name="Model_Plans" xml:space="preserve"><value>내 구독에서 사용 가능 여부</value></data>
+  <data name="Model_NoPlans" xml:space="preserve"><value>내 구독 화면에서 구독을 고르면 이 모델을 어디서 쓸 수 있는지 보여줍니다.</value></data>
+  <data name="Model_PriceHistory" xml:space="preserve"><value>가격 추이 (100만 토큰당)</value></data>
+  <data name="Model_PriceHistoryNote" xml:space="preserve"><value>{0}회 기록: {1} → {2}</value></data>
+  <data name="Model_NotFound" xml:space="preserve"><value>현재 데이터에 이 모델이 없습니다.</value></data>
+  <data name="Model_OpenLeaderboard" xml:space="preserve"><value>리더보드 열기</value></data>
+  <data name="Col_Access" xml:space="preserve"><value>내 구독</value></data>
+  <data name="Leaderboard_RowHint" xml:space="preserve"><value>행을 더블클릭하면 상세가 열립니다.</value></data>
+  <data name="Menu_More" xml:space="preserve"><value>더보기</value></data>
+  <data name="Menu_TextSize" xml:space="preserve"><value>글자 크기 (Ctrl +/-)</value></data>
+  <data name="Size_Small" xml:space="preserve"><value>작게</value></data>
+  <data name="Size_Normal" xml:space="preserve"><value>보통</value></data>
+  <data name="Size_Large" xml:space="preserve"><value>크게</value></data>
+  <data name="Size_XLarge" xml:space="preserve"><value>아주 크게</value></data>
+  <data name="Time_Soon" xml:space="preserve"><value>곧</value></data>
+  <data name="Time_DH" xml:space="preserve"><value>{0}일 {1}시간</value></data>
+  <data name="Time_HM" xml:space="preserve"><value>{0}시간 {1}분</value></data>
+  <data name="Time_M" xml:space="preserve"><value>{0}분</value></data>
+  <data name="Limit_ResetsIn" xml:space="preserve"><value>초기화까지 {0}</value></data>
+  <data name="Settings_NotifyTop" xml:space="preserve"><value>1위 변경 · 신규 모델</value></data>
+  <data name="Settings_NotifyPrice" xml:space="preserve"><value>가격 5% 이상 변동</value></data>
+  <data name="Settings_NotifyLimit" xml:space="preserve"><value>구독 사용량 80% / 100% 도달</value></data>
+  <data name="Toast_PriceTitle" xml:space="preserve"><value>가격 변동</value></data>
+  <data name="Toast_PriceBody" xml:space="preserve"><value>{0}개 모델의 가격이 5% 이상 바뀌었습니다.</value></data>
+  <data name="Toast_LimitTitle" xml:space="preserve"><value>구독 사용량</value></data>
+  <data name="Toast_LimitWarn" xml:space="preserve"><value>{0}: {1}% 사용 ({2}/{3}).</value></data>
+  <data name="Toast_LimitFull" xml:space="preserve"><value>{0}: 한도에 도달했습니다 ({1}/{2}).</value></data>
+  <data name="Tray_Widget" xml:space="preserve"><value>미니 위젯</value></data>
+  <data name="Tray_Tooltip_Ok" xml:space="preserve"><value>여유 있음</value></data>
+  <data name="Widget_Usage" xml:space="preserve"><value>구독 사용량</value></data>
+  <data name="Widget_Close" xml:space="preserve"><value>닫기</value></data>
+  <data name="Widget_NoLimits" xml:space="preserve"><value>내 구독 화면에서 한도를 설정하면 여기에 표시됩니다.</value></data>
+  <data name="Widget_Plus" xml:space="preserve"><value>사용 +1</value></data>
+  <data name="Settings_AutoClaude" xml:space="preserve"><value>로컬 Claude Code 기록으로 Claude 사용량 자동 집계</value></data>
+  <data name="Settings_AutoClaudeHelp" xml:space="preserve"><value>내 PC의 ~/.claude/projects 폴더만 읽기 전용으로 읽어, 한도를 설정한 Claude 구독의 현재 기간 프롬프트 수를 셉니다. 어디로도 전송하지 않으며, 5시간 창은 첫 프롬프트 시각 기준의 근사치입니다.</value></data>
+  <data name="Nav_History" xml:space="preserve"><value>변화 기록</value></data>
+  <data name="History_Title" xml:space="preserve"><value>변화 기록</value></data>
+  <data name="History_CompareTitle" xml:space="preserve"><value>두 날짜 비교</value></data>
+  <data name="History_From" xml:space="preserve"><value>이전</value></data>
+  <data name="History_To" xml:space="preserve"><value>이후</value></data>
+  <data name="History_Category" xml:space="preserve"><value>분야</value></data>
+  <data name="History_NeedTwo" xml:space="preserve"><value>갱신할 때마다 스냅샷이 저장됩니다. 서로 다른 두 날짜가 쌓이면 비교할 수 있습니다.</value></data>
+  <data name="History_NoChanges" xml:space="preserve"><value>이 두 날짜 사이에 순위·가격 변화가 없습니다.</value></data>
+  <data name="History_New" xml:space="preserve"><value>신규</value></data>
+  <data name="History_ColModel" xml:space="preserve"><value>모델</value></data>
+  <data name="History_ColRank" xml:space="preserve"><value>순위</value></data>
+  <data name="History_ColScore" xml:space="preserve"><value>점수</value></data>
+  <data name="History_ColPrice" xml:space="preserve"><value>가격 (100만 토큰당)</value></data>
+  <data name="History_ReleaseTitle" xml:space="preserve"><value>모델 출시 타임라인</value></data>
+  <data name="History_ReleaseHelp" xml:space="preserve"><value>출시일별 종합 점수입니다. 금색은 출시 당시 신기록입니다.</value></data>
+  <data name="History_NoRelease" xml:space="preserve"><value>현재 데이터에 출시일이 있는 모델이 없습니다.</value></data>
+  <data name="History_Record" xml:space="preserve"><value>신기록</value></data>
+  <data name="History_ColDate" xml:space="preserve"><value>출시일</value></data>
+  <data name="History_ColVendor" xml:space="preserve"><value>제작사</value></data>
+  <data name="Chart_LogPrice" xml:space="preserve"><value>가격 축 로그 눈금</value></data>
+  <data name="Chart_ClickHint" xml:space="preserve"><value>점을 클릭하면 모델 상세가 열립니다. 초록 = 내 구독, 원 테두리 = 즐겨찾기.</value></data>
+  <data name="Chart_InPlanLegend" xml:space="preserve"><value>내 구독 안</value></data>
+  <data name="Preset_Label" xml:space="preserve"><value>내 프리셋</value></data>
+  <data name="Preset_Save" xml:space="preserve"><value>현재 가중치 저장</value></data>
+  <data name="Preset_Delete" xml:space="preserve"><value>삭제</value></data>
+  <data name="Preset_NewName" xml:space="preserve"><value>프리셋 이름</value></data>
+  <data name="Compare_MonthlyCost" xml:space="preserve"><value>월 예상 API 비용 ({0}M 토큰)</value></data>
+  <data name="Compare_TokensLabel" xml:space="preserve"><value>월 사용량</value></data>
+  <data name="Compare_TokensUnit" xml:space="preserve"><value>백만 토큰 (입력:출력 3:1 기준)</value></data>
+  <data name="SrcErr_KeyMissing" xml:space="preserve"><value>⚠ API 키가 없습니다. 위에서 키를 입력한 뒤 새로고침하세요.</value></data>
+  <data name="SrcErr_KeyInvalid" xml:space="preserve"><value>⚠ 키가 거부되었습니다(잘못되었거나 폐기됨). 새 키를 입력하세요.</value></data>
+  <data name="SrcErr_RateLimited" xml:space="preserve"><value>⚠ 하루 요청 한도에 도달했습니다. 내일 다시 시도하세요.</value></data>
+  <data name="SrcErr_Network" xml:space="preserve"><value>⚠ 네트워크 문제입니다. 연결을 확인한 뒤 다시 시도하세요.</value></data>
+  <data name="SrcErr_Other" xml:space="preserve"><value>⚠ 새로고침에 실패했습니다. 자세한 내용은 아래를 보세요.</value></data>
+  <data name="About_Updates" xml:space="preserve"><value>버전과 업데이트</value></data>
+  <data name="About_Version" xml:space="preserve"><value>버전 {0}</value></data>
+  <data name="About_CheckUpdate" xml:space="preserve"><value>업데이트 확인</value></data>
+  <data name="About_OpenRelease" xml:space="preserve"><value>다운로드 페이지 열기</value></data>
+  <data name="About_Checking" xml:space="preserve"><value>확인하는 중…</value></data>
+  <data name="About_UpToDate" xml:space="preserve"><value>최신 버전입니다.</value></data>
+  <data name="About_UpdateAvailable" xml:space="preserve"><value>새 버전 {0} 이(가) 있습니다.</value></data>
+  <data name="About_NoRelease" xml:space="preserve"><value>아직 공개된 릴리스가 없습니다.</value></data>
+  <data name="Plans_PlusOne" xml:space="preserve"><value>사용 1회 추가</value></data>
+  <data name="Plans_MinusOne" xml:space="preserve"><value>사용 1회 취소</value></data>
+  <data name="About_Author" xml:space="preserve"><value>만든 사람</value></data>
+  <data name="About_AuthorName" xml:space="preserve"><value>만든 사람: 배민혁</value></data>
+  <data name="Crash_Body" xml:space="preserve"><value>예기치 않은 오류가 발생했습니다. 자세한 내용은 아래 로그 파일에 저장했습니다.</value></data>
+  <data name="Leaderboard_PriceUpTo" xml:space="preserve"><value>≤ ${0} / 1M</value></data>
+  <data name="Leaderboard_NewBadge" xml:space="preserve"><value>NEW</value></data>
+  <data name="Leaderboard_AnyContext" xml:space="preserve"><value>컨텍스트 제한 없음</value></data>
+  <data name="Leaderboard_NoScoreTip" xml:space="preserve"><value>점수 없음. {0} 쪽에 아직 이 모델이 반영되지 않았거나 이름이 연결되지 않았을 수 있습니다.</value></data>
+  <data name="Leaderboard_NewTip" xml:space="preserve"><value>출시 30일 이내</value></data>
+  <data name="Leaderboard_AnyPrice" xml:space="preserve"><value>가격 제한 없음</value></data>
+  <data name="Leaderboard_RecentOnly" xml:space="preserve"><value>최근 30일 출시</value></data>
+  <data name="Leaderboard_ContextAtLeast" xml:space="preserve"><value>컨텍스트 {0} 이상</value></data>
+  <data name="Compare_DomainsHelp" xml:space="preserve"><value>Artificial Analysis 전문 분야 지수(0–100). 막대가 없으면 해당 모델의 점수가 없다는 뜻입니다.</value></data>
+  <data name="Compare_Domains" xml:space="preserve"><value>전문 분야 (AA 지수)</value></data>
+  <data name="Settings_ErrorDetail" xml:space="preserve"><value>상세: {0}</value></data>
+  <data name="Settings_StatusOk" xml:space="preserve"><value>성공</value></data>
+  <data name="Settings_StatusError" xml:space="preserve"><value>오류</value></data>
+  <data name="Settings_SourceModels" xml:space="preserve"><value>모델 {0}개</value></data>
+  <data name="Settings_SourceCached" xml:space="preserve"><value> · 캐시 사용 (API 호출 없음)</value></data>
+  <data name="Category_GapNote" xml:space="preserve"><value>최근 {0}일 안에 출시된 모델 {1}개는 이 분야 점수가 아직 없어 순위에 없습니다: {2}</value></data>
+  <data name="Settings_DataAsOfSource" xml:space="preserve"><value>데이터 기준일 {0} (소스에 적힌 날짜, {1}일 전)</value></data>
+  <data name="Settings_DataAsOfFetch" xml:space="preserve"><value>데이터 기준일 {0} (받아 온 날, {1}일 전)</value></data>
+  <data name="Settings_StaleExcluded" xml:space="preserve"><value>{0}일 넘게 새 데이터가 없어 이 경고와 함께 보여 주고, 점수·추천 계산에서는 뺍니다.</value></data>
+  <data name="Settings_StaleIncluded" xml:space="preserve"><value>{0}일 넘게 새 데이터가 없지만 위 옵션이 켜져 있어 점수 계산에 넣고 있습니다.</value></data>
+  <data name="Settings_IncludeStale" xml:space="preserve"><value>오래된 소스도 점수·추천에 사용</value></data>
+  <data name="Settings_IncludeStaleHelp" xml:space="preserve"><value>기본은 꺼짐. 90일 넘게 새 데이터가 없는 소스는 계산에서 빼고, 대시보드에는 그 소스를 넣었을 때의 1위를 옆에 보여 줍니다.</value></data>
+  <data name="Reason_NewEntry" xml:space="preserve"><value>새 1위는 이전에 점수가 없었음 (새 모델 또는 새로 붙은 데이터)</value></data>
+  <data name="Reason_PreviousUnscored" xml:space="preserve"><value>{0} 의 점수가 빠짐 (소스 데이터 누락)</value></data>
+  <data name="Reason_RuleChanged" xml:space="preserve"><value>데이터가 아니라 계산 기준이 바뀜 (오래된 소스 제외 또는 가중치)</value></data>
+  <data name="Reason_MetricShift" xml:space="preserve"><value>바뀐 지표 {0}: {1} {2}→{3}, {4} {5}→{6}</value></data>
+  <data name="Stale_Excluded" xml:space="preserve"><value>{0} 데이터가 {1}일 넘게 갱신되지 않아 이 점수 계산에서 뺐습니다.</value></data>
+  <data name="Stale_Shadow" xml:space="preserve"><value>포함하면 1위: {0}.</value></data>
+  <data name="Stale_ShadowSame" xml:space="preserve"><value>포함해도 1위는 같습니다.</value></data>
+  <data name="Col_Disagree" xml:space="preserve"><value>불일치</value></data>
+  <data name="Disagree_Price" xml:space="preserve"><value>가격 불일치: Artificial Analysis {0} · OpenRouter {1} (100만 토큰당, {2}% 차이)</value></data>
+  <data name="Disagree_Rank" xml:space="preserve"><value>순위 불일치: 벤치마크(AA 지능) 백분위 {0} · 사람 선호(Arena) 백분위 {1}, {2}점 차이</value></data>
+  <data name="Plan_RemoteOk" xml:space="preserve"><value>구독 목록을 {0}에 받았습니다 (다음 실행부터 적용).</value></data>
+  <data name="Plan_RemoteFail" xml:space="preserve"><value>최신 구독 목록을 받지 못해 저장된 목록을 씁니다: {0}</value></data>
+  <data name="Plan_RemoteInUse" xml:space="preserve"><value>내려받은 구독 목록을 쓰는 중입니다.</value></data>
+  <data name="Plan_BuiltInUse" xml:space="preserve"><value>내장 구독 목록을 쓰는 중입니다.</value></data>
+  <data name="About_InstallUpdate" xml:space="preserve"><value>지금 설치하고 다시 시작</value></data>
+  <data name="About_Installing" xml:space="preserve"><value>업데이트를 받는 중…</value></data>
+  <data name="Settings_AutoUpdate" xml:space="preserve"><value>업데이트 자동으로 받기 (설치판, 다음 실행 때 적용)</value></data>
+  <data name="Backup_Title" xml:space="preserve"><value>백업</value></data>
+  <data name="Backup_Help" xml:space="preserve"><value>모든 데이터(모델·이력·구독·설정)를 파일 하나로 저장하거나 그 파일로 되돌립니다. API 키는 들어가지 않습니다.</value></data>
+  <data name="Backup_Export" xml:space="preserve"><value>백업 내보내기…</value></data>
+  <data name="Backup_Import" xml:space="preserve"><value>백업에서 되돌리기…</value></data>
+  <data name="Backup_Exported" xml:space="preserve"><value>백업을 저장했습니다: {0}</value></data>
+  <data name="Backup_Imported" xml:space="preserve"><value>되돌렸습니다. 이전 데이터는 데이터 폴더에 llmpulse.db.before-restore 로 남겨 두었습니다.</value></data>
+  <data name="Backup_Rejected" xml:space="preserve"><value>이 파일로는 되돌릴 수 없어 아무것도 바꾸지 않았습니다: {0}</value></data>
+  <data name="Backup_ConfirmImport" xml:space="preserve"><value>현재 데이터를 이 백업으로 모두 바꿀까요? 현재 데이터는 llmpulse.db.before-restore 로 남겨 둡니다.</value></data>
+  <data name="About_Manual" xml:space="preserve"><value>사용자 매뉴얼 (PDF)</value></data>
+</root>

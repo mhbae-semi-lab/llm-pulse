@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Nav_Dashboard" xml:space="preserve"><value>仪表盘</value></data>
+  <data name="Nav_Leaderboard" xml:space="preserve"><value>排行榜</value></data>
+  <data name="Nav_Metrics" xml:space="preserve"><value>指标说明</value></data>
+  <data name="Nav_Settings" xml:space="preserve"><value>设置</value></data>
+  <data name="Nav_About" xml:space="preserve"><value>关于</value></data>
+  <data name="Search_Placeholder" xml:space="preserve"><value>搜索模型或厂商</value></data>
+  <data name="Action_Refresh" xml:space="preserve"><value>刷新</value></data>
+  <data name="Action_Language" xml:space="preserve"><value>语言</value></data>
+  <data name="Action_Theme" xml:space="preserve"><value>切换浅色/深色主题</value></data>
+  <data name="Action_MetricInfo" xml:space="preserve"><value>关于此指标</value></data>
+  <data name="Action_Save" xml:space="preserve"><value>保存</value></data>
+  <data name="Fresh_NoData" xml:space="preserve"><value>暂无数据</value></data>
+  <data name="Fresh_Updated" xml:space="preserve"><value>更新于 {0}</value></data>
+  <data name="Fresh_Stale" xml:space="preserve"><value>已过期（超过 48 小时）· {0}</value></data>
+  <data name="Status_Cooldown" xml:space="preserve"><value>刚刚刷新过，请约 {0} 分钟后再试。</value></data>
+  <data name="Status_Refreshing" xml:space="preserve"><value>正在刷新…</value></data>
+  <data name="Status_RefreshOk" xml:space="preserve"><value>完成。数据库中共有 {0} 个模型。</value></data>
+  <data name="Status_RefreshError" xml:space="preserve"><value>数据源“{0}”失败：{1}</value></data>
+  <data name="Dashboard_Title" xml:space="preserve"><value>今日推荐</value></data>
+  <data name="Dashboard_Summary" xml:space="preserve"><value>今日新增 {0} 个模型，较上次快照有 {1} 个第一名变化。</value></data>
+  <data name="Dashboard_EmptyTitle" xml:space="preserve"><value>暂无数据</value></data>
+  <data name="Dashboard_EmptyBody" xml:space="preserve"><value>请先在“设置”中填入 Artificial Analysis API 密钥，然后点击刷新。每日 08:00 自动刷新可稍后设置。</value></data>
+  <data name="Dashboard_NoCategoryData" xml:space="preserve"><value>此分类的数据不足。</value></data>
+  <data name="Card_Best" xml:space="preserve"><value>最佳性能</value></data>
+  <data name="Card_Value" xml:space="preserve"><value>最佳性价比</value></data>
+  <data name="Card_Score" xml:space="preserve"><value>得分</value></data>
+  <data name="Card_ViewRanking" xml:space="preserve"><value>详情 →</value></data>
+  <data name="Rationale_Best" xml:space="preserve"><value>{0} 第一名：得分 {1}，在 {2} 个有得分的模型中排名第一。</value></data>
+  <data name="Rationale_BestRaw" xml:space="preserve"><value>{0} 第一名：{1}，在 {2} 个有数据的模型中排名第一。</value></data>
+  <data name="Rationale_Value" xml:space="preserve"><value>{0} 得分 {1}（为最高分 {3} 的 {2}），混合价格 {4}/百万 token —— 在达到最高分 {5} 以上的模型中最便宜。</value></data>
+  <data name="Badge_TopChanged" xml:space="preserve"><value>第一名已更换（原为 {0}）</value></data>
+  <data name="Leaderboard_Title" xml:space="preserve"><value>排行榜</value></data>
+  <data name="Leaderboard_AllVendors" xml:space="preserve"><value>所有厂商</value></data>
+  <data name="Leaderboard_Vendor" xml:space="preserve"><value>厂商</value></data>
+  <data name="Leaderboard_Count" xml:space="preserve"><value>{0} / {1} 个模型</value></data>
+  <data name="Leaderboard_HeatHint" xml:space="preserve"><value>底色深浅 = 分类得分（数字始终显示）</value></data>
+  <data name="Col_Model" xml:space="preserve"><value>模型</value></data>
+  <data name="Col_Vendor" xml:space="preserve"><value>厂商</value></data>
+  <data name="Col_Price" xml:space="preserve"><value>混合价格 $/百万 ↓</value></data>
+  <data name="Col_Speed" xml:space="preserve"><value>tok/s ↑</value></data>
+  <data name="Col_Ttft" xml:space="preserve"><value>TTFT 秒 ↓</value></data>
+  <data name="Col_Release" xml:space="preserve"><value>发布日期</value></data>
+  <data name="Metrics_Title" xml:space="preserve"><value>指标说明</value></data>
+  <data name="Metric_Method" xml:space="preserve"><value>测量方式</value></data>
+  <data name="Metric_Scale" xml:space="preserve"><value>刻度</value></data>
+  <data name="Metric_UsedIn" xml:space="preserve"><value>用于分类</value></data>
+  <data name="Metric_Caveats" xml:space="preserve"><value>注意事项</value></data>
+  <data name="Metric_Source" xml:space="preserve"><value>来源：</value></data>
+  <data name="Metric_Updated" xml:space="preserve"><value>最近更新：</value></data>
+  <data name="Metric_ScaleIndex" xml:space="preserve"><value>0–100 指数（{0}），直接使用</value></data>
+  <data name="Metric_ScalePercentile" xml:space="preserve"><value>{0}，转换为 0–100 百分位排名</value></data>
+  <data name="Metric_HigherBetter" xml:space="preserve"><value>↑ 越高越好</value></data>
+  <data name="Metric_LowerBetter" xml:space="preserve"><value>↓ 越低越好</value></data>
+  <data name="Scoring_Title" xml:space="preserve"><value>得分如何计算</value></data>
+  <data name="Scoring_Percentile" xml:space="preserve"><value>原始数值始终保留并显示。不同刻度的指标按其在拥有该指标的模型中的百分位排名进行比较（越低越好的指标会反转）。</value></data>
+  <data name="Scoring_Index" xml:space="preserve"><value>智能指数等 0–100 综合指数按原值使用，不会重复转换为百分位。</value></data>
+  <data name="Scoring_Missing" xml:space="preserve"><value>分类得分 = 其指标的加权平均。缺失的指标会重新分配权重；若分类指标不足 50%，则不显示得分（我们从不猜测）。</value></data>
+  <data name="Scoring_Best" xml:space="preserve"><value>最佳性能 = 该分类第一名。</value></data>
+  <data name="Scoring_Value" xml:space="preserve"><value>最佳性价比 = 得分不低于最高分容忍度（默认 90%）的模型中混合价格最低者。不使用简单的 得分/价格 比值，因为它总是偏向便宜但较弱的模型。</value></data>
+  <data name="Scoring_Example" xml:space="preserve"><value>以您的容忍度 {0} 为例：若最高分为 70，则得分不低于 70 × {0} 的模型为候选，其中最便宜的将被推荐。</value></data>
+  <data name="Scoring_Limits" xml:space="preserve"><value>基准测试可能被污染或由厂商自报，基准得分不等同于您实际任务中的表现。</value></data>
+  <data name="Settings_Title" xml:space="preserve"><value>设置</value></data>
+  <data name="Settings_Tolerance" xml:space="preserve"><value>性价比容忍度</value></data>
+  <data name="Settings_ToleranceHelp" xml:space="preserve"><value>得分不低于最高分该比例的模型会被纳入“最佳性价比”候选。</value></data>
+  <data name="Settings_ToleranceValue" xml:space="preserve"><value>最高分的 {0}</value></data>
+  <data name="Settings_ApiKey" xml:space="preserve"><value>Artificial Analysis API 密钥</value></data>
+  <data name="Settings_ApiKeyHelp" xml:space="preserve"><value>按 Windows 用户加密存储（DPAPI）。绝不写入设置文件或日志。</value></data>
+  <data name="Settings_KeyEmpty" xml:space="preserve"><value>请先输入密钥。</value></data>
+  <data name="Settings_KeySaved" xml:space="preserve"><value>密钥已保存。</value></data>
+  <data name="Settings_KeyStored" xml:space="preserve"><value>已存储密钥。</value></data>
+  <data name="Settings_KeyMissing" xml:space="preserve"><value>尚未存储密钥。</value></data>
+  <data name="Settings_Refresh" xml:space="preserve"><value>数据刷新</value></data>
+  <data name="Settings_RefreshHelp" xml:space="preserve"><value>为保护 API 配额，手动刷新限制为每 10 分钟一次。</value></data>
+  <data name="Settings_Sources" xml:space="preserve"><value>数据源状态</value></data>
+  <data name="Settings_LastSuccess" xml:space="preserve"><value>最近成功</value></data>
+  <data name="About_Title" xml:space="preserve"><value>关于</value></data>
+  <data name="About_Data" xml:space="preserve"><value>数据来源</value></data>
+  <data name="About_DataBy" xml:space="preserve"><value>数据：</value></data>
+  <data name="About_Disclaimer" xml:space="preserve"><value>基准测试的局限</value></data>
+  <data name="About_DisclaimerBody" xml:space="preserve"><value>得分来自第三方基准测试，可能被污染、由厂商自报，也未必反映您的工作负载。请将其视为参考，而非保证。</value></data>
+  <data name="About_Privacy" xml:space="preserve"><value>隐私</value></data>
+  <data name="About_PrivacyBody" xml:space="preserve"><value>所有数据仅存储在本机(%LOCALAPPDATA%\LLMPulse)。网络访问仅限于获取公开基准数据(Artificial Analysis 使用您的 API 密钥)、从本应用的 GitHub 仓库获取订阅方案列表,以及向 GitHub Releases 检查更新(安装版自动检查,可在设置中关闭)。不会发送任何使用记录或个人信息。</value></data>
+  <data name="Footer_Data" xml:space="preserve"><value>数据：</value></data>
+  <data name="Footer_Disclaimer" xml:space="preserve"><value>基准测试仅供参考，不是保证。</value></data>
+  <data name="Card_Top" xml:space="preserve"><value>排名第一</value></data>
+  <data name="Action_Back" xml:space="preserve"><value>← 返回</value></data>
+  <data name="Action_OpenLeaderboard" xml:space="preserve"><value>在排行榜中查看</value></data>
+  <data name="Chart_TopRanking" xml:space="preserve"><value>前列排名</value></data>
+  <data name="Chart_PriceVsScore" xml:space="preserve"><value>价格与得分</value></data>
+  <data name="Chart_ParetoHelp" xml:space="preserve"><value>线上的菱形是帕累托前沿：没有更便宜且得分更高的模型。■ 最佳性能，● 最佳性价比。价格轴为对数刻度。</value></data>
+  <data name="Chart_ParetoLegend" xml:space="preserve"><value>帕累托前沿</value></data>
+  <data name="Chart_UsedMetrics" xml:space="preserve"><value>此分类使用的指标</value></data>
+  <data name="Chart_Weight" xml:space="preserve"><value>权重</value></data>
+  <data name="Chart_ScoreAxis" xml:space="preserve"><value>分类得分 (0–100)</value></data>
+  <data name="Chart_PriceAxis" xml:space="preserve"><value>混合价格 $/百万 token（对数）</value></data>
+  <data name="Compare_Title" xml:space="preserve"><value>模型对比</value></data>
+  <data name="Compare_Empty" xml:space="preserve"><value>在排行榜中选择 1–4 个模型（Ctrl/Shift+点击），然后点击对比。双击某行可打开单个模型。</value></data>
+  <data name="Compare_Radar" xml:space="preserve"><value>各分类得分</value></data>
+  <data name="Compare_RadarHelp" xml:space="preserve"><value>没有数据的分类按 0 绘制。</value></data>
+  <data name="Compare_Trend" xml:space="preserve"><value>趋势</value></data>
+  <data name="Compare_TrendMetric" xml:space="preserve"><value>趋势指标</value></data>
+  <data name="Compare_TrendFew" xml:space="preserve"><value>趋势至少需要两个每日快照，随着每日刷新的积累会逐渐完善。</value></data>
+  <data name="Compare_Scores" xml:space="preserve"><value>分类得分 (0–100)</value></data>
+  <data name="Compare_Raw" xml:space="preserve"><value>原始数值</value></data>
+  <data name="Leaderboard_CompareHint" xml:space="preserve"><value>选择要对比的模型</value></data>
+  <data name="Leaderboard_Compare" xml:space="preserve"><value>对比所选 {0} 个</value></data>
+  <data name="Leaderboard_CompareTooMany" xml:space="preserve"><value>最多选择 {0} 个模型</value></data>
+  <data name="Nav_Matching" xml:space="preserve"><value>模型匹配</value></data>
+  <data name="Matching_Title" xml:space="preserve"><value>模型匹配</value></data>
+  <data name="Matching_Intro" xml:space="preserve"><value>辅助数据源（OpenRouter、Aider、Arena）使用各自的模型名称。仅当恰好只有一个候选时，名称才会自动匹配到 Artificial Analysis 模型；其余需要您手动关联。关联后的数据会补充上下文长度、编程与人类偏好结果，并填补缺失的价格。</value></data>
+  <data name="Matching_Empty" xml:space="preserve"><value>暂无辅助数据。请刷新以加载 OpenRouter、Aider 和 Arena。</value></data>
+  <data name="Matching_Summary" xml:space="preserve"><value>已匹配 {0} 个 · 需匹配 {1} 个</value></data>
+  <data name="Matching_Filter" xml:space="preserve"><value>筛选</value></data>
+  <data name="Matching_Filter_Unmatched" xml:space="preserve"><value>需要匹配</value></data>
+  <data name="Matching_Filter_Matched" xml:space="preserve"><value>已匹配</value></data>
+  <data name="Matching_Filter_All" xml:space="preserve"><value>全部</value></data>
+  <data name="Matching_Search" xml:space="preserve"><value>搜索来源模型</value></data>
+  <data name="Matching_Truncated" xml:space="preserve"><value>仅显示前 {0} 个，共 {1} 个。请使用搜索缩小范围。</value></data>
+  <data name="Matching_Status_Needed" xml:space="preserve"><value>需要匹配</value></data>
+  <data name="Matching_Context" xml:space="preserve"><value>上下文 {0}K</value></data>
+  <data name="Matching_Price" xml:space="preserve"><value>输入 {0} · 输出 {1} /百万</value></data>
+  <data name="Matching_SelectItem" xml:space="preserve"><value>请在左侧选择一项，将其关联到某个模型。</value></data>
+  <data name="Matching_Suggestions" xml:space="preserve"><value>建议（点击关联）</value></data>
+  <data name="Matching_NoSuggestions" xml:space="preserve"><value>未找到相似名称。</value></data>
+  <data name="Matching_PickModel" xml:space="preserve"><value>或手动选择模型</value></data>
+  <data name="Matching_ModelSearch" xml:space="preserve"><value>搜索模型</value></data>
+  <data name="Matching_Link" xml:space="preserve"><value>关联到所选模型</value></data>
+  <data name="Matching_Unlink" xml:space="preserve"><value>取消关联</value></data>
+  <data name="Matching_Linked" xml:space="preserve"><value>已关联 {0} → {1}</value></data>
+  <data name="Matching_Unlinked" xml:space="preserve"><value>已取消 {0} 的关联</value></data>
+  <data name="Settings_Schedule" xml:space="preserve"><value>自动刷新</value></data>
+  <data name="Settings_ScheduleHelp" xml:space="preserve"><value>注册一个 Windows 任务计划程序任务，在所选时间于后台刷新数据，即使应用已关闭。若电脑当时关机，开机后会补跑。应用打开时也会自行补刷。</value></data>
+  <data name="Settings_RefreshTime" xml:space="preserve"><value>刷新时间 (HH:mm)</value></data>
+  <data name="Settings_Register" xml:space="preserve"><value>注册</value></data>
+  <data name="Settings_Unregister" xml:space="preserve"><value>取消注册</value></data>
+  <data name="Settings_TimeInvalid" xml:space="preserve"><value>请输入类似 08:00 的时间。</value></data>
+  <data name="Settings_ScheduleRegistered" xml:space="preserve"><value>已注册：每天 {0} 刷新。</value></data>
+  <data name="Settings_ScheduleNotRegistered" xml:space="preserve"><value>未注册。仅在应用打开时刷新数据。</value></data>
+  <data name="Settings_ScheduleFailed" xml:space="preserve"><value>无法更改计划：{0}</value></data>
+  <data name="Settings_TrayResident" xml:space="preserve"><value>关闭窗口后继续在托盘中运行</value></data>
+  <data name="Settings_Notify" xml:space="preserve"><value>第一名变化或出现新模型时通知我</value></data>
+  <data name="Tray_Open" xml:space="preserve"><value>打开 LLM Pulse</value></data>
+  <data name="Tray_Refresh" xml:space="preserve"><value>立即刷新</value></data>
+  <data name="Tray_Quit" xml:space="preserve"><value>退出</value></data>
+  <data name="Toast_Title" xml:space="preserve"><value>LLM Pulse</value></data>
+  <data name="Toast_Body" xml:space="preserve"><value>{0} 个分类的第一名发生变化 · 新增 {1} 个模型</value></data>
+  <data name="Card_MyPlan" xml:space="preserve"><value>我的订阅中最佳</value></data>
+  <data name="Leaderboard_MyPlanOnly" xml:space="preserve"><value>仅我的订阅</value></data>
+  <data name="Settings_OpenDataFolder" xml:space="preserve"><value>打开数据文件夹</value></data>
+  <data name="Plan_Free" xml:space="preserve"><value>免费</value></data>
+  <data name="Plan_PerMonth" xml:space="preserve"><value>${0}/月</value></data>
+  <data name="Plan_PerToken" xml:space="preserve"><value>按 token 计费</value></data>
+  <data name="Plan_Detail" xml:space="preserve"><value>{0} · 匹配 {1} 个模型 · 确认于 {2}</value></data>
+  <data name="Plan_LoadWarning" xml:space="preserve"><value>无法使用您的订阅文件，已显示内置订阅。{0}</value></data>
+  <data name="Plan_UserFile" xml:space="preserve"><value>正在使用您自定义的 {0}。</value></data>
+  <data name="Plan_UserFileHint" xml:space="preserve"><value>要编辑订阅，请在数据文件夹中放置 {0}（格式与内置列表相同），它将替换内置订阅。</value></data>
+  <data name="Matching_Aider" xml:space="preserve"><value>Aider 多语言 {0}%</value></data>
+  <data name="Action_ExportCsv" xml:space="preserve"><value>导出 CSV</value></data>
+  <data name="Action_ExportPng" xml:space="preserve"><value>将此页面保存为 PNG</value></data>
+  <data name="Nav_Plans" xml:space="preserve"><value>我的订阅</value></data>
+  <data name="Plan_OnlyTip" xml:space="preserve"><value>仅显示我的订阅中可用的模型</value></data>
+  <data name="Plans_Title" xml:space="preserve"><value>我的订阅</value></data>
+  <data name="Plans_Help" xml:space="preserve"><value>勾选你正在使用的订阅，仪表盘和图表将只按实际可用的模型显示。可以记录用量上限备忘，并在默认规则不准确时手动修正各模型的可用性。</value></data>
+  <data name="Plans_Profile" xml:space="preserve"><value>配置档案</value></data>
+  <data name="Plans_ProfileName" xml:space="preserve"><value>档案名称</value></data>
+  <data name="Plans_ProfileSave" xml:space="preserve"><value>另存为档案</value></data>
+  <data name="Plans_ProfileDelete" xml:space="preserve"><value>删除</value></data>
+  <data name="Plans_RunWizard" xml:space="preserve"><value>重新运行设置向导</value></data>
+  <data name="Plans_Limit" xml:space="preserve"><value>用量上限备忘</value></data>
+  <data name="Plans_LimitCap" xml:space="preserve"><value>上限</value></data>
+  <data name="Plans_LimitPeriod" xml:space="preserve"><value>周期</value></data>
+  <data name="Plans_LimitNote" xml:space="preserve"><value>备注（例如 500 次快速请求）</value></data>
+  <data name="Plans_Period5h" xml:space="preserve"><value>每 5 小时</value></data>
+  <data name="Plans_PeriodDay" xml:space="preserve"><value>每天</value></data>
+  <data name="Plans_PeriodWeek" xml:space="preserve"><value>每周</value></data>
+  <data name="Plans_PeriodMonth" xml:space="preserve"><value>每月</value></data>
+  <data name="Plans_UsageReset" xml:space="preserve"><value>重置</value></data>
+  <data name="Plans_NoUsage" xml:space="preserve"><value>尚未记录用量</value></data>
+  <data name="Plans_UsageCap" xml:space="preserve"><value>已用 {0} / {1}</value></data>
+  <data name="Plans_UsageNoCap" xml:space="preserve"><value>已用 {0}</value></data>
+  <data name="Plans_Models" xml:space="preserve"><value>此订阅的模型</value></data>
+  <data name="Plans_ModelsHelp" xml:space="preserve"><value>包含 = 可用。受限 = 可用但额度紧张（标记 ⚠）。不可用 = 此订阅中没有。你的修改优先于默认规则。</value></data>
+  <data name="Plans_ModelFilter" xml:space="preserve"><value>筛选模型</value></data>
+  <data name="Plans_ModelSummary" xml:space="preserve"><value>包含 {0} · 受限 {1} · 已修改 {2}</value></data>
+  <data name="Plans_Access" xml:space="preserve"><value>可用性</value></data>
+  <data name="Plans_AccessNone" xml:space="preserve"><value>不可用</value></data>
+  <data name="Plans_AccessLimited" xml:space="preserve"><value>受限</value></data>
+  <data name="Plans_AccessFull" xml:space="preserve"><value>包含</value></data>
+  <data name="Plans_AccessReset" xml:space="preserve"><value>默认</value></data>
+  <data name="Wizard_Title" xml:space="preserve"><value>欢迎使用 LLM Pulse</value></data>
+  <data name="Wizard_Step" xml:space="preserve"><value>第 {0} / {1} 步</value></data>
+  <data name="Wizard_KeyTitle" xml:space="preserve"><value>1. 数据源密钥</value></data>
+  <data name="Wizard_KeyBody" xml:space="preserve"><value>获取实时数据需要 Artificial Analysis API 密钥。密钥仅加密保存在本机。可以先跳过，之后在设置中添加。</value></data>
+  <data name="Wizard_PlansTitle" xml:space="preserve"><value>2. 你使用哪些订阅？</value></data>
+  <data name="Wizard_PlansBody" xml:space="preserve"><value>已预先选中 Cursor、Claude 和 ChatGPT，可按需修改。各模型的细节之后可在“我的订阅”中调整。</value></data>
+  <data name="Wizard_DoneTitle" xml:space="preserve"><value>3. 准备就绪</value></data>
+  <data name="Wizard_DoneBody" xml:space="preserve"><value>你的选择</value></data>
+  <data name="Wizard_DoneNote" xml:space="preserve"><value>如果已保存密钥，点击完成后将开始首次数据刷新。</value></data>
+  <data name="Wizard_OnlyMine" xml:space="preserve"><value>仅显示我可用的模型（可随时在顶部栏切换）</value></data>
+  <data name="Wizard_NoPlans" xml:space="preserve"><value>未选择订阅</value></data>
+  <data name="Wizard_Next" xml:space="preserve"><value>下一步</value></data>
+  <data name="Wizard_Back" xml:space="preserve"><value>上一步</value></data>
+  <data name="Wizard_Finish" xml:space="preserve"><value>完成</value></data>
+  <data name="Wizard_Skip" xml:space="preserve"><value>跳过</value></data>
+  <data name="Pick_Title" xml:space="preserve"><value>今日编程推荐</value></data>
+  <data name="Pick_TitlePlan" xml:space="preserve"><value>今日编程推荐 · 我的订阅内</value></data>
+  <data name="Pick_Why" xml:space="preserve"><value>原因：{0}</value></data>
+  <data name="Pick_Alternatives" xml:space="preserve"><value>备选</value></data>
+  <data name="Pick_Tune" xml:space="preserve"><value>调整组合 →</value></data>
+  <data name="Changes_Title" xml:space="preserve"><value>有什么变化</value></data>
+  <data name="Changes_Since" xml:space="preserve"><value>对比 {0}</value></data>
+  <data name="Changes_Empty" xml:space="preserve"><value>与上次更新相比，没有明显的排名变化。</value></data>
+  <data name="Change_New" xml:space="preserve"><value>新模型：{0}</value></data>
+  <data name="Change_NewRanked" xml:space="preserve"><value>新模型：{0} 在{1}中排名第 {2}</value></data>
+  <data name="Change_Top" xml:space="preserve"><value>{1}：{0} 超越 {2} 升至第 1</value></data>
+  <data name="Change_Entered" xml:space="preserve"><value>{1}：{0} 以第 {2} 名进入前 10</value></data>
+  <data name="Change_Up" xml:space="preserve"><value>{1}：{0} 从第 {2} 升至第 {3}</value></data>
+  <data name="Change_Down" xml:space="preserve"><value>{1}：{0} 从第 {2} 降至第 {3}</value></data>
+  <data name="Weights_Help" xml:space="preserve"><value>拖动滑块设置各指标的权重。0 表示不计入此组合。百分比表示该指标在最终得分中的占比。</value></data>
+  <data name="Weights_Reset" xml:space="preserve"><value>恢复默认</value></data>
+  <data name="Weights_Custom" xml:space="preserve"><value>正在使用自定义权重。此组合的第 1 名变化提醒已关闭。</value></data>
+  <data name="Plans_BreakEven" xml:space="preserve"><value>盈亏平衡：每月 ${0} ≈ 通过 API 使用 {2} 约 {1}M 个 token（混合价 {3}/1M）。</value></data>
+  <data name="Plans_EconTitle" xml:space="preserve"><value>订阅与 API 成本对比</value></data>
+  <data name="Plans_Econ" xml:space="preserve"><value>你的订阅合计每月 ${0}。同样 {1}M 个 token 通过 API 使用 {2}，每月约 ${3}。</value></data>
+  <data name="Plans_EconSubCheaper" xml:space="preserve"><value>订阅每月便宜约 ${0}。</value></data>
+  <data name="Plans_EconApiCheaper" xml:space="preserve"><value>API 每月便宜约 ${0}。</value></data>
+  <data name="Plans_EconNote" xml:space="preserve"><value>粗略估算：采用你订阅内最佳模型的混合价（输入:输出 = 3:1），未考虑缓存、折扣和订阅用量上限。</value></data>
+  <data name="Plans_EconUsage" xml:space="preserve"><value>我的月用量（百万 token）</value></data>
+  <data name="Leaderboard_FavoritesOnly" xml:space="preserve"><value>仅收藏</value></data>
+  <data name="Leaderboard_Columns" xml:space="preserve"><value>列</value></data>
+  <data name="Leaderboard_FavToggle" xml:space="preserve"><value>添加或取消收藏</value></data>
+  <data name="Card_Trend" xml:space="preserve"><value>7日趋势</value></data>
+  <data name="Card_DeltaTip" xml:space="preserve"><value>与上次快照相比的排名变化</value></data>
+  <data name="Pinned_Title" xml:space="preserve"><value>我的收藏</value></data>
+  <data name="Chart_PlanLegend" xml:space="preserve"><value>绿色 = 包含在我的订阅中 · 白色边框 = 收藏</value></data>
+  <data name="Change_PriceDown" xml:space="preserve"><value>{0}:降价 {1} → {2}(−{3}%)</value></data>
+  <data name="Change_PriceUp" xml:space="preserve"><value>{0}:涨价 {1} → {2}(+{3}%)</value></data>
+  <data name="Limit_Warn" xml:space="preserve"><value>{0}:已用 {1}/{2}({3}%),额度即将用完,可考虑其他模型或 API。</value></data>
+  <data name="Limit_Reached" xml:space="preserve"><value>{0}:额度已用完({1}/{2})。重置前请使用其他模型或 API。</value></data>
+  <data name="About_Shortcuts" xml:space="preserve"><value>快捷键</value></data>
+  <data name="About_ShortcutsBody" xml:space="preserve"><value>Ctrl+K  搜索
+F5  刷新
+Ctrl+P  仅看我的订阅
+Ctrl+1…9  切换页面
+Ctrl +/-, 0  文字大小
+Ctrl+Alt+U  用量 +1(全局)
+Ctrl+Alt+L  迷你小组件(全局)</value></data>
+  <data name="Settings_StartWithWindows" xml:space="preserve"><value>随 Windows 启动(在托盘静默运行并自动刷新)</value></data>
+  <data name="Purpose_Label" xml:space="preserve"><value>您需要什么?</value></data>
+  <data name="Purpose_Coding" xml:space="preserve"><value>编程</value></data>
+  <data name="Purpose_Korean" xml:space="preserve"><value>韩语</value></data>
+  <data name="Purpose_Fast" xml:space="preserve"><value>快速响应</value></data>
+  <data name="Purpose_Balanced" xml:space="preserve"><value>综合</value></data>
+  <data name="Purpose_Cheap" xml:space="preserve"><value>便宜又够好</value></data>
+  <data name="Pick_TitleFor" xml:space="preserve"><value>今日推荐 · {0}</value></data>
+  <data name="Pick_TitleForPlan" xml:space="preserve"><value>今日推荐 · {0} · 我的订阅内</value></data>
+  <data name="Table_Title" xml:space="preserve"><value>各领域一览</value></data>
+  <data name="Table_Category" xml:space="preserve"><value>领域</value></data>
+  <data name="Model_Context" xml:space="preserve"><value>上下文</value></data>
+  <data name="Model_Rank" xml:space="preserve"><value>第 {0} / {1}</value></data>
+  <data name="Model_Scores" xml:space="preserve"><value>各领域得分与排名</value></data>
+  <data name="Model_Plans" xml:space="preserve"><value>我的订阅中的可用性</value></data>
+  <data name="Model_NoPlans" xml:space="preserve"><value>在“我的订阅”页面选择订阅后,可查看此模型可在何处使用。</value></data>
+  <data name="Model_PriceHistory" xml:space="preserve"><value>价格走势(每百万 token)</value></data>
+  <data name="Model_PriceHistoryNote" xml:space="preserve"><value>{0} 条记录:{1} → {2}</value></data>
+  <data name="Model_NotFound" xml:space="preserve"><value>当前数据中没有此模型。</value></data>
+  <data name="Model_OpenLeaderboard" xml:space="preserve"><value>打开排行榜</value></data>
+  <data name="Col_Access" xml:space="preserve"><value>我的订阅</value></data>
+  <data name="Leaderboard_RowHint" xml:space="preserve"><value>双击一行查看详情。</value></data>
+  <data name="Menu_More" xml:space="preserve"><value>更多</value></data>
+  <data name="Menu_TextSize" xml:space="preserve"><value>文字大小 (Ctrl +/-)</value></data>
+  <data name="Size_Small" xml:space="preserve"><value>小</value></data>
+  <data name="Size_Normal" xml:space="preserve"><value>标准</value></data>
+  <data name="Size_Large" xml:space="preserve"><value>大</value></data>
+  <data name="Size_XLarge" xml:space="preserve"><value>特大</value></data>
+  <data name="Time_Soon" xml:space="preserve"><value>即将</value></data>
+  <data name="Time_DH" xml:space="preserve"><value>{0}天{1}小时</value></data>
+  <data name="Time_HM" xml:space="preserve"><value>{0}小时{1}分</value></data>
+  <data name="Time_M" xml:space="preserve"><value>{0}分</value></data>
+  <data name="Limit_ResetsIn" xml:space="preserve"><value>{0}后重置</value></data>
+  <data name="Settings_NotifyTop" xml:space="preserve"><value>第一名变化与新模型</value></data>
+  <data name="Settings_NotifyPrice" xml:space="preserve"><value>价格变动 5% 以上</value></data>
+  <data name="Settings_NotifyLimit" xml:space="preserve"><value>订阅用量达到 80% / 100%</value></data>
+  <data name="Toast_PriceTitle" xml:space="preserve"><value>价格变动</value></data>
+  <data name="Toast_PriceBody" xml:space="preserve"><value>{0} 个模型价格变动 5% 以上。</value></data>
+  <data name="Toast_LimitTitle" xml:space="preserve"><value>订阅用量</value></data>
+  <data name="Toast_LimitWarn" xml:space="preserve"><value>{0}:已用 {1}%({2}/{3})。</value></data>
+  <data name="Toast_LimitFull" xml:space="preserve"><value>{0}:已达上限({1}/{2})。</value></data>
+  <data name="Tray_Widget" xml:space="preserve"><value>迷你小组件</value></data>
+  <data name="Tray_Tooltip_Ok" xml:space="preserve"><value>充足</value></data>
+  <data name="Widget_Usage" xml:space="preserve"><value>订阅用量</value></data>
+  <data name="Widget_Close" xml:space="preserve"><value>关闭</value></data>
+  <data name="Widget_NoLimits" xml:space="preserve"><value>在“我的订阅”页面设置用量上限后会显示在这里。</value></data>
+  <data name="Widget_Plus" xml:space="preserve"><value>用量 +1</value></data>
+  <data name="Settings_AutoClaude" xml:space="preserve"><value>根据本地 Claude Code 记录自动统计 Claude 用量</value></data>
+  <data name="Settings_AutoClaudeHelp" xml:space="preserve"><value>仅以只读方式读取本机 ~/.claude/projects 文件夹,统计已设置上限的 Claude 订阅在当前周期内的提示数。不会向任何地方发送数据;5 小时窗口按首个提示时间近似。</value></data>
+  <data name="Nav_History" xml:space="preserve"><value>历史</value></data>
+  <data name="History_Title" xml:space="preserve"><value>历史</value></data>
+  <data name="History_CompareTitle" xml:space="preserve"><value>对比两个日期</value></data>
+  <data name="History_From" xml:space="preserve"><value>起</value></data>
+  <data name="History_To" xml:space="preserve"><value>止</value></data>
+  <data name="History_Category" xml:space="preserve"><value>领域</value></data>
+  <data name="History_NeedTwo" xml:space="preserve"><value>每次刷新都会保存快照。积累到两个不同日期后即可对比。</value></data>
+  <data name="History_NoChanges" xml:space="preserve"><value>这两个日期之间没有排名或价格变化。</value></data>
+  <data name="History_New" xml:space="preserve"><value>新</value></data>
+  <data name="History_ColModel" xml:space="preserve"><value>模型</value></data>
+  <data name="History_ColRank" xml:space="preserve"><value>排名</value></data>
+  <data name="History_ColScore" xml:space="preserve"><value>得分</value></data>
+  <data name="History_ColPrice" xml:space="preserve"><value>价格(每百万)</value></data>
+  <data name="History_ReleaseTitle" xml:space="preserve"><value>模型发布时间线</value></data>
+  <data name="History_ReleaseHelp" xml:space="preserve"><value>按发布日期显示综合得分。金色表示发布时创下新高。</value></data>
+  <data name="History_NoRelease" xml:space="preserve"><value>当前数据中没有带发布日期的模型。</value></data>
+  <data name="History_Record" xml:space="preserve"><value>新纪录</value></data>
+  <data name="History_ColDate" xml:space="preserve"><value>发布日期</value></data>
+  <data name="History_ColVendor" xml:space="preserve"><value>厂商</value></data>
+  <data name="Chart_LogPrice" xml:space="preserve"><value>价格轴对数刻度</value></data>
+  <data name="Chart_ClickHint" xml:space="preserve"><value>点击圆点打开模型详情。绿色=我的订阅内,圆环=收藏。</value></data>
+  <data name="Chart_InPlanLegend" xml:space="preserve"><value>我的订阅内</value></data>
+  <data name="Preset_Label" xml:space="preserve"><value>我的预设</value></data>
+  <data name="Preset_Save" xml:space="preserve"><value>保存当前权重</value></data>
+  <data name="Preset_Delete" xml:space="preserve"><value>删除</value></data>
+  <data name="Preset_NewName" xml:space="preserve"><value>预设名称</value></data>
+  <data name="Compare_MonthlyCost" xml:space="preserve"><value>预计每月 API 费用({0}M token)</value></data>
+  <data name="Compare_TokensLabel" xml:space="preserve"><value>每月用量</value></data>
+  <data name="Compare_TokensUnit" xml:space="preserve"><value>百万 token(输入:输出 3:1)</value></data>
+  <data name="SrcErr_KeyMissing" xml:space="preserve"><value>⚠ 未设置 API 密钥。请在上方输入后刷新。</value></data>
+  <data name="SrcErr_KeyInvalid" xml:space="preserve"><value>⚠ 密钥被拒绝(无效或已撤销)。请输入新密钥。</value></data>
+  <data name="SrcErr_RateLimited" xml:space="preserve"><value>⚠ 已达到每日请求上限。请明天再试。</value></data>
+  <data name="SrcErr_Network" xml:space="preserve"><value>⚠ 网络问题。请检查连接后重试。</value></data>
+  <data name="SrcErr_Other" xml:space="preserve"><value>⚠ 刷新失败。详情见下方。</value></data>
+  <data name="About_Updates" xml:space="preserve"><value>版本与更新</value></data>
+  <data name="About_Version" xml:space="preserve"><value>版本 {0}</value></data>
+  <data name="About_CheckUpdate" xml:space="preserve"><value>检查更新</value></data>
+  <data name="About_OpenRelease" xml:space="preserve"><value>打开下载页面</value></data>
+  <data name="About_Checking" xml:space="preserve"><value>正在检查…</value></data>
+  <data name="About_UpToDate" xml:space="preserve"><value>已是最新版本。</value></data>
+  <data name="About_UpdateAvailable" xml:space="preserve"><value>有新版本 {0}。</value></data>
+  <data name="About_NoRelease" xml:space="preserve"><value>尚未找到已发布的版本。</value></data>
+  <data name="Plans_PlusOne" xml:space="preserve"><value>增加 1 次使用</value></data>
+  <data name="Plans_MinusOne" xml:space="preserve"><value>减少 1 次使用</value></data>
+  <data name="About_Author" xml:space="preserve"><value>作者</value></data>
+  <data name="About_AuthorName" xml:space="preserve"><value>作者:배민혁</value></data>
+  <data name="Crash_Body" xml:space="preserve"><value>发生意外错误。详细信息已保存到下方的日志文件。</value></data>
+  <data name="Leaderboard_PriceUpTo" xml:space="preserve"><value>≤ ${0} / 1M</value></data>
+  <data name="Leaderboard_NewBadge" xml:space="preserve"><value>NEW</value></data>
+  <data name="Leaderboard_AnyContext" xml:space="preserve"><value>不限上下文</value></data>
+  <data name="Leaderboard_NoScoreTip" xml:space="preserve"><value>暂无分数。{0} 可能尚未收录该模型,或名称未匹配。</value></data>
+  <data name="Leaderboard_NewTip" xml:space="preserve"><value>30天内发布</value></data>
+  <data name="Leaderboard_AnyPrice" xml:space="preserve"><value>不限价格</value></data>
+  <data name="Leaderboard_RecentOnly" xml:space="preserve"><value>近30天发布</value></data>
+  <data name="Leaderboard_ContextAtLeast" xml:space="preserve"><value>上下文 ≥ {0}</value></data>
+  <data name="Compare_DomainsHelp" xml:space="preserve"><value>Artificial Analysis 领域指数(0–100)。没有柱子表示该模型暂无分数。</value></data>
+  <data name="Compare_Domains" xml:space="preserve"><value>专业领域(AA 指数)</value></data>
+  <data name="Settings_ErrorDetail" xml:space="preserve"><value>详情:{0}</value></data>
+  <data name="Settings_StatusOk" xml:space="preserve"><value>成功</value></data>
+  <data name="Settings_StatusError" xml:space="preserve"><value>错误</value></data>
+  <data name="Settings_SourceModels" xml:space="preserve"><value>{0} 个模型</value></data>
+  <data name="Settings_SourceCached" xml:space="preserve"><value> · 使用缓存(未调用 API)</value></data>
+  <data name="Category_GapNote" xml:space="preserve"><value>最近 {0} 天内发布的 {1} 个模型在此分类暂无分数,因此未参与排名:{2}</value></data>
+  <data name="Settings_DataAsOfSource" xml:space="preserve"><value>数据日期 {0}(来源数据中的日期,{1} 天前)</value></data>
+  <data name="Settings_DataAsOfFetch" xml:space="preserve"><value>数据日期 {0}(获取日期,{1} 天前)</value></data>
+  <data name="Settings_StaleExcluded" xml:space="preserve"><value>超过 {0} 天没有新数据:显示此警告,并不计入分数和推荐。</value></data>
+  <data name="Settings_StaleIncluded" xml:space="preserve"><value>超过 {0} 天没有新数据,但由于上方选项已开启,仍计入分数。</value></data>
+  <data name="Settings_IncludeStale" xml:space="preserve"><value>在分数中使用过时来源</value></data>
+  <data name="Settings_IncludeStaleHelp" xml:space="preserve"><value>默认关闭。90 天没有新数据的来源不参与计算;仪表板仍会显示加入它时的第 1 名。</value></data>
+  <data name="Reason_NewEntry" xml:space="preserve"><value>新第 1 名之前没有分数(新模型或新数据)</value></data>
+  <data name="Reason_PreviousUnscored" xml:space="preserve"><value>{0} 失去了分数(来源数据缺失)</value></data>
+  <data name="Reason_RuleChanged" xml:space="preserve"><value>变化的是计算规则(排除过时来源或权重),而不是数据</value></data>
+  <data name="Reason_MetricShift" xml:space="preserve"><value>变化指标 {0}:{1} {2}→{3},{4} {5}→{6}</value></data>
+  <data name="Stale_Excluded" xml:space="preserve"><value>{0} 已超过 {1} 天没有新数据,因此未计入此分数。</value></data>
+  <data name="Stale_Shadow" xml:space="preserve"><value>如果计入,第 1 名将是 {0}。</value></data>
+  <data name="Stale_ShadowSame" xml:space="preserve"><value>计入也不会改变第 1 名。</value></data>
+  <data name="Col_Disagree" xml:space="preserve"><value>不一致</value></data>
+  <data name="Disagree_Price" xml:space="preserve"><value>价格不一致:Artificial Analysis {0} 与 OpenRouter {1}(每百万 token,相差 {2}%)</value></data>
+  <data name="Disagree_Rank" xml:space="preserve"><value>排名不一致:基准(AA 智能)百分位 {0} 与人类偏好(Arena)百分位 {1},相差 {2} 分</value></data>
+  <data name="Plan_RemoteOk" xml:space="preserve"><value>订阅列表最近下载于 {0}(下次启动时生效)。</value></data>
+  <data name="Plan_RemoteFail" xml:space="preserve"><value>无法下载最新订阅列表,使用已保存的列表:{0}</value></data>
+  <data name="Plan_RemoteInUse" xml:space="preserve"><value>正在使用已下载的订阅列表。</value></data>
+  <data name="Plan_BuiltInUse" xml:space="preserve"><value>正在使用内置订阅列表。</value></data>
+  <data name="About_InstallUpdate" xml:space="preserve"><value>立即安装并重启</value></data>
+  <data name="About_Installing" xml:space="preserve"><value>正在下载更新…</value></data>
+  <data name="Settings_AutoUpdate" xml:space="preserve"><value>自动下载更新(安装版,下次启动时应用)</value></data>
+  <data name="Backup_Title" xml:space="preserve"><value>备份</value></data>
+  <data name="Backup_Help" xml:space="preserve"><value>将所有数据(模型、历史、订阅、设置)保存为一个文件,或从该文件恢复。不包含 API 密钥。</value></data>
+  <data name="Backup_Export" xml:space="preserve"><value>导出备份…</value></data>
+  <data name="Backup_Import" xml:space="preserve"><value>从备份恢复…</value></data>
+  <data name="Backup_Exported" xml:space="preserve"><value>已保存备份:{0}</value></data>
+  <data name="Backup_Imported" xml:space="preserve"><value>已恢复。之前的数据已在数据文件夹中保存为 llmpulse.db.before-restore。</value></data>
+  <data name="Backup_Rejected" xml:space="preserve"><value>无法使用此文件恢复,未做任何更改:{0}</value></data>
+  <data name="Backup_ConfirmImport" xml:space="preserve"><value>用此备份替换当前所有数据?当前数据将保存为 llmpulse.db.before-restore。</value></data>
+  <data name="About_Manual" xml:space="preserve"><value>用户手册(韩语,PDF)</value></data>
+</root>

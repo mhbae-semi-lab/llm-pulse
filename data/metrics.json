@@ -1,0 +1,542 @@
+[
+  {
+    "id": "aa_intelligence_index",
+    "unit": "index",
+    "scale": "index",
+    "higherIsBetter": true,
+    "source": "Artificial Analysis",
+    "sourceUrl": "https://artificialanalysis.ai/methodology/intelligence-benchmarking",
+    "name": { "en": "Intelligence Index", "ko": "종합 지능 지수", "zh": "综合智能指数", "fr": "Indice d'intelligence" },
+    "summary": {
+      "en": "Composite score of general model capability across many evaluations.",
+      "ko": "여러 평가를 합산한 모델의 전반적 능력 종합 점수.",
+      "zh": "基于多项评测的模型综合能力得分。",
+      "fr": "Score composite de la capacité générale du modèle sur de nombreuses évaluations."
+    },
+    "method": {
+      "en": "Artificial Analysis runs a fixed evaluation suite independently and combines results into one 0-100 index.",
+      "ko": "Artificial Analysis 가 고정된 평가 세트를 독립적으로 실행하고 결과를 0–100 지수로 합산합니다.",
+      "zh": "Artificial Analysis 独立运行固定评测集，并合成 0–100 指数。",
+      "fr": "Artificial Analysis exécute indépendamment une suite d'évaluations fixe et la combine en un indice 0-100."
+    },
+    "caveats": {
+      "en": "Index version changes over time; scores from different versions are not comparable. Benchmarks can be contaminated or gamed.",
+      "ko": "지수 버전이 바뀌면 점수를 서로 비교할 수 없습니다. 벤치마크는 데이터 오염·최적화 가능성이 있습니다.",
+      "zh": "指数版本变化后分数不可比；基准可能存在数据污染或针对性优化。",
+      "fr": "La version de l'indice évolue; les scores de versions différentes ne sont pas comparables. Les benchmarks peuvent être contaminés."
+    }
+  },
+  {
+    "id": "aa_coding_index",
+    "unit": "index",
+    "scale": "index",
+    "higherIsBetter": true,
+    "source": "Artificial Analysis",
+    "sourceUrl": "https://artificialanalysis.ai/methodology/intelligence-benchmarking",
+    "name": { "en": "Coding Index", "ko": "코딩 지수", "zh": "编程指数", "fr": "Indice de codage" },
+    "summary": {
+      "en": "Composite score for programming and software-engineering tasks.",
+      "ko": "프로그래밍·소프트웨어 엔지니어링 과제 종합 점수.",
+      "zh": "编程与软件工程任务的综合得分。",
+      "fr": "Score composite pour les tâches de programmation et d'ingénierie logicielle."
+    },
+    "method": {
+      "en": "Combination of coding-focused evaluations run by Artificial Analysis, reported on a 0-100 scale.",
+      "ko": "Artificial Analysis 가 실행한 코딩 중심 평가를 합산해 0–100 척도로 표시합니다.",
+      "zh": "由 Artificial Analysis 运行的编程类评测合成，0–100 量表。",
+      "fr": "Combinaison d'évaluations centrées sur le code exécutées par Artificial Analysis, échelle 0-100."
+    },
+    "caveats": {
+      "en": "May be missing for some models. Not a substitute for testing on your own codebase.",
+      "ko": "일부 모델은 값이 없을 수 있습니다. 내 코드베이스에서의 실제 성능과 다를 수 있습니다.",
+      "zh": "部分模型可能缺失；不能替代在自有代码库上的实测。",
+      "fr": "Peut être absent pour certains modèles. Ne remplace pas un test sur votre propre base de code."
+    }
+  },
+  {
+    "id": "aa_agentic_index",
+    "unit": "index",
+    "scale": "index",
+    "higherIsBetter": true,
+    "source": "Artificial Analysis",
+    "sourceUrl": "https://artificialanalysis.ai/methodology/intelligence-benchmarking",
+    "name": { "en": "Agentic Index", "ko": "에이전트 지수", "zh": "智能体指数", "fr": "Indice agentique" },
+    "summary": {
+      "en": "Composite score for multi-step, tool-using agent tasks.",
+      "ko": "다단계·도구 사용 에이전트 과제 종합 점수.",
+      "zh": "多步骤、工具调用型智能体任务的综合得分。",
+      "fr": "Score composite pour les tâches d'agents multi-étapes avec outils."
+    },
+    "method": {
+      "en": "Combination of agentic evaluations (tool use, terminal tasks) reported on a 0-100 scale.",
+      "ko": "도구 사용·터미널 작업 등 에이전트 평가를 합산해 0–100 척도로 표시합니다.",
+      "zh": "合成工具调用、终端任务等智能体评测，0–100 量表。",
+      "fr": "Combinaison d'évaluations agentiques (outils, terminal), échelle 0-100."
+    },
+    "caveats": {
+      "en": "Newer metric with fewer models covered.",
+      "ko": "비교적 새 지표라 값이 있는 모델이 적습니다.",
+      "zh": "较新的指标，覆盖模型较少。",
+      "fr": "Métrique récente couvrant moins de modèles."
+    }
+  },
+  {
+    "id": "output_tok_s",
+    "unit": "tok/s",
+    "scale": "percentile",
+    "higherIsBetter": true,
+    "source": "Artificial Analysis",
+    "sourceUrl": "https://artificialanalysis.ai/methodology/performance-benchmarking",
+    "name": { "en": "Output speed", "ko": "출력 속도", "zh": "输出速度", "fr": "Vitesse de sortie" },
+    "summary": {
+      "en": "Tokens generated per second after the first token.",
+      "ko": "첫 토큰 이후 초당 생성되는 토큰 수.",
+      "zh": "首个 token 之后每秒生成的 token 数。",
+      "fr": "Tokens générés par seconde après le premier token."
+    },
+    "method": {
+      "en": "Mean measured by Artificial Analysis across providers and queries.",
+      "ko": "Artificial Analysis 가 제공자·쿼리 전반에서 측정한 평균값.",
+      "zh": "Artificial Analysis 在各提供商与查询上的测量均值。",
+      "fr": "Moyenne mesurée par Artificial Analysis sur les fournisseurs et requêtes."
+    },
+    "caveats": {
+      "en": "Depends on provider load, hardware and time of day. Reasoning models may feel slower end-to-end.",
+      "ko": "제공자 부하·하드웨어·시간대에 따라 달라집니다. 추론 모델은 체감 지연이 더 길 수 있습니다.",
+      "zh": "受提供商负载、硬件与时段影响；推理模型端到端可能更慢。",
+      "fr": "Dépend de la charge du fournisseur, du matériel et de l'heure. Les modèles de raisonnement peuvent sembler plus lents."
+    }
+  },
+  {
+    "id": "ttft_s",
+    "unit": "s",
+    "scale": "percentile",
+    "higherIsBetter": false,
+    "source": "Artificial Analysis",
+    "sourceUrl": "https://artificialanalysis.ai/methodology/performance-benchmarking",
+    "name": { "en": "Time to first token", "ko": "첫 토큰 지연(TTFT)", "zh": "首 token 延迟", "fr": "Délai avant le premier token" },
+    "summary": {
+      "en": "Seconds until the first token arrives. Lower is better.",
+      "ko": "첫 토큰이 도착하기까지의 시간(초). 낮을수록 좋음.",
+      "zh": "首个 token 到达所需秒数，越低越好。",
+      "fr": "Secondes avant l'arrivée du premier token. Plus bas = mieux."
+    },
+    "method": {
+      "en": "Mean measured by Artificial Analysis; includes thinking time for reasoning models.",
+      "ko": "Artificial Analysis 측정 평균값. 추론 모델은 생각 시간이 포함될 수 있습니다.",
+      "zh": "Artificial Analysis 测量均值；推理模型包含思考时间。",
+      "fr": "Moyenne mesurée par Artificial Analysis; inclut le temps de réflexion pour les modèles de raisonnement."
+    },
+    "caveats": {
+      "en": "Network location and provider load affect results.",
+      "ko": "네트워크 위치와 제공자 부하의 영향을 받습니다.",
+      "zh": "受网络位置与提供商负载影响。",
+      "fr": "La localisation réseau et la charge du fournisseur influencent le résultat."
+    }
+  },
+  {
+    "id": "price_blended_per_m",
+    "unit": "$/1M tok",
+    "scale": "percentile",
+    "higherIsBetter": false,
+    "source": "Artificial Analysis",
+    "sourceUrl": "https://artificialanalysis.ai/",
+    "name": { "en": "Blended price", "ko": "블렌디드 가격", "zh": "混合价格", "fr": "Prix mixte" },
+    "summary": {
+      "en": "Price per 1M tokens assuming 3 input : 1 output. Lower is better.",
+      "ko": "입력:출력 = 3:1 가정의 100만 토큰당 가격. 낮을수록 좋음.",
+      "zh": "按输入:输出 = 3:1 计算的每百万 token 价格，越低越好。",
+      "fr": "Prix par million de tokens pour un ratio 3 entrée : 1 sortie. Plus bas = mieux."
+    },
+    "method": {
+      "en": "(3 × input price + output price) / 4, computed locally from the API's input and output prices.",
+      "ko": "(3 × 입력 가격 + 출력 가격) / 4. API 의 입력·출력 가격으로 앱이 계산합니다.",
+      "zh": "(3 × 输入价格 + 输出价格) / 4，由应用根据 API 的输入/输出价格计算。",
+      "fr": "(3 × prix d'entrée + prix de sortie) / 4, calculé localement à partir des prix de l'API."
+    },
+    "caveats": {
+      "en": "List API price; subscriptions are flat-rate and not reflected. Reasoning models use more tokens per task.",
+      "ko": "API 정가 기준이며 월 정액 구독은 반영되지 않습니다. 추론 모델은 작업당 토큰을 더 많이 씁니다.",
+      "zh": "为 API 标价，未反映包月订阅；推理模型每任务消耗更多 token。",
+      "fr": "Prix API public; les abonnements forfaitaires ne sont pas reflétés. Les modèles de raisonnement consomment plus de tokens."
+    }
+  },
+  {
+    "id": "context_k",
+    "unit": "K tokens",
+    "scale": "percentile",
+    "higherIsBetter": true,
+    "source": "OpenRouter",
+    "sourceUrl": "https://openrouter.ai/models",
+    "name": { "en": "Context window", "ko": "컨텍스트 길이", "zh": "上下文窗口", "fr": "Fenêtre de contexte" },
+    "summary": {
+      "en": "Maximum input size in thousands of tokens. Higher is better.",
+      "ko": "처리할 수 있는 최대 입력 길이(천 토큰). 높을수록 좋음.",
+      "zh": "可处理的最大输入长度（千 token），越高越好。",
+      "fr": "Taille d'entrée maximale en milliers de tokens. Plus haut = mieux."
+    },
+    "method": {
+      "en": "Context length reported by OpenRouter for the matched model.",
+      "ko": "매칭된 모델에 대해 OpenRouter 가 보고하는 컨텍스트 길이입니다.",
+      "zh": "OpenRouter 为匹配模型报告的上下文长度。",
+      "fr": "Longueur de contexte indiquée par OpenRouter pour le modèle associé."
+    },
+    "caveats": {
+      "en": "A long window does not mean the model uses all of it well. Only models matched to OpenRouter have a value.",
+      "ko": "창이 길다고 전부 잘 활용한다는 뜻은 아닙니다. OpenRouter 와 매칭된 모델만 값이 있습니다.",
+      "zh": "窗口长不代表模型能充分利用。仅与 OpenRouter 匹配的模型有数值。",
+      "fr": "Une grande fenêtre ne garantit pas une bonne utilisation. Seuls les modèles associés à OpenRouter ont une valeur."
+    }
+  },
+  {
+    "id": "aider_polyglot",
+    "unit": "%",
+    "scale": "percentile",
+    "higherIsBetter": true,
+    "source": "Aider",
+    "sourceUrl": "https://aider.chat/docs/leaderboards/",
+    "name": { "en": "Aider polyglot pass rate", "ko": "Aider 폴리글랏 통과율", "zh": "Aider 多语言通过率", "fr": "Taux de réussite Aider polyglot" },
+    "summary": {
+      "en": "Share of 225 hard Exercism coding exercises (C++, Go, Java, JS, Python, Rust) solved after one retry. Higher is better.",
+      "ko": "어려운 Exercism 코딩 문제 225개(C++, Go, Java, JS, Python, Rust) 중 한 번 재시도 후 푼 비율. 높을수록 좋음.",
+      "zh": "225 道高难度 Exercism 编程题（C++、Go、Java、JS、Python、Rust）在一次重试后的解决比例，越高越好。",
+      "fr": "Part des 225 exercices Exercism difficiles (C++, Go, Java, JS, Python, Rust) résolus après une nouvelle tentative. Plus haut = mieux."
+    },
+    "method": {
+      "en": "Taken from Aider's public leaderboard file (pass_rate_2). If a model appears several times, the best run is used.",
+      "ko": "Aider 공개 리더보드 파일(pass_rate_2)에서 가져옵니다. 한 모델이 여러 번 나오면 가장 좋은 실행을 씁니다.",
+      "zh": "取自 Aider 公开排行榜文件（pass_rate_2）。同一模型多次出现时取最佳一次。",
+      "fr": "Issu du fichier public du classement Aider (pass_rate_2). Si un modèle apparaît plusieurs fois, la meilleure exécution est retenue."
+    },
+    "caveats": {
+      "en": "The leaderboard is updated irregularly, so newer models may be missing. Names differ from other sources: models must be matched on the Model matching page.",
+      "ko": "리더보드 갱신이 불규칙해 최신 모델이 빠져 있을 수 있습니다. 다른 소스와 이름이 달라 모델 매칭 화면에서 매칭이 필요할 수 있습니다.",
+      "zh": "排行榜更新不规律，较新的模型可能缺失。名称与其他来源不同，可能需要在“模型匹配”页面手动匹配。",
+      "fr": "Le classement est mis à jour de façon irrégulière : des modèles récents peuvent manquer. Les noms diffèrent des autres sources : association possible sur la page Association des modèles."
+    }
+  },
+  {
+    "id": "lmarena_overall",
+    "unit": "Elo",
+    "scale": "percentile",
+    "higherIsBetter": true,
+    "source": "Arena",
+    "sourceUrl": "https://arena.ai/leaderboard",
+    "name": { "en": "Arena overall (human preference)", "ko": "Arena 종합 (사람 선호)", "zh": "Arena 综合（人类偏好）", "fr": "Arena global (préférence humaine)" },
+    "summary": {
+      "en": "Elo-style rating from blind human head-to-head votes across all prompts. Higher is better.",
+      "ko": "모든 질문에 대한 사람의 블라인드 1:1 투표로 매긴 Elo 방식 점수. 높을수록 좋음.",
+      "zh": "基于人类对所有提示的盲测一对一投票得出的 Elo 式评分，越高越好。",
+      "fr": "Note de type Elo issue de votes humains en duel à l'aveugle, toutes requêtes confondues. Plus haut = mieux."
+    },
+    "method": {
+      "en": "Read from Arena's public leaderboard dataset (category 'overall', latest publish date). If a model appears several times, the highest rating is used. Converted to a percentile among models that have it.",
+      "ko": "Arena 공개 리더보드 데이터셋(카테고리 'overall', 최신 발행일)에서 읽습니다. 한 모델이 여러 번 나오면 가장 높은 점수를 씁니다. 값이 있는 모델들 사이의 백분위로 변환합니다.",
+      "zh": "读取自 Arena 公开排行榜数据集（类别“overall”，最新发布日）。同一模型多次出现时取最高分，并在有该数据的模型中换算为百分位。",
+      "fr": "Lu depuis le jeu de données public du classement Arena (catégorie « overall », dernière date de publication). Si un modèle apparaît plusieurs fois, la note la plus haute est retenue, convertie en percentile parmi les modèles disponibles."
+    },
+    "caveats": {
+      "en": "Human votes measure style and preference, not correctness. Names differ from other sources, so some models must be matched on the Model matching page. Not all models are rated.",
+      "ko": "사람의 투표는 정답률이 아니라 문체와 선호를 반영합니다. 다른 소스와 이름이 달라 일부 모델은 모델 매칭 화면에서 매칭이 필요하며, 모든 모델에 점수가 있는 것은 아닙니다.",
+      "zh": "人类投票反映风格与偏好，而非正确性。名称与其他来源不同，部分模型需在“模型匹配”页面手动匹配，也并非所有模型都有评分。",
+      "fr": "Les votes humains reflètent le style et la préférence, pas l'exactitude. Les noms diffèrent des autres sources : certains modèles doivent être associés manuellement ; tous les modèles ne sont pas notés."
+    }
+  },
+  {
+    "id": "lmarena_coding",
+    "unit": "Elo",
+    "scale": "percentile",
+    "higherIsBetter": true,
+    "source": "Arena",
+    "sourceUrl": "https://arena.ai/leaderboard",
+    "name": { "en": "Arena coding (human preference)", "ko": "Arena 코딩 (사람 선호)", "zh": "Arena 编程（人类偏好）", "fr": "Arena codage (préférence humaine)" },
+    "summary": {
+      "en": "Elo-style rating from human votes on coding prompts only. Higher is better.",
+      "ko": "코딩 관련 질문만 모은 사람 투표 기반 Elo 방식 점수. 높을수록 좋음.",
+      "zh": "仅基于编程类提示的人类投票得出的 Elo 式评分，越高越好。",
+      "fr": "Note de type Elo issue de votes humains sur les requêtes de codage uniquement. Plus haut = mieux."
+    },
+    "method": {
+      "en": "Read from Arena's public leaderboard dataset (category 'coding', latest publish date). If a model appears several times, the highest rating is used. Converted to a percentile among models that have it.",
+      "ko": "Arena 공개 리더보드 데이터셋(카테고리 'coding', 최신 발행일)에서 읽습니다. 한 모델이 여러 번 나오면 가장 높은 점수를 씁니다. 값이 있는 모델들 사이의 백분위로 변환합니다.",
+      "zh": "读取自 Arena 公开排行榜数据集（类别“coding”，最新发布日）。同一模型多次出现时取最高分，并在有该数据的模型中换算为百分位。",
+      "fr": "Lu depuis le jeu de données public du classement Arena (catégorie « coding », dernière date de publication). Si un modèle apparaît plusieurs fois, la note la plus haute est retenue, convertie en percentile parmi les modèles disponibles."
+    },
+    "caveats": {
+      "en": "Human votes measure style and preference, not correctness. Names differ from other sources, so some models must be matched on the Model matching page. Not all models are rated.",
+      "ko": "사람의 투표는 정답률이 아니라 문체와 선호를 반영합니다. 다른 소스와 이름이 달라 일부 모델은 모델 매칭 화면에서 매칭이 필요하며, 모든 모델에 점수가 있는 것은 아닙니다.",
+      "zh": "人类投票反映风格与偏好，而非正确性。名称与其他来源不同，部分模型需在“模型匹配”页面手动匹配，也并非所有模型都有评分。",
+      "fr": "Les votes humains reflètent le style et la préférence, pas l'exactitude. Les noms diffèrent des autres sources : certains modèles doivent être associés manuellement ; tous les modèles ne sont pas notés."
+    }
+  },
+  {
+    "id": "lmarena_korean",
+    "unit": "Elo",
+    "scale": "percentile",
+    "higherIsBetter": true,
+    "source": "Arena",
+    "sourceUrl": "https://arena.ai/leaderboard",
+    "name": { "en": "Arena Korean (human preference)", "ko": "Arena 한국어 (사람 선호)", "zh": "Arena 韩语（人类偏好）", "fr": "Arena coréen (préférence humaine)" },
+    "summary": {
+      "en": "Elo-style rating from human votes on Korean-language prompts. Higher is better.",
+      "ko": "한국어 질문에 대한 사람 투표 기반 Elo 방식 점수. 높을수록 좋음.",
+      "zh": "基于韩语提示的人类投票得出的 Elo 式评分，越高越好。",
+      "fr": "Note de type Elo issue de votes humains sur des requêtes en coréen. Plus haut = mieux."
+    },
+    "method": {
+      "en": "Read from Arena's public leaderboard dataset (category 'korean', latest publish date). If a model appears several times, the highest rating is used. Converted to a percentile among models that have it.",
+      "ko": "Arena 공개 리더보드 데이터셋(카테고리 'korean', 최신 발행일)에서 읽습니다. 한 모델이 여러 번 나오면 가장 높은 점수를 씁니다. 값이 있는 모델들 사이의 백분위로 변환합니다.",
+      "zh": "读取自 Arena 公开排行榜数据集（类别“korean”，最新发布日）。同一模型多次出现时取最高分，并在有该数据的模型中换算为百分位。",
+      "fr": "Lu depuis le jeu de données public du classement Arena (catégorie « korean », dernière date de publication). Si un modèle apparaît plusieurs fois, la note la plus haute est retenue, convertie en percentile parmi les modèles disponibles."
+    },
+    "caveats": {
+      "en": "Human votes measure style and preference, not correctness. Names differ from other sources, so some models must be matched on the Model matching page. Not all models are rated.",
+      "ko": "사람의 투표는 정답률이 아니라 문체와 선호를 반영합니다. 다른 소스와 이름이 달라 일부 모델은 모델 매칭 화면에서 매칭이 필요하며, 모든 모델에 점수가 있는 것은 아닙니다.",
+      "zh": "人类投票反映风格与偏好，而非正确性。名称与其他来源不同，部分模型需在“模型匹配”页面手动匹配，也并非所有模型都有评分。",
+      "fr": "Les votes humains reflètent le style et la préférence, pas l'exactitude. Les noms diffèrent des autres sources : certains modèles doivent être associés manuellement ; tous les modèles ne sont pas notés."
+    }
+  },
+  {
+    "id": "lmarena_math",
+    "unit": "Elo",
+    "scale": "percentile",
+    "higherIsBetter": true,
+    "source": "Arena",
+    "sourceUrl": "https://arena.ai/leaderboard",
+    "name": { "en": "Arena math (human preference)", "ko": "Arena 수학 (사람 선호)", "zh": "Arena 数学(人类偏好)", "fr": "Arena maths (préférence humaine)" },
+    "summary": {
+      "en": "Elo-style rating from human votes on math prompts. Higher is better.",
+      "ko": "수학 질문에 대한 사람 투표 기반 Elo 방식 점수. 높을수록 좋음.",
+      "zh": "基于数学提示的人类投票得出的 Elo 式评分,越高越好。",
+      "fr": "Note de type Elo issue de votes humains sur des requêtes de maths. Plus haut = mieux."
+    },
+    "method": {
+      "en": "Read from Arena's public leaderboard dataset (category 'math', latest publish date). If a model appears several times, the highest rating is used. Converted to a percentile among models that have it.",
+      "ko": "Arena 공개 리더보드 데이터셋(카테고리 'math', 최신 발행일)에서 읽습니다. 한 모델이 여러 번 나오면 가장 높은 점수를 씁니다. 값이 있는 모델들 사이의 백분위로 변환합니다.",
+      "zh": "读取自 Arena 公开排行榜数据集(类别 'math',最新发布日)。同一模型多次出现时取最高分,并在有该数据的模型中换算为百分位。",
+      "fr": "Lu depuis le jeu de données public du classement Arena (catégorie 'math', dernière date de publication). Si un modèle apparaît plusieurs fois, la note la plus haute est retenue, convertie en percentile parmi les modèles disponibles."
+    },
+    "caveats": {
+      "en": "Human votes measure style and preference, not correctness. Names differ from other sources, so some models must be matched on the Model matching page. Not all models are rated.",
+      "ko": "사람의 투표는 정답률이 아니라 문체와 선호를 반영합니다. 다른 소스와 이름이 달라 일부 모델은 모델 매칭 화면에서 매칭이 필요하며, 모든 모델에 점수가 있는 것은 아닙니다.",
+      "zh": "人类投票反映风格与偏好,而非正确性。名称与其他来源不同,部分模型需在'模型匹配'页面手动匹配,也并非所有模型都有评分。",
+      "fr": "Les votes humains reflètent le style et la préférence, pas l'exactitude. Les noms diffèrent des autres sources : certains modèles doivent être associés manuellement ; tous les modèles ne sont pas notés."
+    }
+  },
+  {
+    "id": "lmarena_hard",
+    "unit": "Elo",
+    "scale": "percentile",
+    "higherIsBetter": true,
+    "source": "Arena",
+    "sourceUrl": "https://arena.ai/leaderboard",
+    "name": { "en": "Arena hard prompts (human preference)", "ko": "Arena 어려운 질문 (사람 선호)", "zh": "Arena 高难度提示(人类偏好)", "fr": "Arena requêtes difficiles (préférence humaine)" },
+    "summary": {
+      "en": "Elo-style rating from human votes on hard, complex prompts. Higher is better.",
+      "ko": "어렵고 복잡한 질문에 대한 사람 투표 기반 Elo 방식 점수. 높을수록 좋음.",
+      "zh": "基于高难度复杂提示的人类投票得出的 Elo 式评分,越高越好。",
+      "fr": "Note de type Elo issue de votes humains sur des requêtes difficiles et complexes. Plus haut = mieux."
+    },
+    "method": {
+      "en": "Read from Arena's public leaderboard dataset (category 'hard_prompts', latest publish date). If a model appears several times, the highest rating is used. Converted to a percentile among models that have it.",
+      "ko": "Arena 공개 리더보드 데이터셋(카테고리 'hard_prompts', 최신 발행일)에서 읽습니다. 한 모델이 여러 번 나오면 가장 높은 점수를 씁니다. 값이 있는 모델들 사이의 백분위로 변환합니다.",
+      "zh": "读取自 Arena 公开排行榜数据集(类别 'hard_prompts',最新发布日)。同一模型多次出现时取最高分,并在有该数据的模型中换算为百分位。",
+      "fr": "Lu depuis le jeu de données public du classement Arena (catégorie 'hard_prompts', dernière date de publication). Si un modèle apparaît plusieurs fois, la note la plus haute est retenue, convertie en percentile parmi les modèles disponibles."
+    },
+    "caveats": {
+      "en": "Human votes measure style and preference, not correctness. Names differ from other sources, so some models must be matched on the Model matching page. Not all models are rated.",
+      "ko": "사람의 투표는 정답률이 아니라 문체와 선호를 반영합니다. 다른 소스와 이름이 달라 일부 모델은 모델 매칭 화면에서 매칭이 필요하며, 모든 모델에 점수가 있는 것은 아닙니다.",
+      "zh": "人类投票反映风格与偏好,而非正确性。名称与其他来源不同,部分模型需在'模型匹配'页面手动匹配,也并非所有模型都有评分。",
+      "fr": "Les votes humains reflètent le style et la préférence, pas l'exactitude. Les noms diffèrent des autres sources : certains modèles doivent être associés manuellement ; tous les modèles ne sont pas notés."
+    }
+  },
+  {
+    "id": "lmarena_instruction",
+    "unit": "Elo",
+    "scale": "percentile",
+    "higherIsBetter": true,
+    "source": "Arena",
+    "sourceUrl": "https://arena.ai/leaderboard",
+    "name": { "en": "Arena instruction following (human preference)", "ko": "Arena 지시 따르기 (사람 선호)", "zh": "Arena 指令遵循(人类偏好)", "fr": "Arena suivi d'instructions (préférence humaine)" },
+    "summary": {
+      "en": "Elo-style rating from human votes on prompts with explicit instructions. Higher is better.",
+      "ko": "명시적인 지시가 있는 질문에 대한 사람 투표 기반 Elo 방식 점수. 높을수록 좋음.",
+      "zh": "基于带有明确指令的提示的人类投票得出的 Elo 式评分,越高越好。",
+      "fr": "Note de type Elo issue de votes humains sur des requêtes avec consignes explicites. Plus haut = mieux."
+    },
+    "method": {
+      "en": "Read from Arena's public leaderboard dataset (category 'instruction_following', latest publish date). If a model appears several times, the highest rating is used. Converted to a percentile among models that have it.",
+      "ko": "Arena 공개 리더보드 데이터셋(카테고리 'instruction_following', 최신 발행일)에서 읽습니다. 한 모델이 여러 번 나오면 가장 높은 점수를 씁니다. 값이 있는 모델들 사이의 백분위로 변환합니다.",
+      "zh": "读取自 Arena 公开排行榜数据集(类别 'instruction_following',最新发布日)。同一模型多次出现时取最高分,并在有该数据的模型中换算为百分位。",
+      "fr": "Lu depuis le jeu de données public du classement Arena (catégorie 'instruction_following', dernière date de publication). Si un modèle apparaît plusieurs fois, la note la plus haute est retenue, convertie en percentile parmi les modèles disponibles."
+    },
+    "caveats": {
+      "en": "Human votes measure style and preference, not correctness. Names differ from other sources, so some models must be matched on the Model matching page. Not all models are rated.",
+      "ko": "사람의 투표는 정답률이 아니라 문체와 선호를 반영합니다. 다른 소스와 이름이 달라 일부 모델은 모델 매칭 화면에서 매칭이 필요하며, 모든 모델에 점수가 있는 것은 아닙니다.",
+      "zh": "人类投票反映风格与偏好,而非正确性。名称与其他来源不同,部分模型需在'模型匹配'页面手动匹配,也并非所有模型都有评分。",
+      "fr": "Les votes humains reflètent le style et la préférence, pas l'exactitude. Les noms diffèrent des autres sources : certains modèles doivent être associés manuellement ; tous les modèles ne sont pas notés."
+    }
+  },
+  {
+    "id": "aa_finance_index",
+    "unit": "index",
+    "scale": "index",
+    "higherIsBetter": true,
+    "source": "Artificial Analysis",
+    "sourceUrl": "https://artificialanalysis.ai/methodology/intelligence-benchmarking",
+    "name": { "en": "Finance & Accounting Index", "ko": "금융·회계 지수", "zh": "金融与会计指数", "fr": "Indice finance et comptabilité" },
+    "summary": {
+      "en": "Artificial Analysis score on professional finance and accounting tasks.",
+      "ko": "금융·회계 분야 전문 과제에 대한 Artificial Analysis 점수.",
+      "zh": "Artificial Analysis 在金融与会计专业任务上的得分。",
+      "fr": "Score Artificial Analysis sur des tâches professionnelles finance et comptabilité."
+    },
+    "method": {
+      "en": "Artificial Analysis runs its own domain evaluation independently and reports one 0-100 index. Only models that were evaluated have a value.",
+      "ko": "Artificial Analysis 가 자체 분야 평가를 독립적으로 실행해 0–100 지수로 공개합니다. 평가된 모델에만 값이 있습니다.",
+      "zh": "Artificial Analysis 独立运行自有的领域评测,给出 0–100 指数。只有被评测的模型才有数值。",
+      "fr": "Artificial Analysis exécute indépendamment sa propre évaluation du domaine et publie un indice 0-100. Seuls les modèles évalués ont une valeur."
+    },
+    "caveats": {
+      "en": "A domain score does not guarantee reliable professional advice. Index versions change over time; benchmarks can be contaminated or gamed.",
+      "ko": "분야 점수가 높아도 전문적인 조언의 신뢰성을 보장하지 않습니다. 지수 버전이 바뀌면 비교할 수 없고, 벤치마크는 오염·최적화 가능성이 있습니다.",
+      "zh": "领域得分高并不保证专业建议可靠。指数版本变化后不可比;基准可能存在污染或针对性优化。",
+      "fr": "Un bon score de domaine ne garantit pas un conseil professionnel fiable. Les versions de l'indice évoluent; les benchmarks peuvent être contaminés."
+    }
+  },
+  {
+    "id": "aa_strategy_index",
+    "unit": "index",
+    "scale": "index",
+    "higherIsBetter": true,
+    "source": "Artificial Analysis",
+    "sourceUrl": "https://artificialanalysis.ai/methodology/intelligence-benchmarking",
+    "name": { "en": "Strategy & Operations Index", "ko": "전략·운영 지수", "zh": "战略与运营指数", "fr": "Indice stratégie et opérations" },
+    "summary": {
+      "en": "Artificial Analysis score on professional strategy and operations tasks.",
+      "ko": "전략·운영 분야 전문 과제에 대한 Artificial Analysis 점수.",
+      "zh": "Artificial Analysis 在战略与运营专业任务上的得分。",
+      "fr": "Score Artificial Analysis sur des tâches professionnelles stratégie et opérations."
+    },
+    "method": {
+      "en": "Artificial Analysis runs its own domain evaluation independently and reports one 0-100 index. Only models that were evaluated have a value.",
+      "ko": "Artificial Analysis 가 자체 분야 평가를 독립적으로 실행해 0–100 지수로 공개합니다. 평가된 모델에만 값이 있습니다.",
+      "zh": "Artificial Analysis 独立运行自有的领域评测,给出 0–100 指数。只有被评测的模型才有数值。",
+      "fr": "Artificial Analysis exécute indépendamment sa propre évaluation du domaine et publie un indice 0-100. Seuls les modèles évalués ont une valeur."
+    },
+    "caveats": {
+      "en": "A domain score does not guarantee reliable professional advice. Index versions change over time; benchmarks can be contaminated or gamed.",
+      "ko": "분야 점수가 높아도 전문적인 조언의 신뢰성을 보장하지 않습니다. 지수 버전이 바뀌면 비교할 수 없고, 벤치마크는 오염·최적화 가능성이 있습니다.",
+      "zh": "领域得分高并不保证专业建议可靠。指数版本变化后不可比;基准可能存在污染或针对性优化。",
+      "fr": "Un bon score de domaine ne garantit pas un conseil professionnel fiable. Les versions de l'indice évoluent; les benchmarks peuvent être contaminés."
+    }
+  },
+  {
+    "id": "aa_legal_index",
+    "unit": "index",
+    "scale": "index",
+    "higherIsBetter": true,
+    "source": "Artificial Analysis",
+    "sourceUrl": "https://artificialanalysis.ai/methodology/intelligence-benchmarking",
+    "name": { "en": "Legal Index", "ko": "법률 지수", "zh": "法律指数", "fr": "Indice juridique" },
+    "summary": {
+      "en": "Artificial Analysis score on professional legal tasks.",
+      "ko": "법률 분야 전문 과제에 대한 Artificial Analysis 점수.",
+      "zh": "Artificial Analysis 在法律专业任务上的得分。",
+      "fr": "Score Artificial Analysis sur des tâches professionnelles juridiques."
+    },
+    "method": {
+      "en": "Artificial Analysis runs its own domain evaluation independently and reports one 0-100 index. Only models that were evaluated have a value.",
+      "ko": "Artificial Analysis 가 자체 분야 평가를 독립적으로 실행해 0–100 지수로 공개합니다. 평가된 모델에만 값이 있습니다.",
+      "zh": "Artificial Analysis 独立运行自有的领域评测,给出 0–100 指数。只有被评测的模型才有数值。",
+      "fr": "Artificial Analysis exécute indépendamment sa propre évaluation du domaine et publie un indice 0-100. Seuls les modèles évalués ont une valeur."
+    },
+    "caveats": {
+      "en": "A domain score does not guarantee reliable professional advice. Index versions change over time; benchmarks can be contaminated or gamed.",
+      "ko": "분야 점수가 높아도 전문적인 조언의 신뢰성을 보장하지 않습니다. 지수 버전이 바뀌면 비교할 수 없고, 벤치마크는 오염·최적화 가능성이 있습니다.",
+      "zh": "领域得分高并不保证专业建议可靠。指数版本变化后不可比;基准可能存在污染或针对性优化。",
+      "fr": "Un bon score de domaine ne garantit pas un conseil professionnel fiable. Les versions de l'indice évoluent; les benchmarks peuvent être contaminés."
+    }
+  },
+  {
+    "id": "aa_healthcare_index",
+    "unit": "index",
+    "scale": "index",
+    "higherIsBetter": true,
+    "source": "Artificial Analysis",
+    "sourceUrl": "https://artificialanalysis.ai/methodology/intelligence-benchmarking",
+    "name": { "en": "Healthcare & Medical Index", "ko": "의료·헬스케어 지수", "zh": "医疗健康指数", "fr": "Indice santé et médecine" },
+    "summary": {
+      "en": "Artificial Analysis score on professional healthcare and medical tasks.",
+      "ko": "의료·헬스케어 분야 전문 과제에 대한 Artificial Analysis 점수.",
+      "zh": "Artificial Analysis 在医疗健康专业任务上的得分。",
+      "fr": "Score Artificial Analysis sur des tâches professionnelles santé et médecine."
+    },
+    "method": {
+      "en": "Artificial Analysis runs its own domain evaluation independently and reports one 0-100 index. Only models that were evaluated have a value.",
+      "ko": "Artificial Analysis 가 자체 분야 평가를 독립적으로 실행해 0–100 지수로 공개합니다. 평가된 모델에만 값이 있습니다.",
+      "zh": "Artificial Analysis 独立运行自有的领域评测,给出 0–100 指数。只有被评测的模型才有数值。",
+      "fr": "Artificial Analysis exécute indépendamment sa propre évaluation du domaine et publie un indice 0-100. Seuls les modèles évalués ont une valeur."
+    },
+    "caveats": {
+      "en": "A domain score does not guarantee reliable professional advice. Index versions change over time; benchmarks can be contaminated or gamed.",
+      "ko": "분야 점수가 높아도 전문적인 조언의 신뢰성을 보장하지 않습니다. 지수 버전이 바뀌면 비교할 수 없고, 벤치마크는 오염·최적화 가능성이 있습니다.",
+      "zh": "领域得分高并不保证专业建议可靠。指数版本变化后不可比;基准可能存在污染或针对性优化。",
+      "fr": "Un bon score de domaine ne garantit pas un conseil professionnel fiable. Les versions de l'indice évoluent; les benchmarks peuvent être contaminés."
+    }
+  },
+  {
+    "id": "aa_engineering_index",
+    "unit": "index",
+    "scale": "index",
+    "higherIsBetter": true,
+    "source": "Artificial Analysis",
+    "sourceUrl": "https://artificialanalysis.ai/methodology/intelligence-benchmarking",
+    "name": { "en": "Engineering Index", "ko": "엔지니어링 지수", "zh": "工程指数", "fr": "Indice d'ingénierie" },
+    "summary": {
+      "en": "Artificial Analysis score on professional engineering tasks.",
+      "ko": "엔지니어링 분야 전문 과제에 대한 Artificial Analysis 점수.",
+      "zh": "Artificial Analysis 在工程专业任务上的得分。",
+      "fr": "Score Artificial Analysis sur des tâches professionnelles d'ingénierie."
+    },
+    "method": {
+      "en": "Artificial Analysis runs its own domain evaluation independently and reports one 0-100 index. Only models that were evaluated have a value.",
+      "ko": "Artificial Analysis 가 자체 분야 평가를 독립적으로 실행해 0–100 지수로 공개합니다. 평가된 모델에만 값이 있습니다.",
+      "zh": "Artificial Analysis 独立运行自有的领域评测,给出 0–100 指数。只有被评测的模型才有数值。",
+      "fr": "Artificial Analysis exécute indépendamment sa propre évaluation du domaine et publie un indice 0-100. Seuls les modèles évalués ont une valeur."
+    },
+    "caveats": {
+      "en": "A domain score does not guarantee reliable professional advice. Index versions change over time; benchmarks can be contaminated or gamed.",
+      "ko": "분야 점수가 높아도 전문적인 조언의 신뢰성을 보장하지 않습니다. 지수 버전이 바뀌면 비교할 수 없고, 벤치마크는 오염·최적화 가능성이 있습니다.",
+      "zh": "领域得分高并不保证专业建议可靠。指数版本变化后不可比;基准可能存在污染或针对性优化。",
+      "fr": "Un bon score de domaine ne garantit pas un conseil professionnel fiable. Les versions de l'indice évoluent; les benchmarks peuvent être contaminés."
+    }
+  },
+  {
+    "id": "aa_economics_index",
+    "unit": "index",
+    "scale": "index",
+    "higherIsBetter": true,
+    "source": "Artificial Analysis",
+    "sourceUrl": "https://artificialanalysis.ai/methodology/intelligence-benchmarking",
+    "name": { "en": "Economics Index", "ko": "경제 지수", "zh": "经济指数", "fr": "Indice d'économie" },
+    "summary": {
+      "en": "Artificial Analysis score on professional economics tasks.",
+      "ko": "경제 분야 전문 과제에 대한 Artificial Analysis 점수.",
+      "zh": "Artificial Analysis 在经济专业任务上的得分。",
+      "fr": "Score Artificial Analysis sur des tâches professionnelles économie."
+    },
+    "method": {
+      "en": "Artificial Analysis runs its own domain evaluation independently and reports one 0-100 index. Only models that were evaluated have a value.",
+      "ko": "Artificial Analysis 가 자체 분야 평가를 독립적으로 실행해 0–100 지수로 공개합니다. 평가된 모델에만 값이 있습니다.",
+      "zh": "Artificial Analysis 独立运行自有的领域评测,给出 0–100 指数。只有被评测的模型才有数值。",
+      "fr": "Artificial Analysis exécute indépendamment sa propre évaluation du domaine et publie un indice 0-100. Seuls les modèles évalués ont une valeur."
+    },
+    "caveats": {
+      "en": "A domain score does not guarantee reliable professional advice. Index versions change over time; benchmarks can be contaminated or gamed.",
+      "ko": "분야 점수가 높아도 전문적인 조언의 신뢰성을 보장하지 않습니다. 지수 버전이 바뀌면 비교할 수 없고, 벤치마크는 오염·최적화 가능성이 있습니다.",
+      "zh": "领域得分高并不保证专业建议可靠。指数版本变化后不可比;基准可能存在污染或针对性优化。",
+      "fr": "Un bon score de domaine ne garantit pas un conseil professionnel fiable. Les versions de l'indice évoluent; les benchmarks peuvent être contaminés."
+    }
+  }
+]

@@ -1,0 +1,146 @@
+[
+  {
+    "id": "overall",
+    "valueMode": true,
+    "name": { "en": "Overall intelligence", "ko": "종합 지능", "zh": "综合智能", "fr": "Intelligence globale" },
+    "metrics": [ { "id": "aa_intelligence_index", "weight": 1.0 } ]
+  },
+  {
+    "id": "coding",
+    "valueMode": true,
+    "name": { "en": "Coding", "ko": "코딩", "zh": "编程", "fr": "Codage" },
+    "metrics": [ { "id": "lmarena_coding", "weight": 0.6 }, { "id": "aider_polyglot", "weight": 0.4 } ]
+  },
+  {
+    "id": "my_coding",
+    "valueMode": true,
+    "name": { "en": "My coding mix", "ko": "내 코딩 조합", "zh": "我的编程组合", "fr": "Mon mix codage" },
+    "metrics": [
+      { "id": "lmarena_coding", "weight": 0.5 },
+      { "id": "aa_intelligence_index", "weight": 0.2 },
+      { "id": "aider_polyglot", "weight": 0.15 },
+      { "id": "output_tok_s", "weight": 0.1 },
+      { "id": "ttft_s", "weight": 0.05 },
+      { "id": "aa_coding_index", "weight": 0 },
+      { "id": "aa_agentic_index", "weight": 0 },
+      { "id": "price_blended_per_m", "weight": 0 },
+      { "id": "context_k", "weight": 0 }
+    ]
+  },
+  {
+    "id": "equipment_sw",
+    "valueMode": true,
+    "name": { "en": "Equipment SW", "ko": "장비 SW", "zh": "设备软件", "fr": "Logiciel d'équipement" },
+    "metrics": [
+      { "id": "lmarena_coding", "weight": 0.45 },
+      { "id": "aider_polyglot", "weight": 0.15 },
+      { "id": "lmarena_korean", "weight": 0.25 },
+      { "id": "context_k", "weight": 0.15 },
+      { "id": "lmarena_instruction", "weight": 0 },
+      { "id": "lmarena_hard", "weight": 0 },
+      { "id": "aa_intelligence_index", "weight": 0 }
+    ]
+  },
+  {
+    "id": "speed",
+    "valueMode": false,
+    "name": { "en": "Speed", "ko": "속도", "zh": "速度", "fr": "Vitesse" },
+    "metrics": [ { "id": "output_tok_s", "weight": 1.0 } ]
+  },
+  {
+    "id": "latency",
+    "valueMode": false,
+    "name": { "en": "Latency", "ko": "응답 지연", "zh": "响应延迟", "fr": "Latence" },
+    "metrics": [ { "id": "ttft_s", "weight": 1.0 } ]
+  },
+  {
+    "id": "price",
+    "valueMode": false,
+    "name": { "en": "Price", "ko": "가격", "zh": "价格", "fr": "Prix" },
+    "metrics": [ { "id": "price_blended_per_m", "weight": 1.0 } ]
+  },
+  {
+    "id": "context",
+    "valueMode": true,
+    "name": { "en": "Long context", "ko": "긴 컨텍스트", "zh": "长上下文", "fr": "Long contexte" },
+    "metrics": [ { "id": "context_k", "weight": 1.0 } ]
+  },
+  {
+    "id": "coding_aider",
+    "valueMode": true,
+    "name": { "en": "Coding (Aider polyglot)", "ko": "코딩 (Aider 폴리글랏)", "zh": "编程（Aider 多语言）", "fr": "Code (Aider polyglot)" },
+    "metrics": [ { "id": "aider_polyglot", "weight": 1.0 } ]
+  },
+  {
+    "id": "arena",
+    "valueMode": true,
+    "name": { "en": "Human preference (Arena)", "ko": "사람 선호 (Arena)", "zh": "人类偏好（Arena）", "fr": "Préférence humaine (Arena)" },
+    "metrics": [ { "id": "lmarena_overall", "weight": 1.0 } ]
+  },
+  {
+    "id": "arena_coding",
+    "valueMode": true,
+    "name": { "en": "Coding preference (Arena)", "ko": "코딩 선호 (Arena)", "zh": "编程偏好（Arena）", "fr": "Préférence codage (Arena)" },
+    "metrics": [ { "id": "lmarena_coding", "weight": 1.0 } ]
+  },
+  {
+    "id": "korean",
+    "valueMode": true,
+    "name": { "en": "Korean language (Arena)", "ko": "한국어 (Arena)", "zh": "韩语（Arena）", "fr": "Coréen (Arena)" },
+    "metrics": [ { "id": "lmarena_korean", "weight": 1.0 } ]
+  },
+  {
+    "id": "arena_math",
+    "valueMode": true,
+    "name": { "en": "Math (Arena)", "ko": "수학 (Arena)", "zh": "数学(Arena)", "fr": "Maths (Arena)" },
+    "metrics": [ { "id": "lmarena_math", "weight": 1.0 } ]
+  },
+  {
+    "id": "arena_hard",
+    "valueMode": true,
+    "name": { "en": "Hard prompts (Arena)", "ko": "어려운 질문 (Arena)", "zh": "高难度提示(Arena)", "fr": "Requêtes difficiles (Arena)" },
+    "metrics": [ { "id": "lmarena_hard", "weight": 1.0 } ]
+  },
+  {
+    "id": "arena_instruction",
+    "valueMode": true,
+    "name": { "en": "Instruction following (Arena)", "ko": "지시 따르기 (Arena)", "zh": "指令遵循(Arena)", "fr": "Suivi d'instructions (Arena)" },
+    "metrics": [ { "id": "lmarena_instruction", "weight": 1.0 } ]
+  },
+  {
+    "id": "aa_finance",
+    "valueMode": true,
+    "name": { "en": "Finance & accounting", "ko": "금융·회계", "zh": "金融与会计", "fr": "Finance et comptabilité" },
+    "metrics": [ { "id": "aa_finance_index", "weight": 1.0 } ]
+  },
+  {
+    "id": "aa_strategy",
+    "valueMode": true,
+    "name": { "en": "Strategy & operations", "ko": "전략·운영", "zh": "战略与运营", "fr": "Stratégie et opérations" },
+    "metrics": [ { "id": "aa_strategy_index", "weight": 1.0 } ]
+  },
+  {
+    "id": "aa_legal",
+    "valueMode": true,
+    "name": { "en": "Legal", "ko": "법률", "zh": "法律", "fr": "Juridique" },
+    "metrics": [ { "id": "aa_legal_index", "weight": 1.0 } ]
+  },
+  {
+    "id": "aa_healthcare",
+    "valueMode": true,
+    "name": { "en": "Healthcare & medical", "ko": "의료·헬스케어", "zh": "医疗健康", "fr": "Santé et médecine" },
+    "metrics": [ { "id": "aa_healthcare_index", "weight": 1.0 } ]
+  },
+  {
+    "id": "aa_engineering",
+    "valueMode": true,
+    "name": { "en": "Engineering", "ko": "엔지니어링", "zh": "工程", "fr": "Ingénierie" },
+    "metrics": [ { "id": "aa_engineering_index", "weight": 1.0 } ]
+  },
+  {
+    "id": "aa_economics",
+    "valueMode": true,
+    "name": { "en": "Economics", "ko": "경제", "zh": "经济", "fr": "Économie" },
+    "metrics": [ { "id": "aa_economics_index", "weight": 1.0 } ]
+  }
+]

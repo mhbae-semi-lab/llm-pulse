@@ -1,0 +1,116 @@
+<UserControl x:Class="LLMPulse.App.Views.MatchingView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:loc="clr-namespace:LLMPulse.App.Localization"
+             xmlns:app="clr-namespace:LLMPulse.App">
+    <UserControl.Resources>
+        <BooleanToVisibilityConverter x:Key="BoolToVis" />
+        <app:InverseBoolToVisibilityConverter x:Key="InvBoolToVis" />
+    </UserControl.Resources>
+    <Grid Margin="24,8,24,24">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="{loc:Loc Matching_Title}" FontSize="28" FontWeight="SemiBold" Margin="0,0,0,4" />
+        <TextBlock Grid.Row="1" Text="{loc:Loc Matching_Intro}" TextWrapping="Wrap" Margin="0,0,0,12"
+                   Foreground="{DynamicResource TextFillColorSecondaryBrush}" />
+
+        <TextBlock Grid.Row="2" Text="{loc:Loc Matching_Empty}" TextWrapping="Wrap"
+                   Visibility="{Binding HasItems, Converter={StaticResource InvBoolToVis}}"
+                   Foreground="{DynamicResource TextFillColorSecondaryBrush}" />
+
+        <Grid Grid.Row="2" Visibility="{Binding HasItems, Converter={StaticResource BoolToVis}}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" MinWidth="320" />
+                <ColumnDefinition Width="20" />
+                <ColumnDefinition Width="1.2*" MinWidth="360" />
+            </Grid.ColumnDefinitions>
+
+            <!-- 목록 -->
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,8">
+                    <ComboBox ItemsSource="{Binding Filters}" SelectedIndex="{Binding FilterIndex}" MinWidth="170"
+                              AutomationProperties.Name="{loc:Loc Matching_Filter}" />
+                    <TextBlock Text="{Binding Summary}" VerticalAlignment="Center" Margin="12,0,0,0"
+                               Foreground="{DynamicResource TextFillColorSecondaryBrush}" />
+                </StackPanel>
+                <TextBox Grid.Row="1" Text="{Binding Search, UpdateSourceTrigger=PropertyChanged}"
+                         Margin="0,0,0,8" AutomationProperties.Name="{loc:Loc Matching_Search}" />
+                <ListBox Grid.Row="2" ItemsSource="{Binding Items}" SelectedItem="{Binding Selected}"
+                         ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                         AutomationProperties.Name="{loc:Loc Matching_Title}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Margin="4,4">
+                                <TextBlock Text="{Binding DisplayName}" FontSize="16" TextTrimming="CharacterEllipsis" />
+                                <TextBlock Text="{Binding Status}" TextTrimming="CharacterEllipsis"
+                                           Foreground="{DynamicResource TextFillColorSecondaryBrush}" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+                <TextBlock Grid.Row="3" Text="{Binding ListNote}" TextWrapping="Wrap" Margin="0,6,0,0"
+                           Foreground="{DynamicResource TextFillColorSecondaryBrush}" />
+            </Grid>
+
+            <!-- 상세 -->
+            <ScrollViewer Grid.Column="2" VerticalScrollBarVisibility="Auto">
+                <StackPanel>
+                    <TextBlock Text="{Binding Message}" TextWrapping="Wrap" Margin="0,0,0,10" FontWeight="SemiBold"
+                               Foreground="{DynamicResource SystemFillColorSuccessBrush}" />
+                    <TextBlock Text="{loc:Loc Matching_SelectItem}" TextWrapping="Wrap"
+                               Visibility="{Binding HasSelection, Converter={StaticResource InvBoolToVis}}"
+                               Foreground="{DynamicResource TextFillColorSecondaryBrush}" />
+
+                    <StackPanel Visibility="{Binding HasSelection, Converter={StaticResource BoolToVis}}">
+                        <TextBlock Text="{Binding Selected.DisplayName}" FontSize="22" FontWeight="SemiBold" TextWrapping="Wrap" />
+                        <TextBlock Text="{Binding Selected.SourceName}" Foreground="{DynamicResource TextFillColorSecondaryBrush}" />
+                        <TextBlock Text="{Binding Selected.Detail}" Margin="0,4,0,0" TextWrapping="Wrap" />
+                        <TextBlock Text="{Binding Selected.Status}" FontWeight="SemiBold" Margin="0,8,0,0" TextWrapping="Wrap" />
+
+                        <Button Content="{loc:Loc Matching_Unlink}" Command="{Binding UnlinkCommand}" Margin="0,8,0,0"
+                                HorizontalAlignment="Left" Padding="14,6"
+                                Visibility="{Binding SelectedIsLinked, Converter={StaticResource BoolToVis}}" />
+
+                        <TextBlock Text="{loc:Loc Matching_Suggestions}" FontSize="18" FontWeight="SemiBold" Margin="0,20,0,6" />
+                        <TextBlock Text="{loc:Loc Matching_NoSuggestions}"
+                                   Visibility="{Binding HasSuggestions, Converter={StaticResource InvBoolToVis}}"
+                                   Foreground="{DynamicResource TextFillColorSecondaryBrush}" />
+                        <ItemsControl ItemsSource="{Binding Suggestions}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Button HorizontalAlignment="Stretch" HorizontalContentAlignment="Left" Margin="0,0,0,4" Padding="12,6"
+                                            Command="{Binding DataContext.LinkSuggestionCommand, RelativeSource={RelativeSource AncestorType=UserControl}}"
+                                            CommandParameter="{Binding}">
+                                        <DockPanel LastChildFill="False">
+                                            <TextBlock DockPanel.Dock="Right" Text="{Binding Hint}" Margin="12,0,0,0"
+                                                       Foreground="{DynamicResource TextFillColorSecondaryBrush}" />
+                                            <TextBlock Text="{Binding Name}" TextTrimming="CharacterEllipsis" />
+                                        </DockPanel>
+                                    </Button>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+
+                        <TextBlock Text="{loc:Loc Matching_PickModel}" FontSize="18" FontWeight="SemiBold" Margin="0,20,0,6" />
+                        <TextBox Text="{Binding ModelSearch, UpdateSourceTrigger=PropertyChanged}" Margin="0,0,0,6"
+                                 AutomationProperties.Name="{loc:Loc Matching_ModelSearch}" />
+                        <ListBox ItemsSource="{Binding Choices}" SelectedItem="{Binding SelectedModel}" MaxHeight="220"
+                                 AutomationProperties.Name="{loc:Loc Matching_PickModel}" />
+                        <Button Content="{loc:Loc Matching_Link}" Command="{Binding LinkCommand}" Margin="0,8,0,0"
+                                HorizontalAlignment="Left" Padding="14,6" />
+                    </StackPanel>
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+    </Grid>
+</UserControl>

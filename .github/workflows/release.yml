@@ -1,0 +1,42 @@
+name: Release
+
+# 태그(v1.0.0 등)를 푸시하면 테스트 -> Velopack 설치 파일 + 휴대용 zip + Lite zip -> GitHub 릴리스 "초안" 생성.
+# 초안은 공개되지 않는다. 확인 뒤 GitHub 에서 직접 공개(Publish release)해야 앱의 자동 업데이트가 이 버전을 본다.
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+      - name: Test
+        run: dotnet test src/LLMPulse.Tests -c Release --nologo
+      - name: Install Velopack CLI
+        run: dotnet tool install -g vpk --version 1.2.161
+      - name: Download previous release (for delta updates)
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: vpk download github --repoUrl "https://github.com/${{ github.repository }}" --token "$env:GH_TOKEN" --outputDir publish/velopack
+      - name: Publish (self-contained + Velopack)
+        run: ./scripts/publish.ps1 -Version ("${{ github.ref_name }}".TrimStart('v'))
+      - name: Publish (lite, framework-dependent)
+        run: ./scripts/publish.ps1 -Lite -Version ("${{ github.ref_name }}".TrimStart('v'))
+      - name: Create draft release (Velopack assets, not published)
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: >
+          vpk upload github --outputDir publish/velopack --repoUrl "https://github.com/${{ github.repository }}"
+          --token "$env:GH_TOKEN" --tag "${{ github.ref_name }}" --releaseName "LLM Pulse ${{ github.ref_name }}"
+      - name: Attach portable and lite zips
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release upload "${{ github.ref_name }}" (Get-ChildItem publish/*.zip).FullName --clobber

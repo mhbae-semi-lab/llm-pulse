@@ -1,0 +1,50 @@
+<UserControl x:Class="LLMPulse.App.Views.AboutView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:loc="clr-namespace:LLMPulse.App.Localization"
+             xmlns:local="clr-namespace:LLMPulse.App.Views">
+    <UserControl.Resources>
+        <local:NullToCollapsedConverter x:Key="NullToCollapsed" />
+        <BooleanToVisibilityConverter x:Key="BoolToVis" />
+    </UserControl.Resources>
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="24,8,24,24" MaxWidth="760" HorizontalAlignment="Left">
+            <TextBlock Text="{loc:Loc About_Title}" FontSize="28" FontWeight="SemiBold" Margin="0,0,0,16" />
+
+            <TextBlock Text="{loc:Loc About_Data}" FontSize="20" FontWeight="SemiBold" />
+            <TextBlock Margin="0,4,0,16" TextWrapping="Wrap">
+                <Run Text="{loc:Loc About_DataBy}" />
+                <Hyperlink NavigateUri="https://artificialanalysis.ai/" RequestNavigate="OnNavigate">Artificial Analysis</Hyperlink>
+            </TextBlock>
+
+            <TextBlock Text="{loc:Loc About_Updates}" FontSize="20" FontWeight="SemiBold" />
+            <TextBlock Text="{Binding VersionText}" Margin="0,4,0,4" Foreground="{DynamicResource TextFillColorSecondaryBrush}" />
+            <StackPanel Orientation="Horizontal" Margin="0,0,0,16">
+                <Button Content="{loc:Loc About_CheckUpdate}" Command="{Binding CheckUpdateCommand}" Padding="12,6" />
+                <TextBlock Text="{Binding UpdateText}" VerticalAlignment="Center" Margin="12,0,0,0" TextWrapping="Wrap" />
+                <Button Content="{loc:Loc About_OpenRelease}" Click="OnOpenRelease" Padding="12,6" Margin="12,0,0,0"
+                        Visibility="{Binding UpdateUrl, Converter={StaticResource NullToCollapsed}}" />
+                <Button Content="{loc:Loc About_InstallUpdate}" Command="{Binding InstallUpdateCommand}" Padding="12,6" Margin="12,0,0,0"
+                        Visibility="{Binding CanInstall, Converter={StaticResource BoolToVis}}" />
+            </StackPanel>
+
+            <TextBlock Text="{loc:Loc About_Author}" FontSize="20" FontWeight="SemiBold" />
+            <TextBlock Margin="0,4,0,16" TextWrapping="Wrap">
+                <Run Text="{loc:Loc About_AuthorName}" /><Run Text="  ·  " />
+                <Hyperlink NavigateUri="https://github.com/mhbae-semi-lab/llm-pulse" RequestNavigate="OnNavigate">GitHub</Hyperlink><Run Text="  ·  " />
+                <Hyperlink NavigateUri="https://github.com/mhbae-semi-lab/llm-pulse/blob/main/docs/manual/LLM-Pulse-User-Manual-ko.pdf" RequestNavigate="OnNavigate"><Run Text="{loc:Loc About_Manual}" /></Hyperlink>
+            </TextBlock>
+
+            <TextBlock Text="{loc:Loc About_Disclaimer}" FontSize="20" FontWeight="SemiBold" />
+            <TextBlock Text="{loc:Loc About_DisclaimerBody}" TextWrapping="Wrap" Margin="0,4,0,16"
+                       Foreground="{DynamicResource TextFillColorSecondaryBrush}" />
+
+            <TextBlock Text="{loc:Loc About_Privacy}" FontSize="20" FontWeight="SemiBold" />
+            <TextBlock Text="{loc:Loc About_PrivacyBody}" TextWrapping="Wrap" Margin="0,4,0,0"
+                       Foreground="{DynamicResource TextFillColorSecondaryBrush}" />
+
+            <TextBlock Text="{loc:Loc About_Shortcuts}" FontSize="20" FontWeight="SemiBold" Margin="0,16,0,0" />
+            <TextBlock Text="{loc:Loc About_ShortcutsBody}" TextWrapping="Wrap" Margin="0,4,0,0"                       Foreground="{DynamicResource TextFillColorSecondaryBrush}" />
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

@@ -1,0 +1,132 @@
+[
+  {
+    "id": "api",
+    "monthlyUsd": null,
+    "all": true,
+    "reviewed": "2026-11-19",
+    "name": { "en": "Pay-as-you-go API", "ko": "API 종량제", "zh": "按量付费 API", "fr": "API à l'usage" },
+    "note": {
+      "en": "Any model offered through an API. Priced per token, so Best Value applies.",
+      "ko": "API 로 제공되는 모든 모델. 토큰 단가가 있어 가성비 추천이 적용됩니다.",
+      "zh": "通过 API 提供的所有模型。按 token 计费，适用性价比推荐。",
+      "fr": "Tous les modèles disponibles par API. Facturé au token, donc le meilleur rapport s'applique."
+    }
+  },
+  {
+    "id": "chatgpt_plus",
+    "monthlyUsd": 20,
+    "vendors": [ "OpenAI" ],
+    "reviewed": "2026-11-19",
+    "name": { "en": "ChatGPT Plus", "ko": "ChatGPT Plus", "zh": "ChatGPT Plus", "fr": "ChatGPT Plus" },
+    "note": {
+      "en": "Vendor-level approximation: all OpenAI models. Some top models may be limited or Pro-only.",
+      "ko": "제작사 단위 근사: OpenAI 의 모든 모델. 일부 최상위 모델은 제한되거나 Pro 전용일 수 있습니다.",
+      "zh": "按厂商近似：所有 OpenAI 模型。部分顶级模型可能受限或仅限 Pro。",
+      "fr": "Approximation par éditeur : tous les modèles OpenAI. Certains modèles haut de gamme peuvent être limités ou réservés à Pro."
+    }
+  },
+  {
+    "id": "chatgpt_pro",
+    "monthlyUsd": 200,
+    "vendors": [ "OpenAI" ],
+    "reviewed": "2026-11-19",
+    "name": { "en": "ChatGPT Pro", "ko": "ChatGPT Pro", "zh": "ChatGPT Pro", "fr": "ChatGPT Pro" },
+    "note": {
+      "en": "Vendor-level approximation: all OpenAI models.",
+      "ko": "제작사 단위 근사: OpenAI 의 모든 모델.",
+      "zh": "按厂商近似：所有 OpenAI 模型。",
+      "fr": "Approximation par éditeur : tous les modèles OpenAI."
+    }
+  },
+  {
+    "id": "claude_pro",
+    "monthlyUsd": 20,
+    "vendors": [ "Anthropic" ],
+    "reviewed": "2026-11-19",
+    "name": { "en": "Claude Pro", "ko": "Claude Pro", "zh": "Claude Pro", "fr": "Claude Pro" },
+    "note": {
+      "en": "Vendor-level approximation: all Anthropic models. Top models may have tighter usage limits.",
+      "ko": "제작사 단위 근사: Anthropic 의 모든 모델. 최상위 모델은 사용량 제한이 더 빡빡할 수 있습니다.",
+      "zh": "按厂商近似：所有 Anthropic 模型。顶级模型的使用限额可能更严。",
+      "fr": "Approximation par éditeur : tous les modèles Anthropic. Les modèles haut de gamme peuvent avoir des limites plus strictes."
+    }
+  },
+  {
+    "id": "claude_max",
+    "monthlyUsd": 100,
+    "vendors": [ "Anthropic" ],
+    "reviewed": "2026-11-19",
+    "name": { "en": "Claude Max", "ko": "Claude Max", "zh": "Claude Max", "fr": "Claude Max" },
+    "note": {
+      "en": "Vendor-level approximation: all Anthropic models. Price shown is the entry tier.",
+      "ko": "제작사 단위 근사: Anthropic 의 모든 모델. 표시 가격은 시작 요금제 기준입니다.",
+      "zh": "按厂商近似：所有 Anthropic 模型。所示价格为入门档。",
+      "fr": "Approximation par éditeur : tous les modèles Anthropic. Prix indiqué : offre d'entrée."
+    }
+  },
+  {
+    "id": "google_ai_pro",
+    "monthlyUsd": 19.99,
+    "vendors": [ "Google" ],
+    "reviewed": "2026-11-19",
+    "name": { "en": "Google AI Pro (Gemini)", "ko": "Google AI Pro (Gemini)", "zh": "Google AI Pro (Gemini)", "fr": "Google AI Pro (Gemini)" },
+    "note": {
+      "en": "Vendor-level approximation: Google models (Gemini, and open Gemma models are not guaranteed).",
+      "ko": "제작사 단위 근사: Google 모델(Gemini). 오픈 모델 Gemma 는 보장되지 않습니다.",
+      "zh": "按厂商近似：Google 模型（Gemini；Gemma 开源模型不保证）。",
+      "fr": "Approximation par éditeur : modèles Google (Gemini ; les modèles ouverts Gemma ne sont pas garantis)."
+    }
+  },
+  {
+    "id": "supergrok",
+    "monthlyUsd": 30,
+    "vendors": [ "xAI" ],
+    "reviewed": "2026-11-19",
+    "name": { "en": "SuperGrok", "ko": "SuperGrok", "zh": "SuperGrok", "fr": "SuperGrok" },
+    "note": {
+      "en": "Vendor-level approximation: all xAI models.",
+      "ko": "제작사 단위 근사: xAI 의 모든 모델.",
+      "zh": "按厂商近似：所有 xAI 模型。",
+      "fr": "Approximation par éditeur : tous les modèles xAI."
+    }
+  },
+  {
+    "id": "copilot",
+    "monthlyUsd": 10,
+    "vendors": [ "OpenAI", "Anthropic", "Google" ],
+    "reviewed": "2026-11-19",
+    "name": { "en": "GitHub Copilot", "ko": "GitHub Copilot", "zh": "GitHub Copilot", "fr": "GitHub Copilot" },
+    "note": {
+      "en": "Coarse approximation: OpenAI, Anthropic and Google models. The real list is narrower and changes often.",
+      "ko": "대략적 근사: OpenAI·Anthropic·Google 모델. 실제 목록은 더 좁고 자주 바뀝니다.",
+      "zh": "粗略近似：OpenAI、Anthropic、Google 模型。实际列表更窄且经常变化。",
+      "fr": "Approximation grossière : modèles OpenAI, Anthropic et Google. La liste réelle est plus étroite et change souvent."
+    }
+  },
+  {
+    "id": "cursor",
+    "monthlyUsd": 20,
+    "vendors": [ "OpenAI", "Anthropic", "Google", "xAI" ],
+    "reviewed": "2026-11-19",
+    "name": { "en": "Cursor", "ko": "Cursor", "zh": "Cursor", "fr": "Cursor" },
+    "note": {
+      "en": "Coarse approximation: OpenAI, Anthropic, Google and xAI models. Premium models draw from a usage pool.",
+      "ko": "대략적 근사: OpenAI·Anthropic·Google·xAI 모델. 프리미엄 모델은 사용량 풀에서 차감됩니다.",
+      "zh": "粗略近似：OpenAI、Anthropic、Google、xAI 模型。高级模型从用量池扣减。",
+      "fr": "Approximation grossière : modèles OpenAI, Anthropic, Google et xAI. Les modèles premium puisent dans un quota."
+    }
+  },
+  {
+    "id": "free_open",
+    "monthlyUsd": 0,
+    "vendors": [ "DeepSeek", "Alibaba", "Meta", "Mistral", "Z AI", "Moonshot" ],
+    "reviewed": "2026-11-19",
+    "name": { "en": "Free chat / open models", "ko": "무료 챗 / 오픈 모델", "zh": "免费聊天 / 开源模型", "fr": "Chat gratuit / modèles ouverts" },
+    "note": {
+      "en": "Vendors that offer free chat apps or downloadable weights. Availability varies by model.",
+      "ko": "무료 챗 앱이나 다운로드 가능한 가중치를 제공하는 제작사. 모델별로 가용성이 다릅니다.",
+      "zh": "提供免费聊天应用或可下载权重的厂商。各模型可用性不同。",
+      "fr": "Éditeurs proposant un chat gratuit ou des poids téléchargeables. La disponibilité varie selon le modèle."
+    }
+  }
+]

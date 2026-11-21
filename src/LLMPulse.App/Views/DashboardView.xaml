@@ -1,0 +1,321 @@
+<UserControl x:Class="LLMPulse.App.Views.DashboardView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:loc="clr-namespace:LLMPulse.App.Localization"
+             xmlns:app="clr-namespace:LLMPulse.App"
+             xmlns:controls="clr-namespace:LLMPulse.App.Controls">
+    <UserControl.Resources>
+        <BooleanToVisibilityConverter x:Key="BoolToVis" />
+        <app:InverseBoolToVisibilityConverter x:Key="InvBoolToVis" />
+
+        <!-- 작은 보조 글씨 (본문보다 약간 흐리게, 하지만 읽을 수 있게 15) -->
+        <Style x:Key="Dim" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="15" />
+            <Setter Property="Foreground" Value="{DynamicResource TextFillColorSecondaryBrush}" />
+        </Style>
+        <Style x:Key="ColHead" TargetType="TextBlock" BasedOn="{StaticResource Dim}">
+            <Setter Property="FontWeight" Value="SemiBold" />
+        </Style>
+
+        <!-- 용도 선택 칩 -->
+        <Style x:Key="ChipButton" TargetType="Button">
+            <Setter Property="Padding" Value="18,8" />
+            <Setter Property="Margin" Value="0,0,8,8" />
+            <Setter Property="FontSize" Value="17" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="Bd" CornerRadius="18" Padding="{TemplateBinding Padding}"
+                                Background="{DynamicResource ControlFillColorDefaultBrush}"
+                                BorderBrush="{DynamicResource ControlStrokeColorDefaultBrush}" BorderThickness="1">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Bd" Property="Background" Value="{DynamicResource ControlFillColorSecondaryBrush}" />
+                            </Trigger>
+                            <DataTrigger Binding="{Binding IsSelected}" Value="True">
+                                <Setter TargetName="Bd" Property="Background" Value="{DynamicResource SystemAccentColorPrimaryBrush}" />
+                                <Setter TargetName="Bd" Property="BorderBrush" Value="{DynamicResource SystemAccentColorPrimaryBrush}" />
+                                <Setter Property="Foreground" Value="White" />
+                            </DataTrigger>
+                            <Trigger Property="IsKeyboardFocused" Value="True">
+                                <Setter TargetName="Bd" Property="BorderBrush" Value="{DynamicResource SystemAccentColorPrimaryBrush}" />
+                                <Setter TargetName="Bd" Property="BorderThickness" Value="2" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- 표 행: 클릭하면 분야 상세 -->
+        <Style x:Key="RowCard" TargetType="Border">
+            <Setter Property="Margin" Value="0,0,0,6" />
+            <Setter Property="Padding" Value="16,12" />
+            <Setter Property="CornerRadius" Value="8" />
+            <Setter Property="Cursor" Value="Hand" />
+            <Setter Property="Background" Value="{DynamicResource CardBackgroundFillColorDefaultBrush}" />
+            <Setter Property="BorderBrush" Value="{DynamicResource CardStrokeColorDefaultBrush}" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="{DynamicResource ControlFillColorSecondaryBrush}" />
+                    <Setter Property="BorderBrush" Value="{DynamicResource SystemAccentColorPrimaryBrush}" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </UserControl.Resources>
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <StackPanel Margin="24,8,24,24">
+            <TextBlock Text="{loc:Loc Dashboard_Title}" FontSize="30" FontWeight="SemiBold" />
+            <TextBlock Text="{Binding Summary}" Margin="0,2,0,14" Style="{StaticResource Dim}" FontSize="16"
+                       Visibility="{Binding HasData, Converter={StaticResource BoolToVis}}" />
+
+            <!-- 한도 경고 -->
+            <Border Visibility="{Binding HasLimitAlert, Converter={StaticResource BoolToVis}}"
+                    Margin="0,0,0,14" Padding="16,10" CornerRadius="8"
+                    Background="{DynamicResource SystemFillColorCautionBackgroundBrush}">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="&#xE7BA;" FontFamily="Segoe MDL2 Assets" FontSize="18" VerticalAlignment="Top" Margin="0,2,12,0"
+                               Foreground="{DynamicResource SystemFillColorCautionBrush}" />
+                    <TextBlock Text="{Binding LimitAlert}" TextWrapping="Wrap" />
+                </StackPanel>
+            </Border>
+
+            <!-- 데이터 없음 -->
+            <Border Visibility="{Binding HasData, Converter={StaticResource InvBoolToVis}}"
+                    Padding="24" CornerRadius="8"
+                    Background="{DynamicResource CardBackgroundFillColorDefaultBrush}"
+                    BorderBrush="{DynamicResource CardStrokeColorDefaultBrush}" BorderThickness="1">
+                <StackPanel>
+                    <TextBlock Text="{loc:Loc Dashboard_EmptyTitle}" FontSize="20" FontWeight="SemiBold" />
+                    <TextBlock Text="{loc:Loc Dashboard_EmptyBody}" TextWrapping="Wrap" Margin="0,8,0,16" Style="{StaticResource Dim}" FontSize="16" />
+                    <Button Content="{loc:Loc Action_Refresh}" Command="{Binding Refresher.RefreshCommand}"
+                            HorizontalAlignment="Left" Padding="16,8" />
+                    <TextBlock Text="{Binding Refresher.StatusText}" Margin="0,12,0,0" TextWrapping="Wrap" />
+                </StackPanel>
+            </Border>
+
+            <StackPanel Visibility="{Binding HasData, Converter={StaticResource BoolToVis}}">
+                <!-- 무엇이 필요하세요? -->
+                <TextBlock Text="{loc:Loc Purpose_Label}" Style="{StaticResource Dim}" FontSize="16" Margin="0,0,0,6" />
+                <ItemsControl ItemsSource="{Binding Purposes}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate><WrapPanel /></ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Button Content="{Binding Title}" Command="{Binding SelectCommand}" Style="{StaticResource ChipButton}" />
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+
+                <!-- 추천(왼쪽) + 변화(오른쪽) -->
+                <Grid Margin="0,6,0,18">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="2*" MinWidth="260" />
+                    </Grid.ColumnDefinitions>
+
+                    <Border Grid.Column="0" Margin="0,0,16,0" Padding="22,18" CornerRadius="10"
+                            Visibility="{Binding HasPick, Converter={StaticResource BoolToVis}}"
+                            Background="{DynamicResource CardBackgroundFillColorDefaultBrush}"
+                            BorderBrush="{DynamicResource SystemAccentColorPrimaryBrush}" BorderThickness="2">
+                        <StackPanel>
+                            <DockPanel>
+                                <Button DockPanel.Dock="Right" Content="{loc:Loc Pick_Tune}" Command="{Binding OpenPickCommand}"
+                                        VerticalAlignment="Top" Padding="12,6" />
+                                <TextBlock Text="{Binding PickTitle}" FontWeight="SemiBold" VerticalAlignment="Center"
+                                           Foreground="{DynamicResource SystemAccentColorPrimaryBrush}" />
+                            </DockPanel>
+                            <StackPanel Orientation="Horizontal" Margin="0,6,0,0">
+                                <TextBlock Text="{Binding PickName}" FontSize="32" FontWeight="SemiBold" TextTrimming="CharacterEllipsis" Cursor="Hand">
+                                    <TextBlock.InputBindings>
+                                        <MouseBinding MouseAction="LeftClick" Command="{Binding OpenPickModelCommand}" />
+                                    </TextBlock.InputBindings>
+                                </TextBlock>
+                                <TextBlock Text="⚠" FontSize="24" Margin="12,0,0,0" VerticalAlignment="Center"
+                                           ToolTip="{loc:Loc Plans_AccessLimited}"
+                                           Foreground="{DynamicResource SystemFillColorCautionBrush}"
+                                           Visibility="{Binding PickLimited, Converter={StaticResource BoolToVis}}" />
+                            </StackPanel>
+                            <TextBlock Text="{Binding PickMeta}" FontSize="18" Style="{StaticResource Dim}" />
+                            <TextBlock Text="{Binding PickWhy}" TextWrapping="Wrap" Margin="0,10,0,0" Style="{StaticResource Dim}" />
+                            <StackPanel Visibility="{Binding HasAlternatives, Converter={StaticResource BoolToVis}}" Margin="0,12,0,0">
+                                <TextBlock Text="{loc:Loc Pick_Alternatives}" FontWeight="SemiBold" />
+                                <ItemsControl ItemsSource="{Binding Alternatives}" Margin="0,4,0,0">
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Margin="0,2,0,0" TextTrimming="CharacterEllipsis" Cursor="Hand">
+                                                <TextBlock.InputBindings>
+                                                    <MouseBinding MouseAction="LeftClick" Command="{Binding OpenCommand}" />
+                                                </TextBlock.InputBindings>
+                                                <Run Text="{Binding Name, Mode=OneWay}" FontSize="18" />
+                                                <Run Text="  " /><Run Text="{Binding Meta, Mode=OneWay}" FontSize="15"
+                                                                    Foreground="{DynamicResource TextFillColorSecondaryBrush}" />
+                                            </TextBlock>
+                                        </DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
+
+                    <Border Grid.Column="1" Padding="18,14" CornerRadius="10"
+                            Visibility="{Binding HasChangesHeader, Converter={StaticResource BoolToVis}}"
+                            Background="{DynamicResource CardBackgroundFillColorDefaultBrush}"
+                            BorderBrush="{DynamicResource CardStrokeColorDefaultBrush}" BorderThickness="1">
+                        <StackPanel>
+                            <TextBlock Text="{loc:Loc Changes_Title}" FontSize="20" FontWeight="SemiBold" />
+                            <TextBlock Text="{Binding ChangesHeader}" Style="{StaticResource Dim}" />
+                            <TextBlock Text="{Binding ChangesEmpty}" Margin="0,6,0,0" Style="{StaticResource Dim}">
+                                <TextBlock.Resources>
+                                    <Style TargetType="TextBlock" BasedOn="{StaticResource Dim}">
+                                        <Style.Triggers>
+                                            <Trigger Property="Text" Value="">
+                                                <Setter Property="Visibility" Value="Collapsed" />
+                                            </Trigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </TextBlock.Resources>
+                            </TextBlock>
+                            <ItemsControl ItemsSource="{Binding Changes}" Margin="0,8,0,0">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding}" TextWrapping="Wrap" Margin="0,0,0,6" FontSize="15" />
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </StackPanel>
+                    </Border>
+                </Grid>
+
+                <!-- 즐겨찾기 -->
+                <StackPanel Visibility="{Binding HasPinned, Converter={StaticResource BoolToVis}}" Margin="0,0,0,18">
+                    <StackPanel Orientation="Horizontal" Margin="0,0,0,6">
+                        <TextBlock Text="&#xE735;" FontFamily="Segoe MDL2 Assets" FontSize="18" VerticalAlignment="Center"
+                                   Foreground="{DynamicResource SystemFillColorCautionBrush}" />
+                        <TextBlock Text="{loc:Loc Pinned_Title}" FontSize="20" FontWeight="SemiBold" Margin="8,0,0,0" />
+                    </StackPanel>
+                    <ItemsControl ItemsSource="{Binding Pinned}">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate><WrapPanel /></ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Border Padding="14,8" Margin="0,0,10,8" CornerRadius="8" Cursor="Hand"
+                                        Background="{DynamicResource CardBackgroundFillColorDefaultBrush}"
+                                        BorderBrush="{DynamicResource CardStrokeColorDefaultBrush}" BorderThickness="1">
+                                    <Border.InputBindings>
+                                        <MouseBinding MouseAction="LeftClick" Command="{Binding OpenCommand}" />
+                                    </Border.InputBindings>
+                                    <StackPanel>
+                                        <TextBlock Text="{Binding Name}" FontSize="18" />
+                                        <TextBlock Text="{Binding Meta}" Style="{StaticResource Dim}" />
+                                    </StackPanel>
+                                </Border>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </StackPanel>
+
+                <!-- 분야별 한눈 표 -->
+                <TextBlock Text="{loc:Loc Table_Title}" FontSize="20" FontWeight="SemiBold" Margin="0,0,0,8" />
+                <Grid Margin="16,0,16,6">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="170" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="110" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Text="{loc:Loc Table_Category}" Style="{StaticResource ColHead}" />
+                    <TextBlock Grid.Column="1" Text="{loc:Loc Card_Best}" Style="{StaticResource ColHead}" />
+                    <TextBlock Grid.Column="2" Text="{loc:Loc Card_Value}" Style="{StaticResource ColHead}" />
+                    <TextBlock Grid.Column="3" Text="{loc:Loc Card_MyPlan}" Style="{StaticResource ColHead}"
+                               Visibility="{Binding ShowPlanColumn, Converter={StaticResource BoolToVis}}" />
+                    <TextBlock Grid.Column="4" Text="{loc:Loc Card_Trend}" Style="{StaticResource ColHead}" />
+                </Grid>
+
+                <ItemsControl ItemsSource="{Binding Cards}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Border Style="{StaticResource RowCard}" Loaded="OnCardLoaded" ToolTip="{Binding Rationale}">
+                                <Border.InputBindings>
+                                    <MouseBinding MouseAction="LeftClick" Command="{Binding OpenCommand}" />
+                                </Border.InputBindings>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="Auto" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="170" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="110" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <StackPanel Grid.Column="0" VerticalAlignment="Center" Margin="0,0,10,0">
+                                        <TextBlock Text="{Binding Title}" FontSize="18" FontWeight="SemiBold" TextWrapping="Wrap" />
+                                        <Border Visibility="{Binding HasDelta, Converter={StaticResource BoolToVis}}"
+                                                HorizontalAlignment="Left" Margin="0,3,0,0" Padding="6,0" CornerRadius="4"
+                                                ToolTip="{loc:Loc Card_DeltaTip}">
+                                            <Border.Style>
+                                                <Style TargetType="Border">
+                                                    <Setter Property="Background" Value="{DynamicResource ControlFillColorSecondaryBrush}" />
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding DeltaUp}" Value="True">
+                                                            <Setter Property="Background" Value="{DynamicResource SystemFillColorSuccessBackgroundBrush}" />
+                                                        </DataTrigger>
+                                                        <DataTrigger Binding="{Binding DeltaDown}" Value="True">
+                                                            <Setter Property="Background" Value="{DynamicResource SystemFillColorCriticalBackgroundBrush}" />
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </Border.Style>
+                                            <TextBlock Text="{Binding DeltaText}" FontSize="14" FontWeight="SemiBold" />
+                                        </Border>
+                                    </StackPanel>
+
+                                    <TextBlock Grid.Column="1" Grid.ColumnSpan="3" Text="{loc:Loc Dashboard_NoCategoryData}"
+                                               Style="{StaticResource Dim}" VerticalAlignment="Center"
+                                               Visibility="{Binding HasScore, Converter={StaticResource InvBoolToVis}}" />
+
+                                    <StackPanel Grid.Column="1" Margin="0,0,10,0" VerticalAlignment="Center"
+                                                Visibility="{Binding HasScore, Converter={StaticResource BoolToVis}}">
+                                        <TextBlock Text="{Binding BestName}" FontSize="18" TextTrimming="CharacterEllipsis" />
+                                        <TextBlock Text="{Binding BestMeta}" Style="{StaticResource Dim}" TextTrimming="CharacterEllipsis" />
+                                    </StackPanel>
+
+                                    <StackPanel Grid.Column="2" Margin="0,0,10,0" VerticalAlignment="Center"
+                                                Visibility="{Binding HasValue, Converter={StaticResource BoolToVis}}">
+                                        <TextBlock Text="{Binding ValueName}" FontSize="18" TextTrimming="CharacterEllipsis" />
+                                        <TextBlock Text="{Binding ValueMeta}" Style="{StaticResource Dim}" TextTrimming="CharacterEllipsis" />
+                                    </StackPanel>
+
+                                    <StackPanel Grid.Column="3" Margin="0,0,10,0" VerticalAlignment="Center"
+                                                Visibility="{Binding HasPlan, Converter={StaticResource BoolToVis}}">
+                                        <TextBlock Text="{Binding PlanName}" FontSize="18" TextTrimming="CharacterEllipsis" />
+                                        <TextBlock Text="{Binding PlanMeta}" Style="{StaticResource Dim}" TextTrimming="CharacterEllipsis" />
+                                    </StackPanel>
+
+                                    <controls:Sparkline Grid.Column="4" Height="30" Width="96" HorizontalAlignment="Left" VerticalAlignment="Center"
+                                                        Values="{Binding Trend}"
+                                                        Visibility="{Binding HasTrend, Converter={StaticResource BoolToVis}}"
+                                                        Stroke="{DynamicResource SystemAccentColorPrimaryBrush}" />
+                                    <TextBlock Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="4" Margin="0,6,0,0"
+                                               Text="{Binding Note}" TextWrapping="Wrap" Style="{StaticResource Dim}"
+                                               Visibility="{Binding HasNote, Converter={StaticResource BoolToVis}}" />
+                                </Grid>
+                            </Border>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </StackPanel>
+        </StackPanel>
+    </ScrollViewer>
+</UserControl>

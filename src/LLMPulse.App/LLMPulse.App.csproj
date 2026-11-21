@@ -1,0 +1,43 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <Resource Include="Assets\app.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LLMPulse.Core\LLMPulse.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.2" />
+    <PackageReference Include="H.NotifyIcon.Wpf" Version="2.3.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="8.0.1" />
+    <PackageReference Include="ScottPlot.WPF" Version="5.1.59" />
+    <PackageReference Include="Velopack" Version="1.2.161" />
+    <PackageReference Include="WPF-UI" Version="4.0.3" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>Assets\app.ico</ApplicationIcon>
+    <!-- Velopack 훅을 먼저 돌리기 위한 진입점 (Program.cs) -->
+    <StartupObject>LLMPulse.App.Program</StartupObject>
+    <NoWarn>$(NoWarn);NU1701</NoWarn>
+    <!-- 번들하는 언어만 위성 어셈블리로 포함 (서드파티 패키지의 수십 개 언어 폴더 제외) -->
+    <SatelliteResourceLanguages>en;ko;zh;zh-Hans;fr</SatelliteResourceLanguages>
+    <Version>1.0.0</Version>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <Product>LLM Pulse</Product>
+    <Authors>배민혁</Authors>
+    <Company>배민혁</Company>
+    <Copyright>© 2026 배민혁</Copyright>
+    <Description>LLM performance and value tracker</Description>
+  </PropertyGroup>
+
+</Project>

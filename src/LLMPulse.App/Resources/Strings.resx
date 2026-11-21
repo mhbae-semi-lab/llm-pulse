@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="Nav_Dashboard" xml:space="preserve"><value>Dashboard</value></data>
+  <data name="Nav_Leaderboard" xml:space="preserve"><value>Leaderboard</value></data>
+  <data name="Nav_Metrics" xml:space="preserve"><value>Metrics info</value></data>
+  <data name="Nav_Settings" xml:space="preserve"><value>Settings</value></data>
+  <data name="Nav_About" xml:space="preserve"><value>About</value></data>
+  <data name="Search_Placeholder" xml:space="preserve"><value>Search models or vendors</value></data>
+  <data name="Action_Refresh" xml:space="preserve"><value>Refresh</value></data>
+  <data name="Action_Language" xml:space="preserve"><value>Language</value></data>
+  <data name="Action_Theme" xml:space="preserve"><value>Toggle light/dark theme</value></data>
+  <data name="Action_MetricInfo" xml:space="preserve"><value>About this metric</value></data>
+  <data name="Action_Save" xml:space="preserve"><value>Save</value></data>
+  <data name="Fresh_NoData" xml:space="preserve"><value>No data yet</value></data>
+  <data name="Fresh_Updated" xml:space="preserve"><value>Updated {0}</value></data>
+  <data name="Fresh_Stale" xml:space="preserve"><value>Out of date (48h+) · {0}</value></data>
+  <data name="Status_Cooldown" xml:space="preserve"><value>Refreshed recently. Try again in about {0} min.</value></data>
+  <data name="Status_Refreshing" xml:space="preserve"><value>Refreshing…</value></data>
+  <data name="Status_RefreshOk" xml:space="preserve"><value>Done. {0} models in the database.</value></data>
+  <data name="Status_RefreshError" xml:space="preserve"><value>Source &quot;{0}&quot; failed: {1}</value></data>
+  <data name="Dashboard_Title" xml:space="preserve"><value>Today&apos;s recommendations</value></data>
+  <data name="Dashboard_Summary" xml:space="preserve"><value>{0} new models today, {1} #1 changes since the previous snapshot.</value></data>
+  <data name="Dashboard_EmptyTitle" xml:space="preserve"><value>No data yet</value></data>
+  <data name="Dashboard_EmptyBody" xml:space="preserve"><value>Add your Artificial Analysis API key in Settings, then press Refresh. Daily refresh at 08:00 can be set up later.</value></data>
+  <data name="Dashboard_NoCategoryData" xml:space="preserve"><value>Not enough data for this category.</value></data>
+  <data name="Card_Best" xml:space="preserve"><value>Best performance</value></data>
+  <data name="Card_Value" xml:space="preserve"><value>Best value</value></data>
+  <data name="Card_Score" xml:space="preserve"><value>Score</value></data>
+  <data name="Card_ViewRanking" xml:space="preserve"><value>Details →</value></data>
+  <data name="Rationale_Best" xml:space="preserve"><value>Top of {0}: score {1}, first among {2} scored models.</value></data>
+  <data name="Rationale_BestRaw" xml:space="preserve"><value>Top of {0}: {1}, first among {2} models with data.</value></data>
+  <data name="Rationale_Value" xml:space="preserve"><value>{0} score {1} ({2} of the top score {3}), blended {4}/1M — cheapest among models within {5} of the top.</value></data>
+  <data name="Badge_TopChanged" xml:space="preserve"><value>#1 changed (was {0})</value></data>
+  <data name="Leaderboard_Title" xml:space="preserve"><value>Leaderboard</value></data>
+  <data name="Leaderboard_AllVendors" xml:space="preserve"><value>All vendors</value></data>
+  <data name="Leaderboard_Vendor" xml:space="preserve"><value>Vendor</value></data>
+  <data name="Leaderboard_Count" xml:space="preserve"><value>{0} of {1} models</value></data>
+  <data name="Leaderboard_HeatHint" xml:space="preserve"><value>Shading = category score (number always shown)</value></data>
+  <data name="Col_Model" xml:space="preserve"><value>Model</value></data>
+  <data name="Col_Vendor" xml:space="preserve"><value>Vendor</value></data>
+  <data name="Col_Price" xml:space="preserve"><value>Blended $/1M ↓</value></data>
+  <data name="Col_Speed" xml:space="preserve"><value>tok/s ↑</value></data>
+  <data name="Col_Ttft" xml:space="preserve"><value>TTFT s ↓</value></data>
+  <data name="Col_Release" xml:space="preserve"><value>Released</value></data>
+  <data name="Metrics_Title" xml:space="preserve"><value>Metrics info</value></data>
+  <data name="Metric_Method" xml:space="preserve"><value>How it is measured</value></data>
+  <data name="Metric_Scale" xml:space="preserve"><value>Scale</value></data>
+  <data name="Metric_UsedIn" xml:space="preserve"><value>Used in categories</value></data>
+  <data name="Metric_Caveats" xml:space="preserve"><value>Caveats</value></data>
+  <data name="Metric_Source" xml:space="preserve"><value>Source:</value></data>
+  <data name="Metric_Updated" xml:space="preserve"><value>Last updated:</value></data>
+  <data name="Metric_ScaleIndex" xml:space="preserve"><value>Index 0–100 ({0}), used as-is</value></data>
+  <data name="Metric_ScalePercentile" xml:space="preserve"><value>{0}, converted to a 0–100 percentile rank</value></data>
+  <data name="Metric_HigherBetter" xml:space="preserve"><value>↑ higher is better</value></data>
+  <data name="Metric_LowerBetter" xml:space="preserve"><value>↓ lower is better</value></data>
+  <data name="Scoring_Title" xml:space="preserve"><value>How scores are calculated</value></data>
+  <data name="Scoring_Percentile" xml:space="preserve"><value>Raw values are always kept and shown. Metrics on different scales are compared by percentile rank among models that have the metric (lower-is-better metrics are flipped).</value></data>
+  <data name="Scoring_Index" xml:space="preserve"><value>Composite 0–100 indices such as the Intelligence Index are used as-is, never converted to percentiles twice.</value></data>
+  <data name="Scoring_Missing" xml:space="preserve"><value>Category score = weighted average of its metrics. Missing metrics are re-weighted; if fewer than 50% of the category&apos;s metrics exist, no score is shown (we never guess).</value></data>
+  <data name="Scoring_Best" xml:space="preserve"><value>Best performance = rank 1 in the category.</value></data>
+  <data name="Scoring_Value" xml:space="preserve"><value>Best value = the cheapest blended price among models scoring at least the tolerance (default 90%) of the top score. A plain score/price ratio is not used because it always favors cheap, weak models.</value></data>
+  <data name="Scoring_Example" xml:space="preserve"><value>Example with your tolerance {0}: if the top score is 70, models scoring at least 70 × {0} are candidates, and the cheapest of them is recommended.</value></data>
+  <data name="Scoring_Limits" xml:space="preserve"><value>Benchmarks can be contaminated or vendor-reported, and a benchmark score is not the same as real-world performance on your task.</value></data>
+  <data name="Settings_Title" xml:space="preserve"><value>Settings</value></data>
+  <data name="Settings_Tolerance" xml:space="preserve"><value>Best-value tolerance</value></data>
+  <data name="Settings_ToleranceHelp" xml:space="preserve"><value>Models scoring at least this share of the top score are considered for &quot;best value&quot;.</value></data>
+  <data name="Settings_ToleranceValue" xml:space="preserve"><value>{0} of top</value></data>
+  <data name="Settings_ApiKey" xml:space="preserve"><value>Artificial Analysis API key</value></data>
+  <data name="Settings_ApiKeyHelp" xml:space="preserve"><value>Stored encrypted for your Windows user (DPAPI). Never written to settings files or logs.</value></data>
+  <data name="Settings_KeyEmpty" xml:space="preserve"><value>Enter a key first.</value></data>
+  <data name="Settings_KeySaved" xml:space="preserve"><value>Key saved.</value></data>
+  <data name="Settings_KeyStored" xml:space="preserve"><value>A key is stored.</value></data>
+  <data name="Settings_KeyMissing" xml:space="preserve"><value>No key stored yet.</value></data>
+  <data name="Settings_Refresh" xml:space="preserve"><value>Data refresh</value></data>
+  <data name="Settings_RefreshHelp" xml:space="preserve"><value>Manual refresh is limited to once every 10 minutes to protect the API quota.</value></data>
+  <data name="Settings_Sources" xml:space="preserve"><value>Data source status</value></data>
+  <data name="Settings_LastSuccess" xml:space="preserve"><value>Last success</value></data>
+  <data name="About_Title" xml:space="preserve"><value>About</value></data>
+  <data name="About_Data" xml:space="preserve"><value>Data source</value></data>
+  <data name="About_DataBy" xml:space="preserve"><value>Data: </value></data>
+  <data name="About_Disclaimer" xml:space="preserve"><value>Limits of benchmarks</value></data>
+  <data name="About_DisclaimerBody" xml:space="preserve"><value>Scores come from third-party benchmarks. They can be contaminated, self-reported by vendors, and may not reflect your workload. Use them as a guide, not a guarantee.</value></data>
+  <data name="About_Privacy" xml:space="preserve"><value>Privacy</value></data>
+  <data name="About_PrivacyBody" xml:space="preserve"><value>Everything is stored locally on this PC (%LOCALAPPDATA%\LLMPulse). Network access is limited to fetching public benchmark data (with your API key for Artificial Analysis), the subscription plan list from this app's GitHub repository, and update checks against GitHub Releases (automatic in the installed version; turn it off in Settings). No usage data or personal data is sent anywhere.</value></data>
+  <data name="Footer_Data" xml:space="preserve"><value>Data: </value></data>
+  <data name="Footer_Disclaimer" xml:space="preserve"><value>Benchmarks are a guide, not a guarantee.</value></data>
+  <data name="Card_Top" xml:space="preserve"><value>Top ranked</value></data>
+  <data name="Action_Back" xml:space="preserve"><value>← Back</value></data>
+  <data name="Action_OpenLeaderboard" xml:space="preserve"><value>Open in leaderboard</value></data>
+  <data name="Chart_TopRanking" xml:space="preserve"><value>Top ranking</value></data>
+  <data name="Chart_PriceVsScore" xml:space="preserve"><value>Price vs. score</value></data>
+  <data name="Chart_ParetoHelp" xml:space="preserve"><value>Diamonds on the line are the Pareto frontier: no cheaper model scores higher. ■ best performance, ● best value. Price axis is logarithmic.</value></data>
+  <data name="Chart_ParetoLegend" xml:space="preserve"><value>Pareto frontier</value></data>
+  <data name="Chart_UsedMetrics" xml:space="preserve"><value>Metrics used in this category</value></data>
+  <data name="Chart_Weight" xml:space="preserve"><value>weight</value></data>
+  <data name="Chart_ScoreAxis" xml:space="preserve"><value>Category score (0–100)</value></data>
+  <data name="Chart_PriceAxis" xml:space="preserve"><value>Blended price $/1M tokens (log)</value></data>
+  <data name="Compare_Title" xml:space="preserve"><value>Compare models</value></data>
+  <data name="Compare_Empty" xml:space="preserve"><value>Select 1–4 models in the leaderboard (Ctrl/Shift+click), then press Compare. Double-click a row to open one model.</value></data>
+  <data name="Compare_Radar" xml:space="preserve"><value>Scores by category</value></data>
+  <data name="Compare_RadarHelp" xml:space="preserve"><value>Categories without data are drawn as 0.</value></data>
+  <data name="Compare_Trend" xml:space="preserve"><value>Trend</value></data>
+  <data name="Compare_TrendMetric" xml:space="preserve"><value>Trend metric</value></data>
+  <data name="Compare_TrendFew" xml:space="preserve"><value>Trend needs at least two daily snapshots. It fills in as daily refreshes accumulate.</value></data>
+  <data name="Compare_Scores" xml:space="preserve"><value>Category scores (0–100)</value></data>
+  <data name="Compare_Raw" xml:space="preserve"><value>Raw values</value></data>
+  <data name="Leaderboard_CompareHint" xml:space="preserve"><value>Select models to compare</value></data>
+  <data name="Leaderboard_Compare" xml:space="preserve"><value>Compare {0} selected</value></data>
+  <data name="Leaderboard_CompareTooMany" xml:space="preserve"><value>Select up to {0} models</value></data>
+  <data name="Nav_Matching" xml:space="preserve"><value>Model matching</value></data>
+  <data name="Matching_Title" xml:space="preserve"><value>Model matching</value></data>
+  <data name="Matching_Intro" xml:space="preserve"><value>Supplementary sources (OpenRouter, Aider, Arena) list models under their own names. A name is matched to an Artificial Analysis model automatically only when exactly one candidate fits; everything else is left for you to link. Linked data adds context length, coding and human-preference results, and fills in missing prices.</value></data>
+  <data name="Matching_Empty" xml:space="preserve"><value>No supplementary data yet. Run a refresh to load OpenRouter, Aider and Arena.</value></data>
+  <data name="Matching_Summary" xml:space="preserve"><value>{0} matched · {1} need matching</value></data>
+  <data name="Matching_Filter" xml:space="preserve"><value>Filter</value></data>
+  <data name="Matching_Filter_Unmatched" xml:space="preserve"><value>Needs matching</value></data>
+  <data name="Matching_Filter_Matched" xml:space="preserve"><value>Matched</value></data>
+  <data name="Matching_Filter_All" xml:space="preserve"><value>All</value></data>
+  <data name="Matching_Search" xml:space="preserve"><value>Search source models</value></data>
+  <data name="Matching_Truncated" xml:space="preserve"><value>Showing the first {0} of {1}. Use search to narrow down.</value></data>
+  <data name="Matching_Status_Needed" xml:space="preserve"><value>Needs matching</value></data>
+  <data name="Matching_Context" xml:space="preserve"><value>Context {0}K</value></data>
+  <data name="Matching_Price" xml:space="preserve"><value>In {0} · Out {1} per 1M</value></data>
+  <data name="Matching_SelectItem" xml:space="preserve"><value>Select an item on the left to link it to a model.</value></data>
+  <data name="Matching_Suggestions" xml:space="preserve"><value>Suggestions (click to link)</value></data>
+  <data name="Matching_NoSuggestions" xml:space="preserve"><value>No similar names found.</value></data>
+  <data name="Matching_PickModel" xml:space="preserve"><value>Or pick a model</value></data>
+  <data name="Matching_ModelSearch" xml:space="preserve"><value>Search models</value></data>
+  <data name="Matching_Link" xml:space="preserve"><value>Link to selected model</value></data>
+  <data name="Matching_Unlink" xml:space="preserve"><value>Remove link</value></data>
+  <data name="Matching_Linked" xml:space="preserve"><value>Linked {0} → {1}</value></data>
+  <data name="Matching_Unlinked" xml:space="preserve"><value>Removed the link for {0}</value></data>
+  <data name="Settings_Schedule" xml:space="preserve"><value>Automatic refresh</value></data>
+  <data name="Settings_ScheduleHelp" xml:space="preserve"><value>Registers a Windows Task Scheduler job that refreshes data in the background at the chosen time, even when the app is closed. If the PC was off, it runs when the PC turns on. While the app is open it also catches up on its own.</value></data>
+  <data name="Settings_RefreshTime" xml:space="preserve"><value>Refresh time (HH:mm)</value></data>
+  <data name="Settings_Register" xml:space="preserve"><value>Register</value></data>
+  <data name="Settings_Unregister" xml:space="preserve"><value>Unregister</value></data>
+  <data name="Settings_TimeInvalid" xml:space="preserve"><value>Enter a time like 08:00.</value></data>
+  <data name="Settings_ScheduleRegistered" xml:space="preserve"><value>Registered: refreshes daily at {0}.</value></data>
+  <data name="Settings_ScheduleNotRegistered" xml:space="preserve"><value>Not registered. Data refreshes only while the app is open.</value></data>
+  <data name="Settings_ScheduleFailed" xml:space="preserve"><value>Could not change the schedule: {0}</value></data>
+  <data name="Settings_TrayResident" xml:space="preserve"><value>Keep running in the tray when the window is closed</value></data>
+  <data name="Settings_Notify" xml:space="preserve"><value>Notify me when a #1 changes or new models appear</value></data>
+  <data name="Tray_Open" xml:space="preserve"><value>Open LLM Pulse</value></data>
+  <data name="Tray_Refresh" xml:space="preserve"><value>Refresh now</value></data>
+  <data name="Tray_Quit" xml:space="preserve"><value>Quit</value></data>
+  <data name="Toast_Title" xml:space="preserve"><value>LLM Pulse</value></data>
+  <data name="Toast_Body" xml:space="preserve"><value>#1 changed in {0} categories · {1} new models</value></data>
+  <data name="Card_MyPlan" xml:space="preserve"><value>Best in my plans</value></data>
+  <data name="Leaderboard_MyPlanOnly" xml:space="preserve"><value>My plans only</value></data>
+  <data name="Settings_OpenDataFolder" xml:space="preserve"><value>Open data folder</value></data>
+  <data name="Plan_Free" xml:space="preserve"><value>Free</value></data>
+  <data name="Plan_PerMonth" xml:space="preserve"><value>${0}/month</value></data>
+  <data name="Plan_PerToken" xml:space="preserve"><value>Per token</value></data>
+  <data name="Plan_Detail" xml:space="preserve"><value>{0} · {1} models matched · reviewed {2}</value></data>
+  <data name="Plan_LoadWarning" xml:space="preserve"><value>Could not use your plan file; built-in plans are shown. {0}</value></data>
+  <data name="Plan_UserFile" xml:space="preserve"><value>Using your custom {0}.</value></data>
+  <data name="Plan_UserFileHint" xml:space="preserve"><value>To edit plans, put a {0} (same format as the built-in list) in the data folder; it replaces the built-in plans.</value></data>
+  <data name="Matching_Aider" xml:space="preserve"><value>Aider polyglot {0}%</value></data>
+  <data name="Action_ExportCsv" xml:space="preserve"><value>Export CSV</value></data>
+  <data name="Action_ExportPng" xml:space="preserve"><value>Save this page as PNG</value></data>
+  <data name="Nav_Plans" xml:space="preserve"><value>My plans</value></data>
+  <data name="Plan_OnlyTip" xml:space="preserve"><value>Show only models available in my plans</value></data>
+  <data name="Plans_Title" xml:space="preserve"><value>My plans</value></data>
+  <data name="Plans_Help" xml:space="preserve"><value>Check the subscriptions you use. Dashboard and charts then show what you can actually use. Add a usage-limit memo, and fix per-model access where the default rules are wrong.</value></data>
+  <data name="Plans_Profile" xml:space="preserve"><value>Profile</value></data>
+  <data name="Plans_ProfileName" xml:space="preserve"><value>Profile name</value></data>
+  <data name="Plans_ProfileSave" xml:space="preserve"><value>Save as profile</value></data>
+  <data name="Plans_ProfileDelete" xml:space="preserve"><value>Delete</value></data>
+  <data name="Plans_RunWizard" xml:space="preserve"><value>Run setup wizard</value></data>
+  <data name="Plans_Limit" xml:space="preserve"><value>Usage limit memo</value></data>
+  <data name="Plans_LimitCap" xml:space="preserve"><value>Limit</value></data>
+  <data name="Plans_LimitPeriod" xml:space="preserve"><value>Period</value></data>
+  <data name="Plans_LimitNote" xml:space="preserve"><value>Note (e.g. 500 fast requests)</value></data>
+  <data name="Plans_Period5h" xml:space="preserve"><value>per 5 hours</value></data>
+  <data name="Plans_PeriodDay" xml:space="preserve"><value>per day</value></data>
+  <data name="Plans_PeriodWeek" xml:space="preserve"><value>per week</value></data>
+  <data name="Plans_PeriodMonth" xml:space="preserve"><value>per month</value></data>
+  <data name="Plans_UsageReset" xml:space="preserve"><value>Reset</value></data>
+  <data name="Plans_NoUsage" xml:space="preserve"><value>No usage counted yet</value></data>
+  <data name="Plans_UsageCap" xml:space="preserve"><value>Used {0} of {1}</value></data>
+  <data name="Plans_UsageNoCap" xml:space="preserve"><value>Used {0}</value></data>
+  <data name="Plans_Models" xml:space="preserve"><value>Models in this plan</value></data>
+  <data name="Plans_ModelsHelp" xml:space="preserve"><value>Included = usable. Limited = usable but with a tight usage pool (marked ⚠). Unavailable = not in this plan. Your edits override the default rules.</value></data>
+  <data name="Plans_ModelFilter" xml:space="preserve"><value>Filter models</value></data>
+  <data name="Plans_ModelSummary" xml:space="preserve"><value>Included {0} · Limited {1} · Edited {2}</value></data>
+  <data name="Plans_Access" xml:space="preserve"><value>Access</value></data>
+  <data name="Plans_AccessNone" xml:space="preserve"><value>Unavailable</value></data>
+  <data name="Plans_AccessLimited" xml:space="preserve"><value>Limited</value></data>
+  <data name="Plans_AccessFull" xml:space="preserve"><value>Included</value></data>
+  <data name="Plans_AccessReset" xml:space="preserve"><value>Default</value></data>
+  <data name="Wizard_Title" xml:space="preserve"><value>Welcome to LLM Pulse</value></data>
+  <data name="Wizard_Step" xml:space="preserve"><value>Step {0} / {1}</value></data>
+  <data name="Wizard_KeyTitle" xml:space="preserve"><value>1. Data source key</value></data>
+  <data name="Wizard_KeyBody" xml:space="preserve"><value>An Artificial Analysis API key is needed for live data. It is stored encrypted on this PC only. You can skip this and add it later in Settings.</value></data>
+  <data name="Wizard_PlansTitle" xml:space="preserve"><value>2. Which subscriptions do you use?</value></data>
+  <data name="Wizard_PlansBody" xml:space="preserve"><value>Cursor, Claude and ChatGPT are pre-selected. Change them as needed; per-model details can be tuned later in My plans.</value></data>
+  <data name="Wizard_DoneTitle" xml:space="preserve"><value>3. Ready</value></data>
+  <data name="Wizard_DoneBody" xml:space="preserve"><value>Your selection</value></data>
+  <data name="Wizard_DoneNote" xml:space="preserve"><value>Finish starts the first data refresh if a key is saved.</value></data>
+  <data name="Wizard_OnlyMine" xml:space="preserve"><value>Show only models I can use (switch anytime in the top bar)</value></data>
+  <data name="Wizard_NoPlans" xml:space="preserve"><value>No subscription selected</value></data>
+  <data name="Wizard_Next" xml:space="preserve"><value>Next</value></data>
+  <data name="Wizard_Back" xml:space="preserve"><value>Back</value></data>
+  <data name="Wizard_Finish" xml:space="preserve"><value>Finish</value></data>
+  <data name="Wizard_Skip" xml:space="preserve"><value>Skip</value></data>
+  <data name="Pick_Title" xml:space="preserve"><value>Today's coding pick</value></data>
+  <data name="Pick_TitlePlan" xml:space="preserve"><value>Today's coding pick · within my plans</value></data>
+  <data name="Pick_Why" xml:space="preserve"><value>Why: {0}</value></data>
+  <data name="Pick_Alternatives" xml:space="preserve"><value>Alternatives</value></data>
+  <data name="Pick_Tune" xml:space="preserve"><value>Tune the mix →</value></data>
+  <data name="Changes_Title" xml:space="preserve"><value>What changed</value></data>
+  <data name="Changes_Since" xml:space="preserve"><value>vs. {0}</value></data>
+  <data name="Changes_Empty" xml:space="preserve"><value>No notable ranking changes since the previous update.</value></data>
+  <data name="Change_New" xml:space="preserve"><value>New model: {0}</value></data>
+  <data name="Change_NewRanked" xml:space="preserve"><value>New model: {0} debuts at #{2} in {1}</value></data>
+  <data name="Change_Top" xml:space="preserve"><value>{1}: {0} took #1 from {2}</value></data>
+  <data name="Change_Entered" xml:space="preserve"><value>{1}: {0} entered the top 10 at #{2}</value></data>
+  <data name="Change_Up" xml:space="preserve"><value>{1}: {0} moved up from #{2} to #{3}</value></data>
+  <data name="Change_Down" xml:space="preserve"><value>{1}: {0} dropped from #{2} to #{3}</value></data>
+  <data name="Weights_Help" xml:space="preserve"><value>Drag the sliders to set how much each metric counts. 0 removes a metric from this mix. Percentages show each metric's share of the final score.</value></data>
+  <data name="Weights_Reset" xml:space="preserve"><value>Reset to default</value></data>
+  <data name="Weights_Custom" xml:space="preserve"><value>Custom weights in use. 1st-place change alerts are off for this mix.</value></data>
+  <data name="Plans_BreakEven" xml:space="preserve"><value>Break-even: ${0}/month ≈ {1}M tokens of {2} through the API ({3}/1M blended).</value></data>
+  <data name="Plans_EconTitle" xml:space="preserve"><value>Subscription vs. API cost</value></data>
+  <data name="Plans_Econ" xml:space="preserve"><value>Your subscriptions total ${0}/month. The same {1}M tokens through the API with {2} would cost about ${3}/month.</value></data>
+  <data name="Plans_EconSubCheaper" xml:space="preserve"><value>Subscriptions are cheaper by about ${0}/month.</value></data>
+  <data name="Plans_EconApiCheaper" xml:space="preserve"><value>The API would be cheaper by about ${0}/month.</value></data>
+  <data name="Plans_EconNote" xml:space="preserve"><value>Rough estimate: uses the blended price (3:1 input:output) of the best model in your plans, and ignores caching, discounts and plan usage limits.</value></data>
+  <data name="Plans_EconUsage" xml:space="preserve"><value>My monthly usage (million tokens)</value></data>
+  <data name="Leaderboard_FavoritesOnly" xml:space="preserve"><value>Favorites only</value></data>
+  <data name="Leaderboard_Columns" xml:space="preserve"><value>Columns</value></data>
+  <data name="Leaderboard_FavToggle" xml:space="preserve"><value>Add or remove favorite</value></data>
+  <data name="Card_Trend" xml:space="preserve"><value>7-day trend</value></data>
+  <data name="Card_DeltaTip" xml:space="preserve"><value>Rank change since the previous snapshot</value></data>
+  <data name="Pinned_Title" xml:space="preserve"><value>My favorites</value></data>
+  <data name="Chart_PlanLegend" xml:space="preserve"><value>Green = included in my plans · white outline = favorite</value></data>
+  <data name="Change_PriceDown" xml:space="preserve"><value>{0}: price dropped {1} → {2} (−{3}%)</value></data>
+  <data name="Change_PriceUp" xml:space="preserve"><value>{0}: price rose {1} → {2} (+{3}%)</value></data>
+  <data name="Limit_Warn" xml:space="preserve"><value>{0}: {1} of {2} used ({3}%) - running low; consider an alternative or the API.</value></data>
+  <data name="Limit_Reached" xml:space="preserve"><value>{0}: limit reached ({1} of {2}). Use an alternative or the API until it resets.</value></data>
+  <data name="About_Shortcuts" xml:space="preserve"><value>Keyboard shortcuts</value></data>
+  <data name="About_ShortcutsBody" xml:space="preserve"><value>Ctrl+K  Search
+F5  Refresh
+Ctrl+P  My plans only
+Ctrl+1…9  Go to page
+Ctrl +/-, 0  Text size
+Ctrl+Alt+U  Usage +1 (global)
+Ctrl+Alt+L  Mini widget (global)</value></data>
+  <data name="Settings_StartWithWindows" xml:space="preserve"><value>Start with Windows (runs quietly in the tray and refreshes by itself)</value></data>
+  <data name="Purpose_Label" xml:space="preserve"><value>What do you need?</value></data>
+  <data name="Purpose_Coding" xml:space="preserve"><value>Coding</value></data>
+  <data name="Purpose_Korean" xml:space="preserve"><value>Korean</value></data>
+  <data name="Purpose_Fast" xml:space="preserve"><value>Fast responses</value></data>
+  <data name="Purpose_Balanced" xml:space="preserve"><value>All-round</value></data>
+  <data name="Purpose_Cheap" xml:space="preserve"><value>Cheapest that is good enough</value></data>
+  <data name="Pick_TitleFor" xml:space="preserve"><value>Top pick · {0}</value></data>
+  <data name="Pick_TitleForPlan" xml:space="preserve"><value>Top pick · {0} · within my plans</value></data>
+  <data name="Table_Title" xml:space="preserve"><value>Every category at a glance</value></data>
+  <data name="Table_Category" xml:space="preserve"><value>Category</value></data>
+  <data name="Model_Context" xml:space="preserve"><value>Context</value></data>
+  <data name="Model_Rank" xml:space="preserve"><value>#{0} of {1}</value></data>
+  <data name="Model_Scores" xml:space="preserve"><value>Scores and rank by category</value></data>
+  <data name="Model_Plans" xml:space="preserve"><value>Access in my plans</value></data>
+  <data name="Model_NoPlans" xml:space="preserve"><value>Pick your plans on the My plans page to see where you can use this model.</value></data>
+  <data name="Model_PriceHistory" xml:space="preserve"><value>Price history (per 1M tokens)</value></data>
+  <data name="Model_PriceHistoryNote" xml:space="preserve"><value>{0} records: {1} → {2}</value></data>
+  <data name="Model_NotFound" xml:space="preserve"><value>This model is not in the current data.</value></data>
+  <data name="Model_OpenLeaderboard" xml:space="preserve"><value>Open leaderboard</value></data>
+  <data name="Col_Access" xml:space="preserve"><value>My plans</value></data>
+  <data name="Leaderboard_RowHint" xml:space="preserve"><value>Double-click a row for details.</value></data>
+  <data name="Menu_More" xml:space="preserve"><value>More</value></data>
+  <data name="Menu_TextSize" xml:space="preserve"><value>Text size (Ctrl +/-)</value></data>
+  <data name="Size_Small" xml:space="preserve"><value>Small</value></data>
+  <data name="Size_Normal" xml:space="preserve"><value>Normal</value></data>
+  <data name="Size_Large" xml:space="preserve"><value>Large</value></data>
+  <data name="Size_XLarge" xml:space="preserve"><value>Extra large</value></data>
+  <data name="Time_Soon" xml:space="preserve"><value>soon</value></data>
+  <data name="Time_DH" xml:space="preserve"><value>{0}d {1}h</value></data>
+  <data name="Time_HM" xml:space="preserve"><value>{0}h {1}m</value></data>
+  <data name="Time_M" xml:space="preserve"><value>{0}m</value></data>
+  <data name="Limit_ResetsIn" xml:space="preserve"><value>resets in {0}</value></data>
+  <data name="Settings_NotifyTop" xml:space="preserve"><value>#1 changes and new models</value></data>
+  <data name="Settings_NotifyPrice" xml:space="preserve"><value>Price changes of 5% or more</value></data>
+  <data name="Settings_NotifyLimit" xml:space="preserve"><value>Plan usage reaches 80% / 100%</value></data>
+  <data name="Toast_PriceTitle" xml:space="preserve"><value>Price changes</value></data>
+  <data name="Toast_PriceBody" xml:space="preserve"><value>{0} models changed price by 5% or more.</value></data>
+  <data name="Toast_LimitTitle" xml:space="preserve"><value>Plan usage</value></data>
+  <data name="Toast_LimitWarn" xml:space="preserve"><value>{0}: {1}% used ({2} of {3}).</value></data>
+  <data name="Toast_LimitFull" xml:space="preserve"><value>{0}: limit reached ({1} of {2}).</value></data>
+  <data name="Tray_Widget" xml:space="preserve"><value>Mini widget</value></data>
+  <data name="Tray_Tooltip_Ok" xml:space="preserve"><value>All good</value></data>
+  <data name="Widget_Usage" xml:space="preserve"><value>Plan usage</value></data>
+  <data name="Widget_Close" xml:space="preserve"><value>Close</value></data>
+  <data name="Widget_NoLimits" xml:space="preserve"><value>Set a usage limit on the My plans page to see it here.</value></data>
+  <data name="Widget_Plus" xml:space="preserve"><value>+1 use</value></data>
+  <data name="Settings_AutoClaude" xml:space="preserve"><value>Count Claude usage automatically from local Claude Code history</value></data>
+  <data name="Settings_AutoClaudeHelp" xml:space="preserve"><value>Reads only your own ~/.claude/projects folder (read-only) and counts prompts in the plan&apos;s current period for Claude plans that have a limit set. Nothing is sent anywhere; the 5-hour window is approximated from your first prompt.</value></data>
+  <data name="Nav_History" xml:space="preserve"><value>History</value></data>
+  <data name="History_Title" xml:space="preserve"><value>History</value></data>
+  <data name="History_CompareTitle" xml:space="preserve"><value>Compare two snapshots</value></data>
+  <data name="History_From" xml:space="preserve"><value>From</value></data>
+  <data name="History_To" xml:space="preserve"><value>To</value></data>
+  <data name="History_Category" xml:space="preserve"><value>Category</value></data>
+  <data name="History_NeedTwo" xml:space="preserve"><value>Snapshots are saved at every refresh. Compare becomes available once two different days exist.</value></data>
+  <data name="History_NoChanges" xml:space="preserve"><value>No rank or price changes between these dates.</value></data>
+  <data name="History_New" xml:space="preserve"><value>new</value></data>
+  <data name="History_ColModel" xml:space="preserve"><value>Model</value></data>
+  <data name="History_ColRank" xml:space="preserve"><value>Rank</value></data>
+  <data name="History_ColScore" xml:space="preserve"><value>Score</value></data>
+  <data name="History_ColPrice" xml:space="preserve"><value>Price per 1M</value></data>
+  <data name="History_ReleaseTitle" xml:space="preserve"><value>Release timeline</value></data>
+  <data name="History_ReleaseHelp" xml:space="preserve"><value>Overall score by release date. Gold = set a new best at its release.</value></data>
+  <data name="History_NoRelease" xml:space="preserve"><value>No release dates in the current data.</value></data>
+  <data name="History_Record" xml:space="preserve"><value>record</value></data>
+  <data name="History_ColDate" xml:space="preserve"><value>Release</value></data>
+  <data name="History_ColVendor" xml:space="preserve"><value>Vendor</value></data>
+  <data name="Chart_LogPrice" xml:space="preserve"><value>Log price axis</value></data>
+  <data name="Chart_ClickHint" xml:space="preserve"><value>Click a point to open the model. Green = in my plans, ring = favorite.</value></data>
+  <data name="Chart_InPlanLegend" xml:space="preserve"><value>In my plans</value></data>
+  <data name="Preset_Label" xml:space="preserve"><value>My presets</value></data>
+  <data name="Preset_Save" xml:space="preserve"><value>Save current weights</value></data>
+  <data name="Preset_Delete" xml:space="preserve"><value>Delete</value></data>
+  <data name="Preset_NewName" xml:space="preserve"><value>Preset name</value></data>
+  <data name="Compare_MonthlyCost" xml:space="preserve"><value>Est. monthly API cost ({0}M tokens)</value></data>
+  <data name="Compare_TokensLabel" xml:space="preserve"><value>Monthly usage</value></data>
+  <data name="Compare_TokensUnit" xml:space="preserve"><value>million tokens (input:output 3:1)</value></data>
+  <data name="SrcErr_KeyMissing" xml:space="preserve"><value>⚠ API key is not set. Enter it above and refresh.</value></data>
+  <data name="SrcErr_KeyInvalid" xml:space="preserve"><value>⚠ The key was rejected (invalid or revoked). Enter a new key.</value></data>
+  <data name="SrcErr_RateLimited" xml:space="preserve"><value>⚠ Daily request limit reached. Try again tomorrow.</value></data>
+  <data name="SrcErr_Network" xml:space="preserve"><value>⚠ Network problem. Check your connection and try again.</value></data>
+  <data name="SrcErr_Other" xml:space="preserve"><value>⚠ Refresh failed. Details are below.</value></data>
+  <data name="About_Updates" xml:space="preserve"><value>Version and updates</value></data>
+  <data name="About_Version" xml:space="preserve"><value>Version {0}</value></data>
+  <data name="About_CheckUpdate" xml:space="preserve"><value>Check for updates</value></data>
+  <data name="About_OpenRelease" xml:space="preserve"><value>Open download page</value></data>
+  <data name="About_Checking" xml:space="preserve"><value>Checking…</value></data>
+  <data name="About_UpToDate" xml:space="preserve"><value>You are on the latest version.</value></data>
+  <data name="About_UpdateAvailable" xml:space="preserve"><value>New version {0} is available.</value></data>
+  <data name="About_NoRelease" xml:space="preserve"><value>No published release was found yet.</value></data>
+  <data name="Plans_PlusOne" xml:space="preserve"><value>Add one use</value></data>
+  <data name="Plans_MinusOne" xml:space="preserve"><value>Remove one use</value></data>
+  <data name="About_Author" xml:space="preserve"><value>Author</value></data>
+  <data name="About_AuthorName" xml:space="preserve"><value>Made by 배민혁</value></data>
+  <data name="Crash_Body" xml:space="preserve"><value>An unexpected error occurred. Details were saved to the log file below.</value></data>
+  <data name="Leaderboard_PriceUpTo" xml:space="preserve"><value>≤ ${0} / 1M</value></data>
+  <data name="Leaderboard_NewBadge" xml:space="preserve"><value>NEW</value></data>
+  <data name="Leaderboard_AnyContext" xml:space="preserve"><value>Any context</value></data>
+  <data name="Leaderboard_NoScoreTip" xml:space="preserve"><value>No score. {0} may not cover this model yet, or its name is not matched.</value></data>
+  <data name="Leaderboard_NewTip" xml:space="preserve"><value>Released within the last 30 days</value></data>
+  <data name="Leaderboard_AnyPrice" xml:space="preserve"><value>Any price</value></data>
+  <data name="Leaderboard_RecentOnly" xml:space="preserve"><value>New (30 days)</value></data>
+  <data name="Leaderboard_ContextAtLeast" xml:space="preserve"><value>Context ≥ {0}</value></data>
+  <data name="Compare_DomainsHelp" xml:space="preserve"><value>Artificial Analysis domain indexes on a 0–100 scale. A missing bar means no score for that model.</value></data>
+  <data name="Compare_Domains" xml:space="preserve"><value>Professional domains (AA indexes)</value></data>
+  <data name="Settings_ErrorDetail" xml:space="preserve"><value>Details: {0}</value></data>
+  <data name="Settings_StatusOk" xml:space="preserve"><value>OK</value></data>
+  <data name="Settings_StatusError" xml:space="preserve"><value>Error</value></data>
+  <data name="Settings_SourceModels" xml:space="preserve"><value>{0} models</value></data>
+  <data name="Settings_SourceCached" xml:space="preserve"><value> · cached (no API call)</value></data>
+  <data name="Category_GapNote" xml:space="preserve"><value>{1} model(s) released in the last {0} days have no score in this category yet, so they are not ranked: {2}</value></data>
+  <data name="Settings_DataAsOfSource" xml:space="preserve"><value>Data as of {0} (date in the source data, {1} days ago)</value></data>
+  <data name="Settings_DataAsOfFetch" xml:space="preserve"><value>Data as of {0} (date fetched, {1} days ago)</value></data>
+  <data name="Settings_StaleExcluded" xml:space="preserve"><value>No new data for over {0} days: shown with this warning and left out of scores and recommendations.</value></data>
+  <data name="Settings_StaleIncluded" xml:space="preserve"><value>No new data for over {0} days, but still used in scores because the option above is on.</value></data>
+  <data name="Settings_IncludeStale" xml:space="preserve"><value>Use stale sources in scores</value></data>
+  <data name="Settings_IncludeStaleHelp" xml:space="preserve"><value>Off by default. A source with no new data for 90 days is left out; the dashboard still shows what #1 would be with it.</value></data>
+  <data name="Reason_NewEntry" xml:space="preserve"><value>the new #1 had no score before (new model or new data)</value></data>
+  <data name="Reason_PreviousUnscored" xml:space="preserve"><value>{0} lost its score (source data missing)</value></data>
+  <data name="Reason_RuleChanged" xml:space="preserve"><value>the scoring rule changed (stale source left out or weights), not the data</value></data>
+  <data name="Reason_MetricShift" xml:space="preserve"><value>changed metric {0}: {1} {2}→{3}, {4} {5}→{6}</value></data>
+  <data name="Stale_Excluded" xml:space="preserve"><value>{0} has had no new data for over {1} days, so it is left out of this score.</value></data>
+  <data name="Stale_Shadow" xml:space="preserve"><value>Including it, #1 would be {0}.</value></data>
+  <data name="Stale_ShadowSame" xml:space="preserve"><value>Including it would not change #1.</value></data>
+  <data name="Col_Disagree" xml:space="preserve"><value>Mismatch</value></data>
+  <data name="Disagree_Price" xml:space="preserve"><value>Price mismatch: Artificial Analysis {0} vs OpenRouter {1} per 1M tokens ({2}% apart)</value></data>
+  <data name="Disagree_Rank" xml:space="preserve"><value>Rank mismatch: benchmark (AA intelligence) percentile {0} vs human preference (Arena) percentile {1}, {2} points apart</value></data>
+  <data name="Plan_RemoteOk" xml:space="preserve"><value>Plan list last downloaded {0} (applies on next start).</value></data>
+  <data name="Plan_RemoteFail" xml:space="preserve"><value>Could not download the latest plan list, so the saved one is used: {0}</value></data>
+  <data name="Plan_RemoteInUse" xml:space="preserve"><value>Using the downloaded plan list.</value></data>
+  <data name="Plan_BuiltInUse" xml:space="preserve"><value>Using the built-in plan list.</value></data>
+  <data name="About_InstallUpdate" xml:space="preserve"><value>Install and restart</value></data>
+  <data name="About_Installing" xml:space="preserve"><value>Downloading the update…</value></data>
+  <data name="Settings_AutoUpdate" xml:space="preserve"><value>Download updates automatically (installed version, applied on next start)</value></data>
+  <data name="Backup_Title" xml:space="preserve"><value>Backup</value></data>
+  <data name="Backup_Help" xml:space="preserve"><value>Save all data (models, history, plans, settings) to one file, or restore from such a file. The API key is not included.</value></data>
+  <data name="Backup_Export" xml:space="preserve"><value>Export backup…</value></data>
+  <data name="Backup_Import" xml:space="preserve"><value>Restore from backup…</value></data>
+  <data name="Backup_Exported" xml:space="preserve"><value>Backup saved: {0}</value></data>
+  <data name="Backup_Imported" xml:space="preserve"><value>Restored. The previous data was kept as llmpulse.db.before-restore in the data folder.</value></data>
+  <data name="Backup_Rejected" xml:space="preserve"><value>This file cannot be restored, so nothing was changed: {0}</value></data>
+  <data name="Backup_ConfirmImport" xml:space="preserve"><value>Replace all current data with this backup? The current data is kept as llmpulse.db.before-restore.</value></data>
+  <data name="About_Manual" xml:space="preserve"><value>User manual (Korean, PDF)</value></data>
+</root>
